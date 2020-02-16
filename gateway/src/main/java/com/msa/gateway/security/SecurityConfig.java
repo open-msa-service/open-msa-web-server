@@ -2,8 +2,12 @@ package com.msa.gateway.security;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.msa.gateway.filters.FormLoginFilter;
+import com.msa.gateway.filters.JwtAuthenticationFilter;
 import com.msa.gateway.handlers.FormLoginAuthenticationSuccessHandler;
+import com.msa.gateway.handlers.JwtAuthenticationFailureHandler;
+import com.msa.gateway.security.jwt.HeaderTokenExtractor;
 import com.msa.gateway.security.providers.FormLoginAuthenticationProvider;
+import com.msa.gateway.security.providers.JwtAuthenticationProvider;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -17,6 +21,8 @@ import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter;
 
+import java.util.Arrays;
+
 @Configuration
 @EnableWebSecurity
 @EnableGlobalMethodSecurity(prePostEnabled = true)
@@ -27,6 +33,15 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
 
     @Autowired
     private FormLoginAuthenticationProvider provider;
+
+    @Autowired
+    private JwtAuthenticationProvider jwtAuthenticationProvider;
+
+    @Autowired
+    private JwtAuthenticationFailureHandler jwtAuthenticationFailureHandler;
+
+    @Autowired
+    private HeaderTokenExtractor headerTokenExtractor;
 
     @Bean
     public PasswordEncoder getPasswordEncoder(){
@@ -44,10 +59,18 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
         return filter;
     }
 
+    protected JwtAuthenticationFilter jwtFilter() throws Exception{
+        FilterSkipMatcher matcher = new FilterSkipMatcher(Arrays.asList("/formlogin"), "/api/**");
+        JwtAuthenticationFilter filter = new JwtAuthenticationFilter(matcher, jwtAuthenticationFailureHandler, headerTokenExtractor);
+        filter.setAuthenticationManager(super.authenticationManagerBean());
+        return filter;
+    }
+
     @Override
     protected void configure(AuthenticationManagerBuilder auth) throws Exception {
         auth
-                .authenticationProvider(this.provider);
+                .authenticationProvider(this.provider)
+                .authenticationProvider(this.jwtAuthenticationProvider);
     }
 
     @Override
@@ -60,6 +83,7 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
         http
                 .headers().frameOptions().disable();
         http
-                .addFilterBefore(formLoginFilter(), UsernamePasswordAuthenticationFilter.class);
+                .addFilterBefore(formLoginFilter(), UsernamePasswordAuthenticationFilter.class)
+                .addFilterBefore(jwtFilter(), UsernamePasswordAuthenticationFilter.class);
     }
 }

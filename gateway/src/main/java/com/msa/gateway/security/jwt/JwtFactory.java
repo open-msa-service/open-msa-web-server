@@ -1,7 +1,8 @@
-package com.msa.gateway.security;
+package com.msa.gateway.security.jwt;
 
 import com.auth0.jwt.JWT;
 import com.auth0.jwt.algorithms.Algorithm;
+import com.msa.gateway.security.AccountContext;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Component;
@@ -22,6 +23,7 @@ public class JwtFactory {
         try{
             token = JWT.create()
                     .withIssuer("jongmin")
+                    .withClaim("USERNAME", context.getAccount().getUserId())
                     .withClaim("USER_ROLE", context.getAccount().getUserRole().getRoleName())
                     .sign(generateAlgorithm());
         }catch (Exception e){
