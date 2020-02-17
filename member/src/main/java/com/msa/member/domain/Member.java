@@ -13,6 +13,7 @@ import java.time.LocalDateTime;
 @Table(name = "MEMBER")
 public class Member {
 
+    @Id
     @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "MEMBER_SEQ")
     @SequenceGenerator(sequenceName = "MEMBER_SEQ", allocationSize = 1, name = "MEMBER_SEQ")
     Long id;
@@ -45,7 +46,7 @@ public class Member {
     @Column(name = "UPDATE_TIME", nullable = false)
     private LocalDateTime updateTime;
 
-    Member(){
+    public Member(){
         if(StringUtils.isEmpty(this.updateTime)){
             this.updateTime = LocalDateTime.now();
         }
