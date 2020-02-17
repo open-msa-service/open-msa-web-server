@@ -34,7 +34,7 @@ public class FormLoginAuthenticationSuccessHandler implements AuthenticationSucc
 
         String tokenString = jwtFactory.generateToken(context);
 
-        processResponse(httpServletResponse, writeDto(tokenString));
+        processResponse(httpServletResponse, writeDto(tokenString)); // 만들어진 token을 header에 넣어준다.
     }
 
     private TokenDto writeDto(String token){

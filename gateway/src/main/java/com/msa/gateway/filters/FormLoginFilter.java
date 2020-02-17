@@ -39,12 +39,12 @@ public class FormLoginFilter extends AbstractAuthenticationProcessingFilter {
         FormLoginDto dto = new ObjectMapper().readValue(httpServletRequest.getReader(), FormLoginDto.class);
         PreAuthorizationToken token = new PreAuthorizationToken(dto);
 
-        return super.getAuthenticationManager().authenticate(token);
+        return super.getAuthenticationManager().authenticate(token); // 인증을 시도한다.
     }
 
     @Override
     protected void successfulAuthentication(HttpServletRequest request, HttpServletResponse response, FilterChain chain, Authentication authResult) throws IOException, ServletException {
-        this.authenticationSuccessHandler.onAuthenticationSuccess(request, response, authResult);
+        this.authenticationSuccessHandler.onAuthenticationSuccess(request, response, authResult); // token을 생성해 준다.
     }
 
     @Override
@@ -55,7 +55,7 @@ public class FormLoginFilter extends AbstractAuthenticationProcessingFilter {
             log.error(exception.getMessage());
         };
 
-        handler.onAuthenticationFailure(request, response, failed);
+        handler.onAuthenticationFailure(request, response, failed); // 현재 log만 찍어주게 되어있다.
     }
 
 }

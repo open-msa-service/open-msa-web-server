@@ -18,7 +18,7 @@ public class JwtDecoder {
     private static final Logger log = LoggerFactory.getLogger(JwtDecoder.class);
 
     public AccountContext decodeJwt(String token){
-        DecodedJWT decodedJWT = decodedJWT = isValidToken(token).orElseThrow(()->new IndexOutOfBoundsException("유효한 토큰이 아닙니다."));
+        DecodedJWT decodedJWT = isValidToken(token).orElseThrow(()->new IndexOutOfBoundsException("유효한 토큰이 아닙니다."));
 
         String username = decodedJWT.getClaim("USERNAME").asString();
         String role = decodedJWT.getClaim("USER_ROLE").asString();

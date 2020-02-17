@@ -8,12 +8,14 @@ import com.msa.gateway.handlers.JwtAuthenticationFailureHandler;
 import com.msa.gateway.security.jwt.HeaderTokenExtractor;
 import com.msa.gateway.security.providers.FormLoginAuthenticationProvider;
 import com.msa.gateway.security.providers.JwtAuthenticationProvider;
+import com.msa.gateway.service.AccountContextService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.security.config.annotation.authentication.builders.AuthenticationManagerBuilder;
 import org.springframework.security.config.annotation.method.configuration.EnableGlobalMethodSecurity;
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
+import org.springframework.security.config.annotation.web.builders.WebSecurity;
 import org.springframework.security.config.annotation.web.configuration.EnableWebSecurity;
 import org.springframework.security.config.annotation.web.configuration.WebSecurityConfigurerAdapter;
 import org.springframework.security.config.http.SessionCreationPolicy;
@@ -21,6 +23,7 @@ import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter;
 
+import javax.sql.DataSource;
 import java.util.Arrays;
 
 @Configuration
@@ -42,6 +45,12 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
 
     @Autowired
     private HeaderTokenExtractor headerTokenExtractor;
+
+    @Autowired
+    private DataSource dataSource;
+
+    @Autowired
+    private AccountContextService accountContextService;
 
     @Bean
     public PasswordEncoder getPasswordEncoder(){
@@ -70,7 +79,11 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
     protected void configure(AuthenticationManagerBuilder auth) throws Exception {
         auth
                 .authenticationProvider(this.provider)
-                .authenticationProvider(this.jwtAuthenticationProvider);
+                .authenticationProvider(this.jwtAuthenticationProvider)
+                .userDetailsService(accountContextService)
+                .and()
+                .jdbcAuthentication()
+                    .dataSource(dataSource);
     }
 
     @Override
@@ -85,5 +98,8 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
         http
                 .addFilterBefore(formLoginFilter(), UsernamePasswordAuthenticationFilter.class)
                 .addFilterBefore(jwtFilter(), UsernamePasswordAuthenticationFilter.class);
+        http
+                .formLogin();
     }
+
 }
