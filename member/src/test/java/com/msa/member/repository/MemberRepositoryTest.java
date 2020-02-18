@@ -1,5 +1,7 @@
 package com.msa.member.repository;
 
+import com.fasterxml.jackson.core.JsonProcessingException;
+import com.fasterxml.jackson.databind.ObjectMapper;
 import com.msa.member.domain.Member;
 import com.msa.member.domain.UserRole;
 import com.msa.member.service.MemberService;
@@ -9,8 +11,10 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
-import org.springframework.web.server.ResponseStatusException;
+import org.springframework.http.ResponseEntity;
 
+
+import java.util.NoSuchElementException;
 
 import static org.junit.jupiter.api.Assertions.*;
 
@@ -26,10 +30,11 @@ class MemberRepositoryTest {
     private MemberService memberService;
 
     private Member member = new Member();
+    private ObjectMapper mapper = new ObjectMapper();
 
     @BeforeEach
     void settingMember(){
-        this.member.setUserId("testId");
+        this.member.setUserId("testId2");
         this.member.setPassword("test");
         this.member.setUsername("jongmin");
         this.member.setUserRole(UserRole.USER);
@@ -48,17 +53,21 @@ class MemberRepositoryTest {
     }
 
     @Test
+    @Disabled
     @DisplayName("Member 조회 테스트")
-    void memberSearchTest(){
-        assertEquals("jongmin", memberService.memberSearchById(1L).getUsername());
-        assertThrows(ResponseStatusException.class, ()->memberService.memberSearchById(2L)); // 404 Bad Request
-        assertEquals("test@test.com", memberService.memberSearchByUserId("testId").getEmail());
+    void memberSearchTest() throws JsonProcessingException {
+        ResponseEntity<Object> response = memberService.memberSearchById(1L);
+        String values = mapper.writeValueAsString(response.getBody());
+        logger.info("Response Body : {}", values);
+        assertThrows(NoSuchElementException.class, ()->memberService.memberSearchById(2L)); // 400 Bad Request
     }
 
     @Test
     @DisplayName("회원가입 테스트")
-    void memberSignupTest(){
-
+    void memberSignupTest() throws JsonProcessingException {
+        ResponseEntity<Object> response = memberService.memberSignUp(member);
+        String values = mapper.writeValueAsString(response.getBody());
+        logger.info("Response Body : {}", values);
     }
 
 }
