@@ -1,6 +1,7 @@
 package com.msa.member.domain;
 
 
+import com.fasterxml.jackson.annotation.JsonFormat;
 import lombok.Getter;
 import lombok.Setter;
 import org.springframework.util.StringUtils;
@@ -43,6 +44,7 @@ public class Member {
     @Column(name = "PHONE_NUMBER", nullable = false)
     private String phoneNumber;
 
+    @JsonFormat(pattern = "yyyy-MM-dd HH:mm:ss")
     @Column(name = "UPDATE_TIME", nullable = false)
     private LocalDateTime updateTime;
 
