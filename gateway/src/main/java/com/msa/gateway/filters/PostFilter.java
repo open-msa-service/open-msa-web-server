@@ -1,12 +1,16 @@
 package com.msa.gateway.filters;
 
+import com.google.common.io.CharStreams;
 import com.netflix.zuul.ZuulFilter;
 import com.netflix.zuul.context.RequestContext;
 import com.netflix.zuul.exception.ZuulException;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import org.springframework.util.StringUtils;
+import java.io.InputStream;
+import java.io.InputStreamReader;
 
-import javax.servlet.http.HttpServletRequest;
+import static org.springframework.http.HttpStatus.INTERNAL_SERVER_ERROR;
 
 public class PostFilter extends ZuulFilter {
 
@@ -30,8 +34,21 @@ public class PostFilter extends ZuulFilter {
     @Override
     public Object run() throws ZuulException {
         RequestContext context = RequestContext.getCurrentContext();
-        HttpServletRequest request = context.getRequest();
-        log.info(String.format("%s request to %s", request.getMethod(),request.getRequestURL().toString()));
+
+        try(final InputStream inputStream = context.getResponseDataStream()){
+            if(StringUtils.isEmpty(inputStream)){
+                log.info("BODY:{}", "");
+                return null;
+            }
+
+            String responseData = CharStreams.toString(new InputStreamReader(inputStream, "UTF-8"));
+            log.info("BODY : {}", responseData);
+
+            context.setResponseBody(responseData);
+        }catch (Exception e){
+            throw new ZuulException(e, INTERNAL_SERVER_ERROR.value(), e.getMessage());
+        }
+
         return null;
     }
 }
