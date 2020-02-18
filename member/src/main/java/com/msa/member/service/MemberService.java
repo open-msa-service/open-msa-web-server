@@ -1,11 +1,14 @@
 package com.msa.member.service;
 
 import com.msa.member.domain.Member;
+import org.springframework.http.ResponseEntity;
 
 public interface MemberService {
 
-    Member memberSearchById(Long id);
+    ResponseEntity<Object> memberSearchById(Long id);
 
-    Member memberSearchByUserId(String userId);
+    ResponseEntity<Object> memberSearchByUserId(String userId);
+
+    ResponseEntity<Object> memberSignUp(Member member);
 
 }
