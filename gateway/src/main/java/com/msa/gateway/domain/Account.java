@@ -23,7 +23,7 @@ public class Account {
     @Column(name = "USERNAME", nullable = false)
     private String username;
 
-    @Column(name = "PASSWORD", nullable = false, length = 30)
+    @Column(name = "PASSWORD", nullable = false)
     private String password;
 
     @Enumerated(value = EnumType.STRING)
