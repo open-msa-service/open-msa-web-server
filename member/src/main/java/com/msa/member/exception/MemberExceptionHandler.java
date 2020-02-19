@@ -18,14 +18,14 @@ public class MemberExceptionHandler extends ResponseEntityExceptionHandler {
     @ExceptionHandler(value = {NoSuchElementException.class})
     public ResponseEntity<Object> noSuchElementException(NoSuchElementException ex){
         String errorMessage = getErrorMessage(ex.getMessage(), ex.toString());
-        ResponseMessage responseMessage = new ResponseMessage(HttpStatus.BAD_REQUEST, "가입되지 않은 아이디이거나, 비밀번호가 일치하지 않습니다.", errorMessage);
+        ResponseMessage responseMessage = new ResponseMessage(HttpStatus.BAD_REQUEST.value(), "가입되지 않은 아이디이거나, 비밀번호가 일치하지 않습니다.", errorMessage);
         return new ResponseEntity<Object>(responseMessage, HttpStatus.BAD_REQUEST);
     }
 
     @ExceptionHandler(value = {DataIntegrityViolationException.class})
     public ResponseEntity<Object> dataIntegrityViolationException(DataIntegrityViolationException ex){
         String errorMessage = getErrorMessage(ex.getMessage(), ex.toString());
-        ResponseMessage responseMessage = new ResponseMessage(HttpStatus.BAD_REQUEST, "회원가입에 실패 했습니다.", errorMessage);
+        ResponseMessage responseMessage = new ResponseMessage(HttpStatus.BAD_REQUEST.value(), "회원가입에 실패 했습니다.", errorMessage);
         return new ResponseEntity<Object>(responseMessage, HttpStatus.BAD_REQUEST);
     }
 

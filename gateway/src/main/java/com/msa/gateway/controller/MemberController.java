@@ -13,7 +13,7 @@ public class MemberController {
 
     @GetMapping("/signup")
     public String getUsername(Authentication authentication){
-        PostAuthorizationToken token = (PostAuthorizationToken)authentication;
-        return token.getAccountContext().getUsername();
+
+        return null;
     }
 }

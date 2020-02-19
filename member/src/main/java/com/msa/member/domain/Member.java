@@ -44,8 +44,9 @@ public class Member {
     @Column(name = "PHONE_NUMBER", nullable = false)
     private String phoneNumber;
 
+    @Basic(optional = false)
     @JsonFormat(pattern = "yyyy-MM-dd HH:mm:ss")
-    @Column(name = "UPDATE_TIME", nullable = false)
+    @Column(name = "UPDATE_TIME", nullable = false, insertable = false, updatable = false)
     private LocalDateTime updateTime;
 
     public Member(){

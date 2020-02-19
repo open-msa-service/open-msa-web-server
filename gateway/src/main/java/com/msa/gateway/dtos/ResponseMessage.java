@@ -11,13 +11,13 @@ import java.util.Map;
 @Getter @Setter
 public class ResponseMessage {
 
-    private HttpStatus status;
+    private int status;
     private Map<String, Object> data;
     private String message;
     private String error;
     private String time;
 
-    public ResponseMessage(HttpStatus status, String message, String error){
+    public ResponseMessage(int status, String message, String error){
         this.status = status;
         this.message = message;
         this.error = error;
