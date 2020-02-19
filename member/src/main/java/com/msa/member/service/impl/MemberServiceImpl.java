@@ -26,7 +26,7 @@ public class MemberServiceImpl implements MemberService {
     public ResponseEntity<Object> memberSearchById(Long id){
         Member member = Optional.of(memberRepository.findById(id)).get()
                 .orElseThrow(NoSuchElementException::new);
-        responseMessage = new ResponseMessage(HttpStatus.OK, "id:" + id + "의 회원정보를 조회했습니다.", null);
+        responseMessage = new ResponseMessage(HttpStatus.OK.value(), "id:" + id + "의 회원정보를 조회했습니다.", null);
         responseMessage.setData(member, "member");
         return new ResponseEntity<Object>(responseMessage, HttpStatus.OK);
     }
@@ -35,7 +35,7 @@ public class MemberServiceImpl implements MemberService {
     public ResponseEntity<Object> memberSearchByUserId(String userId) {
         Member member = Optional.of(memberRepository.findByUserId(userId)).get()
                 .orElseThrow(NoSuchElementException::new);
-        responseMessage = new ResponseMessage(HttpStatus.OK, "사용자 ID:" + userId + "의 회원정보를 조회했습니다.", null);
+        responseMessage = new ResponseMessage(HttpStatus.OK.value(), "사용자 ID:" + userId + "의 회원정보를 조회했습니다.", null);
         responseMessage.setData(member, "member");
         return new ResponseEntity<Object>(responseMessage, HttpStatus.OK);
     }
@@ -47,7 +47,7 @@ public class MemberServiceImpl implements MemberService {
         }catch (DataIntegrityViolationException ex){
             throw new DataIntegrityViolationException("", ex);
         }
-        responseMessage = new ResponseMessage(HttpStatus.OK, "회원가입에 성공했습니다.", null);
+        responseMessage = new ResponseMessage(HttpStatus.OK.value(), "회원가입에 성공했습니다.", null);
         return new ResponseEntity<Object>(responseMessage, HttpStatus.OK);
     }
 }

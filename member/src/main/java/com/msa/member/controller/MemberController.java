@@ -24,7 +24,7 @@ public class MemberController {
         return memberService.memberSearchByUserId(userId);
     }
 
-    @PostMapping("/signup")
+    @PostMapping(value = "/signup")
     ResponseEntity<Object> memberSignup(@RequestBody Member member){
         return memberService.memberSignUp(member);
     }

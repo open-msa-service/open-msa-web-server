@@ -2,7 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f74f4414-498c-4a8b-8465-d98701f6f47e" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/gateway/src/main/java/com/msa/gateway/filters/PostFilter.java" beforeDir="false" afterPath="$PROJECT_DIR$/gateway/src/main/java/com/msa/gateway/filters/PostFilter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gateway/src/main/java/com/msa/gateway/GatewayApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/gateway/src/main/java/com/msa/gateway/GatewayApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gateway/src/main/java/com/msa/gateway/controller/MemberController.java" beforeDir="false" afterPath="$PROJECT_DIR$/gateway/src/main/java/com/msa/gateway/controller/MemberController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gateway/src/main/java/com/msa/gateway/exception/MemberExceptionHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/gateway/src/main/java/com/msa/gateway/exception/MemberExceptionHandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gateway/src/main/java/com/msa/gateway/service/MemberService.java" beforeDir="false" afterPath="$PROJECT_DIR$/gateway/src/main/java/com/msa/gateway/service/MemberService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gateway/src/main/java/com/msa/gateway/service/impl/MemberServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/gateway/src/main/java/com/msa/gateway/service/impl/MemberServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gateway/src/test/java/com/msa/gateway/controller/MemberControllerTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/gateway/src/test/java/com/msa/gateway/controller/MemberControllerTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/member/src/main/java/com/msa/member/MemberApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/member/src/main/java/com/msa/member/MemberApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/member/src/main/java/com/msa/member/controller/MemberController.java" beforeDir="false" afterPath="$PROJECT_DIR$/member/src/main/java/com/msa/member/controller/MemberController.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/gateway/target/" />
@@ -21,10 +28,25 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/gateway/src/main/resources/application.properties">
+        <entry file="file://$PROJECT_DIR$/gateway/src/test/java/com/msa/gateway/controller/MemberControllerTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="483">
-              <caret line="23" column="44" lean-forward="true" selection-start-line="23" selection-start-column="44" selection-end-line="23" selection-end-column="44" />
+            <state relative-caret-position="516">
+              <caret line="60" lean-forward="true" selection-start-line="60" selection-end-line="60" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/gateway/src/main/java/com/msa/gateway/config/CustomClientHttpRequestInterceptor.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="288">
+              <caret line="16" column="34" lean-forward="true" selection-start-line="16" selection-start-column="34" selection-end-line="16" selection-end-column="34" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -32,17 +54,47 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/gateway/src/main/java/com/msa/gateway/GatewayApplication.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="189">
-              <caret line="13" lean-forward="true" selection-start-line="13" selection-end-line="13" />
+            <state relative-caret-position="273">
+              <caret line="15" lean-forward="true" selection-start-line="15" selection-end-line="15" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/member/src/main/java/com/msa/member/MemberApplication.java">
+        <entry file="file://$PROJECT_DIR$/gateway/src/main/java/com/msa/gateway/config/CustomRestTemplateCustomizer.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="168">
-              <caret line="11" lean-forward="true" selection-start-line="11" selection-end-line="11" />
+              <caret line="8" column="80" lean-forward="true" selection-start-line="8" selection-start-column="80" selection-end-line="8" selection-end-column="80" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/gateway/src/main/java/com/msa/gateway/service/impl/MemberServiceImpl.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="445">
+              <caret line="45" selection-start-line="45" selection-end-line="45" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/gateway/src/main/java/com/msa/gateway/service/MemberService.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="147">
+              <caret line="7" column="14" selection-start-line="7" selection-start-column="14" selection-end-line="7" selection-end-column="14" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -51,16 +103,41 @@
         <entry file="file://$PROJECT_DIR$/member/src/main/java/com/msa/member/controller/MemberController.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="399">
-              <caret line="25" selection-start-line="25" selection-end-line="25" />
+              <caret line="25" lean-forward="true" selection-start-line="25" selection-end-line="26" selection-end-column="35" />
+              <folding>
+                <element signature="e#899#900#0" expanded="true" />
+                <element signature="e#956#957#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/member/src/main/java/com/msa/member/service/impl/MemberServiceImpl.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="472">
+              <caret line="50" column="57" lean-forward="true" selection-start-line="50" selection-start-column="57" selection-end-line="50" selection-end-column="57" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/gateway/src/main/java/com/msa/gateway/filters/PostFilter.java">
+        <entry file="file://$PROJECT_DIR$/gateway/src/main/java/com/msa/gateway/controller/MemberController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="70">
-              <caret line="8" column="44" selection-start-line="8" selection-start-column="44" selection-end-line="8" selection-end-column="44" />
+            <state relative-caret-position="315">
+              <caret line="15" column="34" selection-start-line="15" selection-start-column="34" selection-end-line="15" selection-end-column="34" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/member/src/main/java/com/msa/member/MemberApplication.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="168">
+              <caret line="18" lean-forward="true" selection-start-line="18" selection-end-line="18" />
             </state>
           </provider>
         </entry>
@@ -72,6 +149,7 @@
       <list>
         <option value="Enum" />
         <option value="package-info" />
+        <option value="Interface" />
         <option value="JUnit5 Test Class" />
         <option value="Class" />
       </list>
@@ -83,18 +161,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/gateway/src/main/java/com/msa/gateway/dtos/FormLoginDto.java" />
-        <option value="$PROJECT_DIR$/gateway/src/main/java/com/msa/gateway/security/tokens/PreAuthorizationToken.java" />
-        <option value="$PROJECT_DIR$/gateway/src/main/java/com/msa/gateway/security/AccountContextService.java" />
-        <option value="$PROJECT_DIR$/gateway/src/main/java/com/msa/gateway/repository/AccountRepository.java" />
-        <option value="$PROJECT_DIR$/gateway/src/main/java/com/msa/gateway/service/AccountContextService.java" />
-        <option value="$PROJECT_DIR$/gateway/src/main/java/com/msa/gateway/security/providers/FormLoginAuthenticationProvider.java" />
-        <option value="$PROJECT_DIR$/gateway/src/main/java/com/msa/gateway/dtos/TokenDto.java" />
-        <option value="$PROJECT_DIR$/gateway/src/main/java/com/msa/gateway/security/InvalidJwtException.java" />
-        <option value="$PROJECT_DIR$/gateway/src/main/java/com/msa/gateway/security/HeaderTokenExtractor.java" />
-        <option value="$PROJECT_DIR$/gateway/src/test/java/com/msa/gateway/security/HeaderTokenExtractorTest.java" />
-        <option value="$PROJECT_DIR$/gateway/src/main/java/com/msa/gateway/handlers/JwtAuthenticationFailureHandler.java" />
-        <option value="$PROJECT_DIR$/gateway/src/main/java/com/msa/gateway/security/tokens/JwtPreProcessingToken.java" />
         <option value="$PROJECT_DIR$/gateway/src/main/java/com/msa/gateway/security/JwtFactory.java" />
         <option value="$PROJECT_DIR$/gateway/src/main/java/com/msa/gateway/security/tokens/JwtPostProcessingToken.java" />
         <option value="$PROJECT_DIR$/gateway/src/main/java/com/msa/gateway/domain/UserRole.java" />
@@ -109,30 +175,43 @@
         <option value="$PROJECT_DIR$/gateway/src/main/java/com/msa/gateway/handlers/FormLoginAuthenticationSuccessHandler.java" />
         <option value="$PROJECT_DIR$/gateway/src/main/java/com/msa/gateway/controller/ApiController.java" />
         <option value="$PROJECT_DIR$/gateway/pom.xml" />
-        <option value="$PROJECT_DIR$/gateway/src/main/java/com/msa/gateway/domain/Account.java" />
         <option value="$PROJECT_DIR$/gateway/src/main/java/com/msa/gateway/security/SecurityConfig.java" />
         <option value="$PROJECT_DIR$/member/src/main/java/com/msa/member/domain/UserRole.java" />
         <option value="$PROJECT_DIR$/member/src/main/java/com/msa/member/exception/NoSuchElementException.java" />
         <option value="$PROJECT_DIR$/member/src/main/java/com/msa/member/repository/MemberRepository.java" />
         <option value="$PROJECT_DIR$/member/src/main/java/com/msa/member/dtos/ErrorMessage.java" />
-        <option value="$PROJECT_DIR$/member/src/main/java/com/msa/member/dtos/ResponseMessage.java" />
         <option value="$PROJECT_DIR$/member/src/main/java/com/msa/member/service/MemberService.java" />
-        <option value="$PROJECT_DIR$/member/src/main/java/com/msa/member/service/impl/MemberServiceImpl.java" />
         <option value="$PROJECT_DIR$/member/src/test/java/com/msa/member/repository/MemberRepositoryTest.java" />
-        <option value="$PROJECT_DIR$/member/src/main/java/com/msa/member/controller/MemberController.java" />
         <option value="$PROJECT_DIR$/member/pom.xml" />
-        <option value="$PROJECT_DIR$/member/src/main/java/com/msa/member/domain/Member.java" />
         <option value="$PROJECT_DIR$/member/src/test/java/com/msa/member/controller/MemberControllerTest.java" />
         <option value="$PROJECT_DIR$/member/src/main/resources/application.properties" />
-        <option value="$PROJECT_DIR$/gateway/src/main/java/com/msa/gateway/GatewayApplication.java" />
         <option value="$PROJECT_DIR$/gateway/src/main/resources/application.properties" />
         <option value="$PROJECT_DIR$/gateway/src/main/java/com/msa/gateway/filters/PreFIlter.java" />
         <option value="$PROJECT_DIR$/gateway/src/main/java/com/msa/gateway/filters/PreFilter.java" />
         <option value="$PROJECT_DIR$/gateway/src/main/java/com/msa/gateway/filters/ErrorFilter.java" />
         <option value="$PROJECT_DIR$/gateway/src/main/java/com/msa/gateway/filters/RouteFilter.java" />
         <option value="$PROJECT_DIR$/gateway/src/main/java/com/msa/gateway/config/ZuulFilterConfig.java" />
-        <option value="$PROJECT_DIR$/member/src/main/java/com/msa/member/exception/MemberExceptionHandler.java" />
         <option value="$PROJECT_DIR$/gateway/src/main/java/com/msa/gateway/filters/PostFilter.java" />
+        <option value="$PROJECT_DIR$/gateway/src/main/java/com/msa/gateway/domain/Account.java" />
+        <option value="$PROJECT_DIR$/gateway/src/main/java/com/msa/gateway/config/CreateBeanConfig.java" />
+        <option value="$PROJECT_DIR$/gateway/src/main/java/com/msa/gateway/config/CustomRestTemplateCustomizer.java" />
+        <option value="$PROJECT_DIR$/gateway/src/main/java/com/msa/gateway/config/CustomClientHttpRequestInterceptor.java" />
+        <option value="$PROJECT_DIR$/gateway/src/main/java/com/msa/gateway/config/RestTemplateConfig.java" />
+        <option value="$PROJECT_DIR$/member/src/main/java/com/msa/member/domain/Member.java" />
+        <option value="$PROJECT_DIR$/member/src/main/java/com/msa/member/dtos/ResponseMessage.java" />
+        <option value="$PROJECT_DIR$/member/src/main/java/com/msa/member/exception/MemberExceptionHandler.java" />
+        <option value="$PROJECT_DIR$/member/src/main/java/com/msa/member/service/impl/MemberServiceImpl.java" />
+        <option value="$PROJECT_DIR$/gateway/src/main/java/com/msa/gateway/dtos/ResponseMessage.java" />
+        <option value="$PROJECT_DIR$/gateway/src/main/java/com/msa/gateway/GatewayApplication.java" />
+        <option value="$PROJECT_DIR$/gateway/src/main/java/com/msa/gateway/exception/MemberExceptionHandler.java" />
+        <option value="$PROJECT_DIR$/gateway/src/main/java/com/msa/gateway/service/MemberService.java" />
+        <option value="$PROJECT_DIR$/gateway/src/test/java/com/msa/gateway/controller/MemberControllerTest.java" />
+        <option value="$PROJECT_DIR$/gateway/src/main/java/com/msa/gateway/config/CharSetConfig.java" />
+        <option value="$PROJECT_DIR$/member/src/main/java/com/msa/member/config/CharSetConfig.java" />
+        <option value="$PROJECT_DIR$/member/src/main/java/com/msa/member/MemberApplication.java" />
+        <option value="$PROJECT_DIR$/gateway/src/main/java/com/msa/gateway/service/impl/MemberServiceImpl.java" />
+        <option value="$PROJECT_DIR$/member/src/main/java/com/msa/member/controller/MemberController.java" />
+        <option value="$PROJECT_DIR$/gateway/src/main/java/com/msa/gateway/controller/MemberController.java" />
       </list>
     </option>
   </component>
@@ -216,7 +295,74 @@
               <item name="gateway" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="gateway" type="462c0819:PsiDirectoryNode" />
+              <item name="exception" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="open-msa-web-server" type="b2602c69:ProjectViewProjectNode" />
+              <item name="gateway" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="gateway" type="462c0819:PsiDirectoryNode" />
+              <item name="repository" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="open-msa-web-server" type="b2602c69:ProjectViewProjectNode" />
+              <item name="gateway" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="gateway" type="462c0819:PsiDirectoryNode" />
+              <item name="service" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="open-msa-web-server" type="b2602c69:ProjectViewProjectNode" />
+              <item name="gateway" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="gateway" type="462c0819:PsiDirectoryNode" />
+              <item name="service" type="462c0819:PsiDirectoryNode" />
+              <item name="impl" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="open-msa-web-server" type="b2602c69:ProjectViewProjectNode" />
+              <item name="gateway" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="resources" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="open-msa-web-server" type="b2602c69:ProjectViewProjectNode" />
+              <item name="gateway" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="open-msa-web-server" type="b2602c69:ProjectViewProjectNode" />
+              <item name="gateway" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="open-msa-web-server" type="b2602c69:ProjectViewProjectNode" />
+              <item name="gateway" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="gateway" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="open-msa-web-server" type="b2602c69:ProjectViewProjectNode" />
+              <item name="gateway" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="gateway" type="462c0819:PsiDirectoryNode" />
+              <item name="controller" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -248,11 +394,15 @@
   </component>
   <component name="RecentsManager">
     <key name="CreateTestDialog.RecentsKey">
+      <recent name="com.msa.gateway.controller" />
       <recent name="com.msa.member.controller" />
       <recent name="com.msa.member.repository" />
       <recent name="com.msa.gateway.security" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.msa.member.config" />
+      <recent name="com.msa.gateway.dtos" />
+      <recent name="com.msa.gateway.exception" />
       <recent name="com.msa.member.domain" />
     </key>
     <key name="CreateTestDialog.Recents.Supers">
@@ -271,7 +421,22 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Spring Boot.MemberApplication">
+  <component name="RunManager" selected="Spring Boot.GatewayApplication">
+    <configuration name="MemberControllerTest (1)" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="gateway" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.msa.gateway.controller.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.msa.gateway.controller" />
+      <option name="MAIN_CLASS_NAME" value="com.msa.gateway.controller.MemberControllerTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="MemberControllerTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="member" />
       <extension name="coverage">
@@ -334,22 +499,6 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="MemberRepositoryTest.memberSearchTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="member" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.msa.member.repository.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="com.msa.member.repository" />
-      <option name="MAIN_CLASS_NAME" value="com.msa.member.repository.MemberRepositoryTest" />
-      <option name="METHOD_NAME" value="memberSearchTest" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="GameApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
       <module name="game" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="com.msa.game.GameApplication" />
@@ -373,11 +522,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.MemberControllerTest (1)" />
         <item itemvalue="JUnit.MemberControllerTest" />
         <item itemvalue="JUnit.MemberControllerTest.signupTest" />
         <item itemvalue="JUnit.MemberRepositoryTest" />
         <item itemvalue="JUnit.MemberControllerTest.findById" />
-        <item itemvalue="JUnit.MemberRepositoryTest.memberSearchTest" />
       </list>
     </recent_temporary>
   </component>
@@ -392,50 +541,49 @@
       <option name="presentableId" value="Default" />
       <updated>1581685015214</updated>
       <workItem from="1581685016577" duration="6090000" />
-      <workItem from="1581826455428" duration="32673000" />
+      <workItem from="1581826455428" duration="44883000" />
     </task>
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="MemberRepositoryTest - 2020.02.18 at 14h 05m 04s.xml">
-      <configuration name="MemberRepositoryTest" configurationId="JUnit" />
+    <history-entry file="MemberControllerTest_(1) - 2020.02.19 at 21h 07m 34s.xml">
+      <configuration name="MemberControllerTest (1)" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="MemberRepositoryTest - 2020.02.18 at 14h 05m 42s.xml">
-      <configuration name="MemberRepositoryTest" configurationId="JUnit" />
+    <history-entry file="MemberControllerTest_(1) - 2020.02.19 at 21h 29m 34s.xml">
+      <configuration name="MemberControllerTest (1)" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="MemberRepositoryTest - 2020.02.18 at 14h 06m 11s.xml">
-      <configuration name="MemberRepositoryTest" configurationId="JUnit" />
+    <history-entry file="MemberControllerTest_(1) - 2020.02.19 at 21h 39m 29s.xml">
+      <configuration name="MemberControllerTest (1)" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="MemberRepositoryTest - 2020.02.18 at 14h 25m 42s.xml">
-      <configuration name="MemberRepositoryTest" configurationId="JUnit" />
+    <history-entry file="MemberControllerTest_(1) - 2020.02.19 at 21h 51m 15s.xml">
+      <configuration name="MemberControllerTest (1)" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="MemberControllerTest - 2020.02.18 at 15h 41m 46s.xml">
-      <configuration name="MemberControllerTest" configurationId="JUnit" />
+    <history-entry file="MemberControllerTest_(1) - 2020.02.19 at 21h 55m 49s.xml">
+      <configuration name="MemberControllerTest (1)" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="MemberControllerTest - 2020.02.18 at 15h 43m 21s.xml">
-      <configuration name="MemberControllerTest" configurationId="JUnit" />
+    <history-entry file="MemberControllerTest_(1) - 2020.02.19 at 21h 57m 04s.xml">
+      <configuration name="MemberControllerTest (1)" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="MemberControllerTest - 2020.02.18 at 16h 36m 32s.xml">
-      <configuration name="MemberControllerTest" configurationId="JUnit" />
+    <history-entry file="MemberControllerTest_(1) - 2020.02.19 at 22h 06m 54s.xml">
+      <configuration name="MemberControllerTest (1)" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="MemberControllerTest_signupTest - 2020.02.18 at 16h 40m 57s.xml">
-      <configuration name="MemberControllerTest.signupTest" configurationId="JUnit" />
+    <history-entry file="MemberControllerTest_(1) - 2020.02.19 at 22h 15m 09s.xml">
+      <configuration name="MemberControllerTest (1)" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="MemberControllerTest - 2020.02.18 at 16h 41m 19s.xml">
-      <configuration name="MemberControllerTest" configurationId="JUnit" />
+    <history-entry file="MemberControllerTest_(1) - 2020.02.19 at 22h 15m 35s.xml">
+      <configuration name="MemberControllerTest (1)" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="MemberControllerTest - 2020.02.18 at 16h 44m 17s.xml">
-      <configuration name="MemberControllerTest" configurationId="JUnit" />
+    <history-entry file="MemberControllerTest_(1) - 2020.02.19 at 22h 16m 59s.xml">
+      <configuration name="MemberControllerTest (1)" configurationId="JUnit" />
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="38763000" />
+    <option name="totallyTimeSpent" value="50973000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="1440" y="0" width="1920" height="1080" extended-state="0" />
-    <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.20447284" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.1970181" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="Image Layers" order="3" />
@@ -443,10 +591,10 @@
       <window_info id="UI Designer" order="5" />
       <window_info id="Favorites" order="6" side_tool="true" />
       <window_info id="Web" order="7" side_tool="true" />
-      <window_info anchor="bottom" id="Messages" order="0" weight="0.32897383" />
+      <window_info anchor="bottom" id="Messages" order="0" weight="0.3279678" />
       <window_info anchor="bottom" id="Message" order="1" />
       <window_info anchor="bottom" id="Find" order="2" />
-      <window_info anchor="bottom" id="Run" order="3" visible="true" weight="0.31287727" />
+      <window_info active="true" anchor="bottom" id="Run" order="3" visible="true" weight="0.31287727" />
       <window_info anchor="bottom" id="Debug" order="4" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="5" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="6" weight="0.4" />
@@ -475,138 +623,6 @@
     <option name="version" value="1" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/gateway/src/main/java/com/msa/gateway/security/AccountContext.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="903">
-          <caret line="43" selection-start-line="43" selection-end-line="43" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/security/spring-security-config/5.2.1.RELEASE/spring-security-config-5.2.1.RELEASE.jar!/org/springframework/security/config/annotation/web/builders/HttpSecurity.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="251">
-          <caret line="68" column="49" lean-forward="true" selection-start-line="68" selection-start-column="49" selection-end-line="68" selection-end-column="49" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/security/spring-security-web/5.2.1.RELEASE/spring-security-web-5.2.1.RELEASE.jar!/org/springframework/security/web/authentication/AuthenticationSuccessHandler.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="252">
-          <caret line="20" column="9" selection-start-line="20" selection-start-column="9" selection-end-line="20" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/gateway/src/main/java/com/msa/gateway/handlers/JwtAuthenticationFailureHandler.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="420">
-          <caret line="20" column="32" selection-start-line="20" selection-start-column="32" selection-end-line="20" selection-end-column="32" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_201.jdk/Contents/Home/src.zip!/java/lang/Class.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="253">
-          <caret line="509" column="26" selection-start-line="509" selection-start-column="26" selection-end-line="509" selection-end-column="26" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/gateway/src/main/java/com/msa/gateway/dtos/TokenDto.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="336">
-          <caret line="17" column="27" selection-start-line="17" selection-start-column="27" selection-end-line="17" selection-end-column="27" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/gateway/src/main/java/com/msa/gateway/repository/AccountRepository.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="252">
-          <caret line="12" lean-forward="true" selection-start-line="12" selection-end-line="12" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/gateway/src/main/java/com/msa/gateway/security/jwt/HeaderTokenExtractor.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="399">
-          <caret line="19" column="1" lean-forward="true" selection-start-line="19" selection-start-column="1" selection-end-line="19" selection-end-column="1" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/apache/tomcat/embed/tomcat-embed-core/9.0.30/tomcat-embed-core-9.0.30.jar!/javax/servlet/FilterChain.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="147">
-          <caret line="10" column="9" selection-start-line="10" selection-start-column="9" selection-end-line="10" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/gateway/src/main/java/com/msa/gateway/filters/JwtAuthenticationFilter.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="282">
-          <caret line="46" lean-forward="true" selection-start-line="46" selection-end-line="46" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/gateway/src/main/java/com/msa/gateway/handlers/FormLoginAuthenticationSuccessHandler.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="420">
-          <caret line="36" column="97" selection-start-line="36" selection-start-column="97" selection-end-line="36" selection-end-column="97" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/gateway/src/main/java/com/msa/gateway/security/tokens/PreAuthorizationToken.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="399">
-          <caret line="23" lean-forward="true" selection-start-line="23" selection-end-line="23" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#322#323#0" expanded="true" />
-            <element signature="e#363#364#0" expanded="true" />
-            <element signature="e#416#417#0" expanded="true" />
-            <element signature="e#468#469#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/gateway/src/main/java/com/msa/gateway/security/jwt/JwtFactory.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="126">
-          <caret line="13" column="13" selection-start-line="13" selection-start-column="13" selection-end-line="13" selection-end-column="13" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/gateway/src/main/java/com/msa/gateway/security/jwt/JwtDecoder.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="189">
-          <caret line="19" column="31" lean-forward="true" selection-start-line="19" selection-start-column="31" selection-end-line="19" selection-end-column="31" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/gateway/src/main/java/com/msa/gateway/security/providers/JwtAuthenticationProvider.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="588">
@@ -655,16 +671,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/gateway/src/main/java/com/msa/gateway/service/AccountContextService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="378">
-          <caret line="29" lean-forward="true" selection-start-line="29" selection-end-line="29" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/gateway/src/main/java/com/msa/gateway/filters/FormLoginFilter.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="819">
@@ -696,16 +702,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="378">
           <caret line="25" column="5" selection-start-line="25" selection-start-column="5" selection-end-line="25" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/gateway/src/main/java/com/msa/gateway/domain/Account.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="193">
-          <caret line="15" column="20" lean-forward="true" selection-start-line="15" selection-start-column="20" selection-end-line="15" selection-end-column="20" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -785,57 +781,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/member/src/main/java/com/msa/member/service/MemberService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="231">
-          <caret line="11" column="55" selection-start-line="11" selection-start-column="55" selection-end-line="11" selection-end-column="55" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/member/src/main/java/com/msa/member/domain/Member.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="126">
-          <caret line="6" column="37" selection-start-line="6" selection-start-column="37" selection-end-line="6" selection-end-column="37" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/member/src/main/java/com/msa/member/repository/MemberRepository.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="189">
           <caret line="9" column="49" selection-start-line="9" selection-start-column="49" selection-end-line="9" selection-end-column="49" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/member/src/main/java/com/msa/member/dtos/ResponseMessage.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="588">
-          <caret line="29" column="28" selection-start-line="29" selection-start-column="28" selection-end-line="29" selection-end-column="28" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/member/src/main/java/com/msa/member/service/impl/MemberServiceImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="519">
-          <caret line="49" column="84" selection-start-line="49" selection-start-column="84" selection-end-line="49" selection-end-column="84" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/gateway/src/main/java/com/msa/gateway/controller/ApiController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="378">
-          <caret line="18" column="5" lean-forward="true" selection-start-line="18" selection-start-column="5" selection-end-line="18" selection-end-column="5" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -909,43 +858,244 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/gateway/src/main/resources/application.properties">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="483">
-          <caret line="23" column="44" lean-forward="true" selection-start-line="23" selection-start-column="44" selection-end-line="23" selection-end-column="44" />
+        <state relative-caret-position="588">
+          <caret line="28" selection-start-line="28" selection-end-line="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/gateway/src/main/java/com/msa/gateway/filters/PostFilter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="532">
+          <caret line="36" lean-forward="true" selection-start-line="36" selection-end-line="36" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/member/src/main/java/com/msa/member/service/MemberService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="273">
+          <caret line="14" lean-forward="true" selection-start-line="14" selection-end-line="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/gateway/src/main/java/com/msa/gateway/config/CreateBeanConfig.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="273">
+          <caret line="13" selection-start-line="13" selection-end-line="13" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#302#303#0" expanded="true" />
+            <element signature="e#327#328#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/gateway/src/main/java/com/msa/gateway/repository/AccountRepository.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="252">
+          <caret line="12" lean-forward="true" selection-start-line="12" selection-end-line="12" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/gateway/src/main/java/com/msa/gateway/service/AccountContextService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="246">
+          <caret line="14" column="13" selection-start-line="14" selection-start-column="13" selection-end-line="14" selection-end-column="13" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/gateway/src/main/java/com/msa/gateway/domain/Account.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="819">
+          <caret line="39" column="24" selection-start-line="39" selection-start-column="24" selection-end-line="39" selection-end-column="24" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/member/src/main/java/com/msa/member/domain/Member.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="383">
+          <caret line="45" lean-forward="true" selection-start-line="45" selection-end-line="45" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/member/src/main/java/com/msa/member/exception/MemberExceptionHandler.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="399">
-          <caret line="28" column="81" selection-start-line="28" selection-start-column="81" selection-end-line="28" selection-end-column="81" />
+        <state relative-caret-position="378">
+          <caret line="27" column="92" selection-start-line="27" selection-start-column="92" selection-end-line="27" selection-end-column="92" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/gateway/src/main/java/com/msa/gateway/GatewayApplication.java">
+    <entry file="file://$PROJECT_DIR$/gateway/src/main/java/com/msa/gateway/dtos/TokenDto.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="189">
-          <caret line="13" lean-forward="true" selection-start-line="13" selection-end-line="13" />
+        <state relative-caret-position="105">
+          <caret line="7" column="13" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/member/src/main/java/com/msa/member/MemberApplication.java">
+    <entry file="file://$PROJECT_DIR$/gateway/src/main/java/com/msa/gateway/dtos/ResponseMessage.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="168">
-          <caret line="11" lean-forward="true" selection-start-line="11" selection-end-line="11" />
+        <state relative-caret-position="273">
+          <caret line="19" column="30" selection-start-line="19" selection-start-column="30" selection-end-line="19" selection-end-column="30" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/gateway/src/main/java/com/msa/gateway/config/RestTemplateConfig.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="357">
+          <caret line="17" column="53" lean-forward="true" selection-start-line="17" selection-start-column="53" selection-end-line="17" selection-end-column="53" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#225#226#0" expanded="true" />
+            <element signature="e#282#283#0" expanded="true" />
+            <element signature="e#628#629#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/member/src/main/java/com/msa/member/dtos/ResponseMessage.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="273">
+          <caret line="19" column="30" selection-start-line="19" selection-start-column="30" selection-end-line="19" selection-end-column="30" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/gateway/src/main/java/com/msa/gateway/controller/ApiController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="294">
+          <caret line="19" lean-forward="true" selection-start-line="19" selection-end-line="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/gateway/src/main/java/com/msa/gateway/config/CharSetConfig.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="483">
+          <caret line="24" column="39" selection-start-line="24" selection-start-column="39" selection-end-line="24" selection-end-column="39" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/member/src/main/java/com/msa/member/config/CharSetConfig.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="147">
+          <caret line="14" column="4" selection-start-line="14" selection-start-column="4" selection-end-line="25" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/gateway/src/main/java/com/msa/gateway/exception/MemberExceptionHandler.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="243">
+          <caret line="25" column="62" selection-start-line="25" selection-start-column="31" selection-end-line="25" selection-end-column="62" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/gateway/src/main/java/com/msa/gateway/service/MemberService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="147">
+          <caret line="7" column="14" selection-start-line="7" selection-start-column="14" selection-end-line="7" selection-end-column="14" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/gateway/src/main/java/com/msa/gateway/service/impl/MemberServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="445">
+          <caret line="45" selection-start-line="45" selection-end-line="45" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/member/src/main/java/com/msa/member/service/impl/MemberServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="472">
+          <caret line="50" column="57" lean-forward="true" selection-start-line="50" selection-start-column="57" selection-end-line="50" selection-end-column="57" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/member/src/main/java/com/msa/member/controller/MemberController.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="399">
-          <caret line="25" selection-start-line="25" selection-end-line="25" />
+          <caret line="25" lean-forward="true" selection-start-line="25" selection-end-line="26" selection-end-column="35" />
+          <folding>
+            <element signature="e#899#900#0" expanded="true" />
+            <element signature="e#956#957#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/gateway/src/main/java/com/msa/gateway/filters/PostFilter.java">
+    <entry file="file://$PROJECT_DIR$/member/src/main/java/com/msa/member/MemberApplication.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="70">
-          <caret line="8" column="44" selection-start-line="8" selection-start-column="44" selection-end-line="8" selection-end-column="44" />
+        <state relative-caret-position="168">
+          <caret line="18" lean-forward="true" selection-start-line="18" selection-end-line="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/gateway/src/main/java/com/msa/gateway/config/CustomRestTemplateCustomizer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="168">
+          <caret line="8" column="80" lean-forward="true" selection-start-line="8" selection-start-column="80" selection-end-line="8" selection-end-column="80" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/gateway/src/main/java/com/msa/gateway/config/CustomClientHttpRequestInterceptor.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="288">
+          <caret line="16" column="34" lean-forward="true" selection-start-line="16" selection-start-column="34" selection-end-line="16" selection-end-column="34" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/gateway/src/test/java/com/msa/gateway/controller/MemberControllerTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="516">
+          <caret line="60" lean-forward="true" selection-start-line="60" selection-end-line="60" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/gateway/src/main/java/com/msa/gateway/GatewayApplication.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="273">
+          <caret line="15" lean-forward="true" selection-start-line="15" selection-end-line="15" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/gateway/src/main/java/com/msa/gateway/controller/MemberController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="315">
+          <caret line="15" column="34" selection-start-line="15" selection-start-column="34" selection-end-line="15" selection-end-column="34" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

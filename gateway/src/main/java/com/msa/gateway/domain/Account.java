@@ -1,9 +1,11 @@
 package com.msa.gateway.domain;
 
+import com.fasterxml.jackson.annotation.JsonFormat;
 import lombok.Getter;
 import lombok.Setter;
 
 import javax.persistence.*;
+import java.time.LocalDateTime;
 
 @Entity
 @Getter @Setter
@@ -33,4 +35,15 @@ public class Account {
 
     @Column(name = "PROFILE_HREF")
     private String profileHref;
+
+    @Transient
+    private String email;
+
+    @Transient
+    private String phoneNumber;
+
+    @Transient
+    @JsonFormat(pattern = "yyyy-MM-dd HH:mm:ss")
+    private LocalDateTime updateTime;
+
 }
