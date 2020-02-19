@@ -1,4 +1,4 @@
-package com.msa.member.dtos;
+package com.msa.gateway.dtos;
 
 import lombok.Getter;
 import lombok.Setter;
