@@ -7,8 +7,10 @@ import com.msa.gateway.service.MemberService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.web.client.RestTemplateBuilder;
 import org.springframework.dao.DataIntegrityViolationException;
+import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
+import org.springframework.web.client.HttpClientErrorException;
 import org.springframework.web.client.RestTemplate;
 
 @Service
@@ -27,12 +29,23 @@ public class MemberServiceImpl implements MemberService {
     }
 
     @Override
-    public ResponseEntity<Object> memberSignup(Account account) {
+    public ResponseEntity<Object> memberSignUp(Account account) {
+        ResponseEntity<Object> responseEntity = null;
         try{
             accountRepository.save(account);
-        }catch (DataIntegrityViolationException ex){
+            responseEntity = restTemplate.postForEntity(BASE_URL+"/signup", account, Object.class);
+            int status = responseEntity.getStatusCodeValue();
+            if(status != 200){
+                throw new DataIntegrityViolationException("");
+            }
+        }catch (DataIntegrityViolationException ex){ // gateway error
             throw new DataIntegrityViolationException("", ex);
+        }catch (HttpClientErrorException ex){ // restTemplate error
+            throw new HttpClientErrorException(HttpStatus.BAD_REQUEST);
         }
-        return restTemplate.postForEntity(BASE_URL+"/signup", account, Object.class);
+
+        return responseEntity;
     }
+
+
 }

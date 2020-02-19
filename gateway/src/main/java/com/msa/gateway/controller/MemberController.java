@@ -1,19 +1,21 @@
 package com.msa.gateway.controller;
 
-
-import com.msa.gateway.security.tokens.PostAuthorizationToken;
-import org.springframework.security.core.Authentication;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import com.msa.gateway.domain.Account;
+import com.msa.gateway.service.MemberService;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.*;
 
 @RestController
 @RequestMapping("/user")
 public class MemberController {
 
-    @GetMapping("/signup")
-    public String getUsername(Authentication authentication){
+    @Autowired
+    private MemberService memberService;
 
-        return null;
+    @PostMapping(value = "/signup")
+    ResponseEntity<Object> memberSignUp(@RequestBody Account account){
+        return memberService.memberSignUp(account);
     }
+
 }

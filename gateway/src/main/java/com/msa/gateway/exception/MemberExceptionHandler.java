@@ -8,6 +8,7 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.util.StringUtils;
 import org.springframework.web.bind.annotation.ControllerAdvice;
 import org.springframework.web.bind.annotation.ExceptionHandler;
+import org.springframework.web.client.HttpClientErrorException;
 import org.springframework.web.servlet.mvc.method.annotation.ResponseEntityExceptionHandler;
 
 import java.util.NoSuchElementException;
@@ -27,6 +28,13 @@ public class MemberExceptionHandler extends ResponseEntityExceptionHandler {
         String errorMessage = getErrorMessage(ex.getMessage(), ex.toString());
         ResponseMessage responseMessage = new ResponseMessage(HttpStatus.BAD_REQUEST.value(), "회원가입에 실패 했습니다.", errorMessage);
         return new ResponseEntity<Object>(responseMessage, HttpStatus.BAD_REQUEST);
+    }
+
+    @ExceptionHandler(value = {HttpClientErrorException.class})
+    public ResponseEntity<Object> httpClientErrorException(HttpClientErrorException ex){
+        String errorMessage = getErrorMessage(ex.getMessage(), ex.toString());
+        ResponseMessage responseMessage = new ResponseMessage(HttpStatus.BAD_REQUEST.value(), "잘못된 요청 입니다.", errorMessage);
+        return new ResponseEntity<>(responseMessage, HttpStatus.BAD_REQUEST);
     }
 
     private String getErrorMessage(String message, String s) {
