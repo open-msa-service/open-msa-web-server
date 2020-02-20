@@ -38,7 +38,7 @@ public class FormLoginAuthenticationProvider implements AuthenticationProvider {
             return PostAuthorizationToken.getTokenFromAccountContext(AccountContext.fromAccountModel(account));
         }
 
-        throw  new NoSuchElementException("인증 정보가 정확하지 않습니다.");
+        throw new NoSuchElementException("인증 정보가 정확하지 않습니다.");
     }
 
     @Override
