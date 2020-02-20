@@ -4,6 +4,7 @@ import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.msa.gateway.domain.Account;
 import com.msa.gateway.domain.UserRole;
+import com.msa.gateway.dtos.FormLoginDto;
 import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
@@ -13,14 +14,22 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.autoconfigure.web.servlet.AutoConfigureMockMvc;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.boot.web.client.RestTemplateBuilder;
+import org.springframework.http.HttpHeaders;
+import org.springframework.http.HttpStatus;
 import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
 import org.springframework.test.web.servlet.MockMvc;
 import org.springframework.test.web.servlet.MvcResult;
 import org.springframework.web.client.RestTemplate;
 
+import java.util.HashMap;
+import java.util.Map;
+
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.get;
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.post;
 import static org.springframework.test.web.servlet.result.MockMvcResultHandlers.print;
+import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.status;
 
 @SpringBootTest
 @AutoConfigureMockMvc
@@ -44,6 +53,34 @@ class MemberControllerTest {
     private MockMvc mockMvc;
 
     @Test
+    @DisplayName("로그인 및 접근 테스트")
+    void loginAndAccessTest() throws Exception {
+        FormLoginDto formLoginDto = new FormLoginDto();
+        formLoginDto.setId("testId9");
+        formLoginDto.setPassword("test");
+        String contents = mapper.writeValueAsString(formLoginDto);
+        MvcResult mvcResult = mockMvc.perform(post("/formlogin").content(contents).contentType(MediaType.APPLICATION_JSON))
+                .andExpect(status().isOk()).andReturn();
+        String token = (String) mvcResult.getResponse().getHeaderValue("Authorization");
+        log.info("Token Info : {}", token);
+
+        Map<String, String> authMap = new HashMap<>();
+        authMap.put("Authorization", token);
+
+        HttpHeaders headers = new HttpHeaders();
+        headers.setAll(authMap);
+
+        MvcResult mvcResult1 = mockMvc.perform(get("/api/hello").headers(headers).contentType(MediaType.APPLICATION_JSON))
+                .andExpect(status().isOk()).andReturn();
+        String userId = mvcResult1.getResponse().getContentAsString();
+        log.info("User Id : {}", userId);
+        assertEquals("testId9", userId);
+    }
+
+
+
+    @Test
+    @Disabled
     @DisplayName("회원가입 연동 TEST")
     void combineSignupTest() throws Exception {
         Account account = new Account();
