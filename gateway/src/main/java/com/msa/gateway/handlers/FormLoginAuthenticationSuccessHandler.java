@@ -21,6 +21,9 @@ import java.io.IOException;
 @Component
 public class FormLoginAuthenticationSuccessHandler implements AuthenticationSuccessHandler {
 
+    private static final String HEADER_STRING = "Authorization";
+    private static final String TOKEN_PREFIX = "Bearer ";
+
     @Autowired
     private JwtFactory jwtFactory;
 
@@ -44,7 +47,7 @@ public class FormLoginAuthenticationSuccessHandler implements AuthenticationSucc
     private void processResponse(HttpServletResponse response, TokenDto dto) throws JsonProcessingException, IOException{
         response.setContentType(MediaType.APPLICATION_JSON_UTF8_VALUE);
         response.setStatus(HttpStatus.OK.value());
-        response.getWriter().write(objectMapper.writeValueAsString(dto));
+        response.addHeader(HEADER_STRING, TOKEN_PREFIX + dto.getToken());
     }
 
 

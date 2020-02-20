@@ -53,11 +53,6 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
     private AccountContextService accountContextService;
 
     @Bean
-    public PasswordEncoder getPasswordEncoder(){
-        return new BCryptPasswordEncoder();
-    }
-
-    @Bean
     public ObjectMapper getObjectMapper(){
         return new ObjectMapper();
     }

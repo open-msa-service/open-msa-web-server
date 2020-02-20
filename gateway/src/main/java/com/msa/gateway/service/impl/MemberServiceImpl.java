@@ -5,10 +5,14 @@ import com.msa.gateway.domain.Account;
 import com.msa.gateway.repository.AccountRepository;
 import com.msa.gateway.service.MemberService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.boot.web.client.RestTemplateBuilder;
+import org.springframework.context.annotation.Bean;
 import org.springframework.dao.DataIntegrityViolationException;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
+import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
+import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
 import org.springframework.web.client.HttpClientErrorException;
 import org.springframework.web.client.RestTemplate;
@@ -21,6 +25,9 @@ public class MemberServiceImpl implements MemberService {
     @Autowired
     private AccountRepository accountRepository;
 
+    @Autowired
+    private PasswordEncoder passwordEncoder;
+
     private RestTemplate restTemplate;
 
     @Autowired
@@ -30,6 +37,8 @@ public class MemberServiceImpl implements MemberService {
 
     @Override
     public ResponseEntity<Object> memberSignUp(Account account) {
+        String password = account.getPassword();
+        account.setPassword(passwordEncoder.encode(password));
         ResponseEntity<Object> responseEntity = null;
         try{
             accountRepository.save(account);
@@ -46,6 +55,5 @@ public class MemberServiceImpl implements MemberService {
 
         return responseEntity;
     }
-
 
 }

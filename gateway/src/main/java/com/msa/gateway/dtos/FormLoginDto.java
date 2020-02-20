@@ -12,4 +12,5 @@ public class FormLoginDto {
 
     @JsonProperty("password")
     String password;
+
 }

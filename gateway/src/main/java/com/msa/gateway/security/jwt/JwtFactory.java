@@ -8,13 +8,14 @@ import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Component;
 
 import java.io.UnsupportedEncodingException;
+import java.util.Date;
 
 
 @Component
 public class JwtFactory {
 
     private static final Logger log = LoggerFactory.getLogger(JwtFactory.class);
-
+    private static final int EXPIRATION_TIME = 864_000_000; // 10days
     private static String singingKey = "jwtkey";
 
     public String generateToken(AccountContext context){
@@ -25,6 +26,7 @@ public class JwtFactory {
                     .withIssuer("jongmin")
                     .withClaim("USERNAME", context.getAccount().getUserId())
                     .withClaim("USER_ROLE", context.getAccount().getUserRole().getRoleName())
+                    .withExpiresAt(new Date(System.currentTimeMillis() + EXPIRATION_TIME))
                     .sign(generateAlgorithm());
         }catch (Exception e){
             log.error(e.getMessage());
