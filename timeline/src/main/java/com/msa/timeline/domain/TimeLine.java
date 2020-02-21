@@ -4,6 +4,7 @@ package com.msa.timeline.domain;
 import com.fasterxml.jackson.annotation.JsonFormat;
 import lombok.Getter;
 import lombok.Setter;
+import org.hibernate.annotations.UpdateTimestamp;
 
 import javax.persistence.*;
 import java.time.LocalDateTime;
@@ -27,18 +28,18 @@ public class TimeLine {
     @Enumerated(value = EnumType.STRING)
     private Scope scope;
 
-    @Basic(optional = false)
+    @UpdateTimestamp
     @JsonFormat(pattern = "yyyy-MM-dd")
-    @Column(name = "UPDATE_TIME", nullable = false, insertable = false, updatable = false)
+    @Column(name = "UPDATE_TIME", nullable = false, insertable = false)
     private LocalDateTime updateTime;
 
     @Column(name = "USER_ID", nullable = false)
     private String userId;
 
-    @OneToMany(mappedBy = "timeline", fetch = FetchType.LAZY)
+    @OneToMany(mappedBy = "time_id", fetch = FetchType.LAZY)
     private List<Like> likes;
 
-    @OneToMany(mappedBy = "timeline", fetch = FetchType.LAZY)
+    @OneToMany(mappedBy = "time_id", fetch = FetchType.LAZY)
     private List<Comment> comments;
 
 }
