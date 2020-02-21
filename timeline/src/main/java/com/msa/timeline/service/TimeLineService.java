@@ -11,6 +11,8 @@ import javax.transaction.Transactional;
 @Transactional
 public interface TimeLineService {
 
+    ResponseEntity<Object> searchAllTimeLine();
+
     ResponseEntity<Object> writeTimeLine(TimeLine timeLine);
 
     ResponseEntity<Object> writeComments(Comment comment);
