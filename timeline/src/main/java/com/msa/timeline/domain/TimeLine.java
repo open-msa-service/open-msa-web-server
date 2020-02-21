@@ -18,7 +18,7 @@ public class TimeLine {
     @Id
     @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "TIME_SEQ")
     @SequenceGenerator(sequenceName = "TIME_SEQ", allocationSize = 1, name = "TIME_SEQ")
-    private Long time_id;
+    private Long timeId;
 
     @Lob
     @Column(name = "CONTENT", nullable = false)
@@ -36,10 +36,10 @@ public class TimeLine {
     @Column(name = "USER_ID", nullable = false)
     private String userId;
 
-    @OneToMany(mappedBy = "time_id", fetch = FetchType.LAZY)
+    @OneToMany(mappedBy = "timeId", fetch = FetchType.EAGER)
     private List<Like> likes;
 
-    @OneToMany(mappedBy = "time_id", fetch = FetchType.LAZY)
+    @OneToMany(mappedBy = "timeId", fetch = FetchType.EAGER)
     private List<Comment> comments;
 
 }
