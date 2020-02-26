@@ -1,6 +1,7 @@
 package com.msa.gateway.filters;
 
 import com.msa.gateway.handlers.JwtAuthenticationFailureHandler;
+import com.msa.gateway.security.InvalidJwtException;
 import com.msa.gateway.security.jwt.HeaderTokenExtractor;
 import com.msa.gateway.security.tokens.JwtPreProcessingToken;
 import org.slf4j.Logger;
@@ -39,10 +40,15 @@ public class JwtAuthenticationFilter extends AbstractAuthenticationProcessingFil
     @Override
     public Authentication attemptAuthentication(HttpServletRequest httpServletRequest, HttpServletResponse httpServletResponse) throws AuthenticationException, IOException, ServletException {
         String tokenPayload = httpServletRequest.getHeader("Authorization");
-
-        JwtPreProcessingToken token = new JwtPreProcessingToken(this.extractor.extract(tokenPayload));
-
-        return this.getAuthenticationManager().authenticate(token);
+        log.info("Request Token Payload ..................{}", tokenPayload);
+        try{
+            String extractToken = this.extractor.extract(tokenPayload);
+            log.info("Request Token ..................{}", extractToken);
+            JwtPreProcessingToken token = new JwtPreProcessingToken(extractToken);
+            return this.getAuthenticationManager().authenticate(token);
+        }catch (InvalidJwtException ex){
+            throw new InvalidJwtException("접근 권한이 없습니다.");
+        }
     }
 
     @Override

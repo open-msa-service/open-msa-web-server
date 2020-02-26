@@ -46,12 +46,11 @@ public class MemberServiceImpl implements MemberService {
         String password = account.getPassword();
         account.setPassword(passwordEncoder.encode(password));
         ResponseEntity<Object> responseEntity = null;
+        // 아이디 중복체크
+        if(accountRepository.existsByUserId(account.getUserId())){
+            throw new DuplicateKeyException("");
+        }
         try{
-            // 아이디 중복체크
-            if(accountRepository.existsByUserId(account.getUserId())){
-                throw new DuplicateKeyException("");
-            }
-
             accountRepository.save(account);
             responseEntity = restTemplate.postForEntity(BASE_URL+"/signup", account, Object.class);
             int status = responseEntity.getStatusCodeValue();

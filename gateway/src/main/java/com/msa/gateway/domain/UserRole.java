@@ -24,4 +24,5 @@ public enum UserRole {
         return Arrays.stream(UserRole.values()).filter(r->r.isCorrectName(roleName))
                 .findFirst().orElseThrow(()->new NoSuchElementException("검색된 권한이 없습니다."));
     }
+
 }

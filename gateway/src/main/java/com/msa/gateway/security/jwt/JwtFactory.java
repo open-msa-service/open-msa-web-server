@@ -15,7 +15,7 @@ import java.util.Date;
 public class JwtFactory {
 
     private static final Logger log = LoggerFactory.getLogger(JwtFactory.class);
-    private static final int EXPIRATION_TIME = 864_000_000; // 10days
+    private static final int EXPIRATION_TIME = 86_400_000; // 1days
     private static String singingKey = "jwtkey";
 
     public String generateToken(AccountContext context){
