@@ -40,10 +40,8 @@ public class JwtAuthenticationFilter extends AbstractAuthenticationProcessingFil
     @Override
     public Authentication attemptAuthentication(HttpServletRequest httpServletRequest, HttpServletResponse httpServletResponse) throws AuthenticationException, IOException, ServletException {
         String tokenPayload = httpServletRequest.getHeader("Authorization");
-        log.info("Request Token Payload ..................{}", tokenPayload);
         try{
             String extractToken = this.extractor.extract(tokenPayload);
-            log.info("Request Token ..................{}", extractToken);
             JwtPreProcessingToken token = new JwtPreProcessingToken(extractToken);
             return this.getAuthenticationManager().authenticate(token);
         }catch (InvalidJwtException ex){

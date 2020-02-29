@@ -42,7 +42,7 @@ public class MemberServiceImpl implements MemberService {
     @Override
     public ResponseEntity<Object> memberSignUp(Account account) {
         account.setUserRole(UserRole.USER);
-
+        account.setProfileHref("/static/images/default_image.png");
         String password = account.getPassword();
         account.setPassword(passwordEncoder.encode(password));
         ResponseEntity<Object> responseEntity = null;

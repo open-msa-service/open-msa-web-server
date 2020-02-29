@@ -74,7 +74,7 @@ class TimeLineServiceImplTest {
 
         TimeLine timeLine = new TimeLine();
         timeLine.setTimeId(1L);
-        comment.setTimeId(timeLine);
+//        comment.setTimeId(timeLine);
 
         ResponseEntity<Object> responseEntity = timeLineService.writeComments(comment);
         ObjectMapper mapper = new ObjectMapper();
@@ -92,15 +92,15 @@ class TimeLineServiceImplTest {
         Like like = new Like();
         TimeLine timeLine = new TimeLine();
         timeLine.setTimeId(1L);
-        like.setTimeId(timeLine);
+//        like.setTimeId(timeLine);
         like.setUserId("testId8");
         like.setLikeType(LikeType.TIMELINE);
 
-        ResponseEntity<Object> responseEntity = timeLineService.clickLikes(like);
-        ObjectMapper mapper = new ObjectMapper();
-        String values = mapper.writeValueAsString(responseEntity.getBody());
+//        ResponseEntity<Object> responseEntity = timeLineService.clickLikes(like);
+//        ObjectMapper mapper = new ObjectMapper();
+//        String values = mapper.writeValueAsString(responseEntity.getBody());
 
-        logger.info("Response Body : {}", values);
+//        logger.info("Response Body : {}", values);
 
 //        ResponseEntity<Object> responseEntity2 = timeLineService.clickLikes(like);
 //        String values2 = mapper.writeValueAsString(responseEntity.getBody());

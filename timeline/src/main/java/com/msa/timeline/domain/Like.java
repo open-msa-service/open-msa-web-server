@@ -18,13 +18,13 @@ public class Like {
     @Column(name = "USER_ID")
     private String userId;
 
-    @ManyToOne
-    @JoinColumn(name = "timeId")
-    private TimeLine timeId;
+//    @ManyToOne
+//    @JoinColumn(name = "timeId")
+//    private TimeLine timeId;
 
-    @ManyToOne
-    @JoinColumn(name = "commentId")
-    private Comment commentId;
+//    @ManyToOne
+//    @JoinColumn(name = "commentId")
+//    private Comment commentId;
 
     @Enumerated(value = EnumType.STRING)
     private LikeType likeType;

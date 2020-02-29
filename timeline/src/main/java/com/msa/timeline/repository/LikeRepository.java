@@ -8,8 +8,8 @@ import org.springframework.data.jpa.repository.JpaRepository;
 
 public interface LikeRepository extends JpaRepository<Like, Long> {
 
-    long countByUserIdAndTimeId(String userId, TimeLine timeId);
+//    long countByUserIdAndTimeId(String userId, TimeLine timeId);
 
-    long countByUserIdAndCommentId(String userId, Comment commentId);
+//    long countByUserIdAndCommentId(String userId, Comment commentId);
 
 }
