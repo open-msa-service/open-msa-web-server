@@ -13,17 +13,20 @@ public class Like {
     @Id
     @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "LIKE_SEQ")
     @SequenceGenerator(sequenceName = "LIKE_SEQ", allocationSize = 1, name = "LIKE_SEQ")
-    private Long like_id;
+    private Long likeId;
 
+    @Column(name = "USER_ID")
     private String userId;
 
-    @ManyToOne
-    @JoinColumn(name = "time_id")
-    private TimeLine time_id;
+//    @ManyToOne
+//    @JoinColumn(name = "timeId")
+//    private TimeLine timeId;
 
-    @ManyToOne
-    @JoinColumn(name = "comment_id")
-    private Comment comment_id;
+//    @ManyToOne
+//    @JoinColumn(name = "commentId")
+//    private Comment commentId;
 
+    @Enumerated(value = EnumType.STRING)
+    private LikeType likeType;
 
 }

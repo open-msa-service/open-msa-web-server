@@ -5,6 +5,7 @@ import com.fasterxml.jackson.annotation.JsonFormat;
 import lombok.Getter;
 import lombok.Setter;
 import org.hibernate.annotations.UpdateTimestamp;
+import org.springframework.web.multipart.MultipartFile;
 
 import javax.persistence.*;
 import java.time.LocalDateTime;
@@ -18,7 +19,7 @@ public class TimeLine {
     @Id
     @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "TIME_SEQ")
     @SequenceGenerator(sequenceName = "TIME_SEQ", allocationSize = 1, name = "TIME_SEQ")
-    private Long time_id;
+    private Long timeId;
 
     @Lob
     @Column(name = "CONTENT", nullable = false)
@@ -28,18 +29,24 @@ public class TimeLine {
     @Enumerated(value = EnumType.STRING)
     private Scope scope;
 
+    @Column(name = "FILE_LOCATION")
+    private String fileLocation;
+
+    @Column(name = "USER_ID", nullable = false)
+    private String userId;
+
     @UpdateTimestamp
     @JsonFormat(pattern = "yyyy-MM-dd")
     @Column(name = "UPDATE_TIME", nullable = false, insertable = false)
     private LocalDateTime updateTime;
 
-    @Column(name = "USER_ID", nullable = false)
-    private String userId;
+    @Transient
+    private String[] fileNameList;
 
-    @OneToMany(mappedBy = "time_id", fetch = FetchType.LAZY)
-    private List<Like> likes;
-
-    @OneToMany(mappedBy = "time_id", fetch = FetchType.LAZY)
-    private List<Comment> comments;
+//    @OneToMany(mappedBy = "timeId", fetch = FetchType.EAGER)
+//    private List<Like> likes;
+//
+//    @OneToMany(mappedBy = "timeId", fetch = FetchType.EAGER)
+//    private List<Comment> comments;
 
 }

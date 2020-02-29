@@ -1,5 +1,6 @@
 package com.msa.gateway.handlers;
 
+import com.auth0.jwt.exceptions.JWTVerificationException;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.security.core.AuthenticationException;
@@ -19,5 +20,6 @@ public class JwtAuthenticationFailureHandler implements AuthenticationFailureHan
     @Override
     public void onAuthenticationFailure(HttpServletRequest httpServletRequest, HttpServletResponse httpServletResponse, AuthenticationException e) throws IOException, ServletException {
         log.error(e.getMessage());
+        throw new JWTVerificationException("");
     }
 }

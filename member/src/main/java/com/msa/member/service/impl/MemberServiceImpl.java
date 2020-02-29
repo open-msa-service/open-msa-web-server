@@ -4,6 +4,8 @@ import com.msa.member.domain.Member;
 import com.msa.member.dtos.ResponseMessage;
 import com.msa.member.repository.MemberRepository;
 import com.msa.member.service.MemberService;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.dao.DataIntegrityViolationException;
 import org.springframework.http.HttpStatus;
@@ -16,6 +18,8 @@ import java.util.Optional;
 
 @Service
 public class MemberServiceImpl implements MemberService {
+
+    private static final Logger logger = LoggerFactory.getLogger(MemberServiceImpl.class);
 
     @Autowired
     private MemberRepository memberRepository;
@@ -33,6 +37,7 @@ public class MemberServiceImpl implements MemberService {
 
     @Override
     public ResponseEntity<Object> memberSearchByUserId(String userId) {
+        logger.info("MemberSearchByUserId userId............{}", userId);
         Member member = Optional.of(memberRepository.findByUserId(userId)).get()
                 .orElseThrow(NoSuchElementException::new);
         responseMessage = new ResponseMessage(HttpStatus.OK.value(), "사용자 ID:" + userId + "의 회원정보를 조회했습니다.", null);
