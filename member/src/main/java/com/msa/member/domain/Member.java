@@ -48,7 +48,7 @@ public class Member {
     private String statusMessage;
 
     @Column(name = "INTRODUCE_MESSAGE")
-    private String introduceMessge;
+    private String introduceMessage;
     
     @JsonFormat(pattern = "yyyy-MM-dd HH:mm:ss")
     @Column(name = "UPDATE_TIME", nullable = false, insertable = false, updatable = false)
