@@ -14,7 +14,9 @@ public class FilterSkipMatcher implements RequestMatcher {
     private RequestMatcher processingMatcher;
 
     public FilterSkipMatcher(List<String> pathToSkip, String processingPath){
-        this.orRequestMatcher = new OrRequestMatcher(pathToSkip.stream().map(p->new AntPathRequestMatcher(p)).collect(Collectors.toList()));
+        List<RequestMatcher> requestMatchers = pathToSkip.stream().map(p->new AntPathRequestMatcher(p)).collect(Collectors.toList());
+
+        this.orRequestMatcher = new OrRequestMatcher(requestMatchers);
         this.processingMatcher = new AntPathRequestMatcher(processingPath);
     }
 

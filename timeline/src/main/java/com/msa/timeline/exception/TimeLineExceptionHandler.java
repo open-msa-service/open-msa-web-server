@@ -1,6 +1,7 @@
 package com.msa.timeline.exception;
 
 import com.msa.timeline.dtos.ResponseMessage;
+import org.apache.tomcat.util.http.fileupload.FileUploadException;
 import org.springframework.dao.DataIntegrityViolationException;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -16,6 +17,13 @@ public class TimeLineExceptionHandler extends ResponseEntityExceptionHandler {
     public ResponseEntity<Object> dataIntegrityViolationException(DataIntegrityViolationException ex){
         String errorMessage = getErrorMessage(ex.getMessage(), ex.toString());
         ResponseMessage responseMessage = new ResponseMessage(HttpStatus.BAD_REQUEST.value(), "게시글 작성에 실패했습니다.", errorMessage);
+        return new ResponseEntity<Object>(responseMessage, HttpStatus.BAD_REQUEST);
+    }
+
+    @ExceptionHandler(value = {FileUploadException.class})
+    public ResponseEntity<Object> fileUploadException(FileUploadException ex){
+        String errorMessage = getErrorMessage(ex.getMessage(), ex.toString());
+        ResponseMessage responseMessage = new ResponseMessage(HttpStatus.BAD_REQUEST.value(), "파일 업로드에 실패 했습니다.", errorMessage);
         return new ResponseEntity<Object>(responseMessage, HttpStatus.BAD_REQUEST);
     }
 

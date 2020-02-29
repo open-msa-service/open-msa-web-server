@@ -44,6 +44,11 @@ public class TimeLineServiceImpl implements TimeLineService {
     @Override
     public ResponseEntity<Object> writeTimeLine(TimeLine timeLine) {
         try{
+            StringBuilder fileLocation = new StringBuilder();
+            for(String str : timeLine.getFileNameList()){
+                fileLocation.append(str.replaceAll(",", " ")).append(",");
+            }
+            timeLine.setFileLocation(fileLocation.toString());
             timeLineRepository.save(timeLine);
         }catch(DataIntegrityViolationException ex){
             throw new DataIntegrityViolationException("", ex);
@@ -63,30 +68,30 @@ public class TimeLineServiceImpl implements TimeLineService {
         return new ResponseEntity<>(responseMessage, HttpStatus.OK);
     }
 
-    @Override
-    public ResponseEntity<Object> clickLikes(Like like) {
-        try{
-            if(LikeType.TIMELINE.equals(like.getLikeType())){
-                long count = likeRepository.countByUserIdAndTimeId(like.getUserId(), like.getTimeId());
-                if(count > 0){
-                    likeRepository.delete(like);
-                }else{
-                    likeRepository.save(like);
-                }
-            }else{
-                long count = likeRepository.countByUserIdAndCommentId(like.getUserId(),like.getCommentId());
-                if(count > 0){
-                    likeRepository.delete(like);
-                }else{
-                    likeRepository.save(like);
-                }
-            }
-        }catch (DataIntegrityViolationException ex){
-            throw new DataIntegrityViolationException("", ex);
-        }
-        responseMessage = new ResponseMessage(HttpStatus.OK.value(), "좋아요 변경이 성공적으로 되었습니다.", null);
-        return new ResponseEntity<>(responseMessage, HttpStatus.OK);
-    }
+//    @Override
+//    public ResponseEntity<Object> clickLikes(Like like) {
+//        try{
+//            if(LikeType.TIMELINE.equals(like.getLikeType())){
+//                long count = likeRepository.countByUserIdAndTimeId(like.getUserId(), like.getTimeId());
+//                if(count > 0){
+//                    likeRepository.delete(like);
+//                }else{
+//                    likeRepository.save(like);
+//                }
+//            }else{
+//                long count = likeRepository.countByUserIdAndCommentId(like.getUserId(),like.getCommentId());
+//                if(count > 0){
+//                    likeRepository.delete(like);
+//                }else{
+//                    likeRepository.save(like);
+//                }
+//            }
+//        }catch (DataIntegrityViolationException ex){
+//            throw new DataIntegrityViolationException("", ex);
+//        }
+//        responseMessage = new ResponseMessage(HttpStatus.OK.value(), "좋아요 변경이 성공적으로 되었습니다.", null);
+//        return new ResponseEntity<>(responseMessage, HttpStatus.OK);
+//    }
 
 
 }

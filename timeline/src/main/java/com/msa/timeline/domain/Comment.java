@@ -23,11 +23,11 @@ public class Comment {
     @Column(name = "USER_ID", nullable = false)
     private String userId;
 
-    @ManyToOne
-    @JoinColumn(name = "timeId")
-    private TimeLine timeId;
-
-    @OneToMany(mappedBy = "commentId", fetch = FetchType.EAGER)
-    private List<Like> likes;
+//    @ManyToOne
+//    @JoinColumn(name = "timeId")
+//    private TimeLine timeId;
+//
+//    @OneToMany(mappedBy = "commentId", fetch = FetchType.EAGER)
+//    private List<Like> likes;
 
 }

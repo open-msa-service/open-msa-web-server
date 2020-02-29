@@ -11,4 +11,6 @@ public interface AccountRepository extends CrudRepository<Account, Long> {
 
     Optional<Account> findBySocialId(long socialId);
 
+    boolean existsByUserId(String userId);
+
 }

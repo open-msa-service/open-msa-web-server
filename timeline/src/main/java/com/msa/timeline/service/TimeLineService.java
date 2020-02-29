@@ -17,6 +17,6 @@ public interface TimeLineService {
 
     ResponseEntity<Object> writeComments(Comment comment);
 
-    ResponseEntity<Object> clickLikes(Like like);
+//    ResponseEntity<Object> clickLikes(Like like);
 
 }
