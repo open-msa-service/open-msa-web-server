@@ -4,6 +4,7 @@ package com.msa.member.exception;
 import com.msa.member.dtos.ResponseMessage;
 import org.apache.tomcat.util.http.fileupload.FileUploadException;
 import org.springframework.dao.DataIntegrityViolationException;
+import org.springframework.dao.IncorrectUpdateSemanticsDataAccessException;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.util.StringUtils;
@@ -36,6 +37,7 @@ public class MemberExceptionHandler extends ResponseEntityExceptionHandler {
         ResponseMessage responseMessage = new ResponseMessage(HttpStatus.BAD_REQUEST.value(), "파일 업로드에 실패 했습니다.", errorMessage);
         return new ResponseEntity<Object>(responseMessage, HttpStatus.BAD_REQUEST);
     }
+
 
     private String getErrorMessage(String message, String s) {
         String errorMessage = message;

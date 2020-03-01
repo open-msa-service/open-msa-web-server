@@ -22,10 +22,10 @@ public class Member {
     @Column(name = "USER_ID", unique = true)
     private String userId;
 
-    @Column(name = "USERNAME", nullable = false)
+    @Column(name = "USERNAME", nullable = false, updatable = false)
     private String username;
 
-    @Column(name = "PASSWORD", nullable = false)
+    @Column(name = "PASSWORD", nullable = false, updatable = false)
     private String password;
 
     @Enumerated(value = EnumType.STRING)
@@ -48,7 +48,7 @@ public class Member {
     private String statusMessage;
 
     @Column(name = "INTRODUCE_MESSAGE")
-    private String introduceMessge;
+    private String introduceMessage;
     
     @JsonFormat(pattern = "yyyy-MM-dd HH:mm:ss")
     @Column(name = "UPDATE_TIME", nullable = false, insertable = false, updatable = false)

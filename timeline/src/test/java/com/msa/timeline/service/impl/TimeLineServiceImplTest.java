@@ -61,7 +61,7 @@ class TimeLineServiceImplTest {
         timeLine.setContent("수정!!!222");
         timeLine.setUserId("testId9");
         timeLine.setScope(Scope.ALL);
-        assertDoesNotThrow(()->timeLineService.writeTimeLine(timeLine));
+//        assertDoesNotThrow(()->timeLineService.writeTimeLine(timeLine));
     }
 
     @Test
