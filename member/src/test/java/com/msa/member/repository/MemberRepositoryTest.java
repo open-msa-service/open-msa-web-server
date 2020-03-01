@@ -32,7 +32,24 @@ class MemberRepositoryTest {
     private Member member = new Member();
     private ObjectMapper mapper = new ObjectMapper();
 
+
+    @Test
+    @DisplayName("회원정보 수정 테스트")
+    void memberProfileUpdateTeest(){
+        member.setUserId("test");
+        member.setStatusMessage("상태 메시지!");
+        member.setEmail("test@test.com");
+        member.setPhoneNumber("010-2222-3333");
+        member.setProfileHref("/static/images/default_image.png");
+        member.setIntroduceMessage("");
+
+        assertDoesNotThrow(()->memberRepository.updateMember(member));
+
+    }
+
+
     @BeforeEach
+    @Disabled
     void settingMember(){
         this.member.setUserId("testId2");
         this.member.setPassword("test");
@@ -63,6 +80,7 @@ class MemberRepositoryTest {
     }
 
     @Test
+    @Disabled
     @DisplayName("회원가입 테스트")
     void memberSignupTest() throws JsonProcessingException {
         ResponseEntity<Object> response = memberService.memberSignUp(member);

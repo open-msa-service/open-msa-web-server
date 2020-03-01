@@ -22,10 +22,10 @@ public class Member {
     @Column(name = "USER_ID", unique = true)
     private String userId;
 
-    @Column(name = "USERNAME", nullable = false)
+    @Column(name = "USERNAME", nullable = false, updatable = false)
     private String username;
 
-    @Column(name = "PASSWORD", nullable = false)
+    @Column(name = "PASSWORD", nullable = false, updatable = false)
     private String password;
 
     @Enumerated(value = EnumType.STRING)
