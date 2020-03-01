@@ -24,14 +24,11 @@ public class TimeLineController {
     @Autowired
     private FileUploadDownloadService fileUploadDownloadService;
 
-    @PostMapping("/upload/image")
-    ResponseEntity<Object> uploadTimeimage(@RequestParam("file") MultipartFile[] file){
-        return fileUploadDownloadService.storeFile(file);
+    @PostMapping("/upload/content")
+    ResponseEntity<Object> uploadTimeimage(@RequestPart("file") MultipartFile[] file, @RequestPart("timeline")String timeline){
+        return timeLineService.writeTimeLine(file, timeline);
     }
 
-    @PostMapping("/upload/content")
-    ResponseEntity<Object> uploadTimeContent(@RequestBody TimeLine timeLine){
-        return timeLineService.writeTimeLine(timeLine);
-    }
+
 
 }
