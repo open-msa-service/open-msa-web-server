@@ -2,6 +2,8 @@ package com.msa.timeline.domain;
 
 
 import com.fasterxml.jackson.annotation.JsonFormat;
+import com.fasterxml.jackson.annotation.JsonManagedReference;
+import lombok.EqualsAndHashCode;
 import lombok.Getter;
 import lombok.Setter;
 import org.hibernate.annotations.UpdateTimestamp;
@@ -12,7 +14,6 @@ import java.time.LocalDateTime;
 import java.util.List;
 
 @Entity
-@Getter @Setter
 @Table(name = "TIMELINE")
 public class TimeLine {
 
@@ -43,10 +44,90 @@ public class TimeLine {
     @Transient
     private String[] fileNameList;
 
-//    @OneToMany(mappedBy = "timeId", fetch = FetchType.EAGER)
-//    private List<Like> likes;
-//
+    @Transient
+    private boolean isUpdated;
+
+    public boolean getIsUpdated(){
+        return this.isUpdated;
+    }
+
+    @OneToMany(mappedBy = "timeId", fetch = FetchType.EAGER)
+    @JsonManagedReference
+    private List<Like> likes;
+
 //    @OneToMany(mappedBy = "timeId", fetch = FetchType.EAGER)
 //    private List<Comment> comments;
 
+
+    public Long getTimeId() {
+        return timeId;
+    }
+
+    public void setTimeId(Long timeId) {
+        this.timeId = timeId;
+    }
+
+    public String getContent() {
+        return content;
+    }
+
+    public void setContent(String content) {
+        this.content = content;
+    }
+
+    public Scope getScope() {
+        return scope;
+    }
+
+    public void setScope(Scope scope) {
+        this.scope = scope;
+    }
+
+    public String getFileLocation() {
+        return fileLocation;
+    }
+
+    public void setFileLocation(String fileLocation) {
+        this.fileLocation = fileLocation;
+    }
+
+    public String getUserId() {
+        return userId;
+    }
+
+    public void setUserId(String userId) {
+        this.userId = userId;
+    }
+
+    public LocalDateTime getUpdateTime() {
+        return updateTime;
+    }
+
+    public void setUpdateTime(LocalDateTime updateTime) {
+        this.updateTime = updateTime;
+    }
+
+    public String[] getFileNameList() {
+        return fileNameList;
+    }
+
+    public void setFileNameList(String[] fileNameList) {
+        this.fileNameList = fileNameList;
+    }
+
+    public boolean isUpdated() {
+        return isUpdated;
+    }
+
+    public void setUpdated(boolean updated) {
+        isUpdated = updated;
+    }
+
+    public List<Like> getLikes() {
+        return likes;
+    }
+
+    public void setLikes(List<Like> likes) {
+        this.likes = likes;
+    }
 }

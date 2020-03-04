@@ -2,6 +2,7 @@ package com.msa.member.service.impl;
 
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.JsonMappingException;
+import com.fasterxml.jackson.databind.JsonNode;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.msa.member.domain.Member;
 import com.msa.member.dtos.ResponseMessage;
@@ -12,29 +13,36 @@ import org.hibernate.engine.jdbc.spi.SqlExceptionHelper;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.boot.web.client.RestTemplateBuilder;
 import org.springframework.dao.DataIntegrityViolationException;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
 import org.springframework.util.StringUtils;
+import org.springframework.web.client.HttpClientErrorException;
+import org.springframework.web.client.RestTemplate;
 import org.springframework.web.multipart.MultipartFile;
 import org.springframework.web.server.ResponseStatusException;
 
-import java.util.NoSuchElementException;
-import java.util.Optional;
+import java.util.*;
 
 @Service
 public class MemberServiceImpl implements MemberService {
 
+    private static final String BASE_URL = "http://localhost:8083/time";
     private static final Logger logger = LoggerFactory.getLogger(MemberServiceImpl.class);
 
-    @Autowired
-    private MemberRepository memberRepository;
+    @Autowired private MemberRepository memberRepository;
 
-    @Autowired
-    private FileUploadDownloadService fileUploadDownloadService;
+    @Autowired private FileUploadDownloadService fileUploadDownloadService;
 
     private ResponseMessage responseMessage;
+    private RestTemplate restTemplate;
+
+    @Autowired
+    MemberServiceImpl(RestTemplateBuilder builder){
+        this.restTemplate = builder.build();
+    }
 
     @Override
     public ResponseEntity<Object> memberSearchById(Long id){
@@ -52,6 +60,51 @@ public class MemberServiceImpl implements MemberService {
         responseMessage = new ResponseMessage(HttpStatus.OK.value(), "사용자 ID:" + userId + "의 회원정보를 조회했습니다.", null);
         responseMessage.setData(member, "member");
         return new ResponseEntity<Object>(responseMessage, HttpStatus.OK);
+    }
+
+    @Override
+    public ResponseEntity<Object> memberSerarchMyTimeline(String userId) {
+        ResponseEntity<Object> responseEntity = null;
+        Map<String, Object> responseMap = new HashMap<>();
+        try{
+            responseEntity = restTemplate.getForEntity(BASE_URL+"/user/"+userId, Object.class);
+            int status = responseEntity.getStatusCodeValue();
+            if(status != 200){
+                throw new DataIntegrityViolationException("");
+            }
+
+            String timeline = getTimeLineData(responseEntity);
+            Member member = Optional.of(memberRepository.findByUserId(userId).get()).orElseThrow(()->new DataIntegrityViolationException(""));
+
+            responseMap.put("timeline", timeline);
+            responseMap.put("member", member);
+
+        }catch (DataIntegrityViolationException ex){ // member error
+            throw new DataIntegrityViolationException("", ex);
+        }catch (HttpClientErrorException ex){ // restTemplate error
+            throw new HttpClientErrorException(HttpStatus.BAD_REQUEST);
+        }
+        responseMessage = new ResponseMessage(responseEntity.getStatusCodeValue(), "게시물을 성공적으로 가지고 왔습니다.",null);
+        responseMessage.setData(responseMap);
+
+        return new ResponseEntity<>(responseMessage, HttpStatus.OK);
+    }
+
+    private String getTimeLineData(ResponseEntity<Object> responseEntity) {
+        HashMap<String, Object> responseBody = (HashMap<String, Object>) responseEntity.getBody();
+        ObjectMapper objectMapper = new ObjectMapper();
+
+        String tempString;
+        try {
+            assert responseBody != null;
+            tempString = objectMapper.writeValueAsString(responseBody.get("data"));
+            JsonNode jsonNode = objectMapper.readValue(tempString, JsonNode.class).get("timeline");
+            tempString = objectMapper.writeValueAsString(jsonNode);
+
+        } catch (JsonProcessingException e) {
+            throw new DataIntegrityViolationException("");
+        }
+        return tempString;
     }
 
     @Override

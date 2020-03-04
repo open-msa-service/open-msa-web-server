@@ -5,10 +5,14 @@ import com.msa.timeline.domain.Like;
 import com.msa.timeline.domain.TimeLine;
 import org.springframework.data.jpa.repository.JpaRepository;
 
+import java.util.List;
+
 
 public interface LikeRepository extends JpaRepository<Like, Long> {
 
-//    long countByUserIdAndTimeId(String userId, TimeLine timeId);
+    List<Like> findByTimeId(TimeLine timeId);
+
+    void deleteLikeByLikeId(long likeId);
 
 //    long countByUserIdAndCommentId(String userId, Comment commentId);
 

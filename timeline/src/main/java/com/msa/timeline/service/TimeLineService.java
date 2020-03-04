@@ -14,10 +14,13 @@ public interface TimeLineService {
 
     ResponseEntity<Object> searchAllTimeLine();
 
-    ResponseEntity<Object> writeTimeLine(MultipartFile[] file, String timeline);
+    ResponseEntity<Object> writeTimeLine(MultipartFile[] file, String timeline, boolean update);
 
     ResponseEntity<Object> writeComments(Comment comment);
 
-//    ResponseEntity<Object> clickLikes(Like like);
+    ResponseEntity<Object> searchAllTimeLineByUserId(String userId);
+
+    ResponseEntity<Object> deleteTimeLineById(Long timeId);
+
 
 }

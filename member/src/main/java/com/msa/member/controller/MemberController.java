@@ -43,4 +43,9 @@ public class MemberController {
         return memberService.memberUpdateProfile(file, members);
     }
 
+    @GetMapping("/timeline/{userId}")
+    ResponseEntity<Object> getMemberInfoAndTimeLine(@PathVariable String userId){
+        return memberService.memberSerarchMyTimeline(userId);
+    }
+
 }

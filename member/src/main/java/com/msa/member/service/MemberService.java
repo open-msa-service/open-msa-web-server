@@ -14,4 +14,6 @@ public interface MemberService {
 
     ResponseEntity<Object> memberUpdateProfile(MultipartFile[] files, String members);
 
+    ResponseEntity<Object> memberSerarchMyTimeline(String userId);
+
 }

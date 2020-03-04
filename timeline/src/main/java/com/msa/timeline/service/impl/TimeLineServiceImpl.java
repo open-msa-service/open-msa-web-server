@@ -16,6 +16,7 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.dao.DataIntegrityViolationException;
+import org.springframework.dao.EmptyResultDataAccessException;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
@@ -54,15 +55,24 @@ public class TimeLineServiceImpl implements TimeLineService {
         return new ResponseEntity<>(responseMessage, HttpStatus.OK);
     }
 
+
     @Override
-    public ResponseEntity<Object> writeTimeLine(MultipartFile[] file, String tempTimeline) {
+    public ResponseEntity<Object> writeTimeLine(MultipartFile[] file, String tempTimeline, boolean update) {
 
         TimeLine timeLine = convertStringToTimeLine(tempTimeline);
-        logger.info("timeline values : {},{},{},{}", timeLine.getContent(),timeLine.getFileNameList(), timeLine.getUserId(), timeLine.getScope());
+
         try{
-            setImageFileNames(timeLine);
-            fileUploadDownloadService.storeFile(file);
-            timeLineRepository.save(timeLine);
+            if(timeLine.getIsUpdated()){
+                setImageFileNames(timeLine);
+                fileUploadDownloadService.storeFile(file);
+            }
+
+            if(update){
+                timeLineRepository.updateTimeline(timeLine);
+            }else{
+                timeLineRepository.save(timeLine);
+            }
+
         }catch(DataIntegrityViolationException ex){
             throw new DataIntegrityViolationException("", ex);
         }
@@ -103,30 +113,32 @@ public class TimeLineServiceImpl implements TimeLineService {
         return new ResponseEntity<>(responseMessage, HttpStatus.OK);
     }
 
-//    @Override
-//    public ResponseEntity<Object> clickLikes(Like like) {
-//        try{
-//            if(LikeType.TIMELINE.equals(like.getLikeType())){
-//                long count = likeRepository.countByUserIdAndTimeId(like.getUserId(), like.getTimeId());
-//                if(count > 0){
-//                    likeRepository.delete(like);
-//                }else{
-//                    likeRepository.save(like);
-//                }
-//            }else{
-//                long count = likeRepository.countByUserIdAndCommentId(like.getUserId(),like.getCommentId());
-//                if(count > 0){
-//                    likeRepository.delete(like);
-//                }else{
-//                    likeRepository.save(like);
-//                }
-//            }
-//        }catch (DataIntegrityViolationException ex){
-//            throw new DataIntegrityViolationException("", ex);
-//        }
-//        responseMessage = new ResponseMessage(HttpStatus.OK.value(), "좋아요 변경이 성공적으로 되었습니다.", null);
-//        return new ResponseEntity<>(responseMessage, HttpStatus.OK);
-//    }
+
+    @Override
+    public ResponseEntity<Object> searchAllTimeLineByUserId(String userId) {
+        List<TimeLine> timeLines = null;
+        try{
+            timeLines = timeLineRepository.findByUserIdOrderByUpdateTimeDesc(userId);
+        }catch (DataIntegrityViolationException ex){
+            throw new DataIntegrityViolationException("", ex);
+        }
+        responseMessage = new ResponseMessage(HttpStatus.OK.value(), "게시글 목록을 가져오는데 성공했습니다.", null);
+        responseMessage.setData(timeLines, "timeline");
+        return new ResponseEntity<>(responseMessage, HttpStatus.OK);
+    }
+
+    @Override
+    public ResponseEntity<Object> deleteTimeLineById(Long timeId) {
+
+        try{
+            timeLineRepository.deleteById(timeId);
+        }catch (EmptyResultDataAccessException e){
+            throw new EmptyResultDataAccessException("",0);
+        }
+
+        responseMessage = new ResponseMessage(HttpStatus.OK.value(), "게시글을 삭제하는데 성공했습니다.", null);
+        return new ResponseEntity<>(responseMessage, HttpStatus.OK);
+    }
 
 
 }
