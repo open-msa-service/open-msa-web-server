@@ -12,8 +12,12 @@ public interface LikeRepository extends JpaRepository<Like, Long> {
 
     List<Like> findByTimeId(TimeLine timeId);
 
+    int countLikeByTimeIdAndUserId(TimeLine timeId, String userId);
+
+    void deleteLikeByTimeIdAndUserId(TimeLine timeId, String userId);
+
     void deleteLikeByLikeId(long likeId);
 
-//    long countByUserIdAndCommentId(String userId, Comment commentId);
+    void deleteLikeByTimeId(TimeLine timeId);
 
 }

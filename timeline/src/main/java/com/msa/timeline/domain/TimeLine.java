@@ -12,6 +12,7 @@ import org.springframework.web.multipart.MultipartFile;
 import javax.persistence.*;
 import java.time.LocalDateTime;
 import java.util.List;
+import java.util.Set;
 
 @Entity
 @Table(name = "TIMELINE")
@@ -36,10 +37,32 @@ public class TimeLine {
     @Column(name = "USER_ID", nullable = false)
     private String userId;
 
+    public String getUsername() {
+        return username;
+    }
+
+    public void setUsername(String username) {
+        this.username = username;
+    }
+
+    @Column(name = "USERNAME", nullable = false)
+    private String username;
+
     @UpdateTimestamp
     @JsonFormat(pattern = "yyyy-MM-dd")
     @Column(name = "UPDATE_TIME", nullable = false, insertable = false)
     private LocalDateTime updateTime;
+
+    @Column(name = "PROFILE_HREF")
+    private String profileHref;
+
+    public String getProfileHref() {
+        return profileHref;
+    }
+
+    public void setProfileHref(String profileHref) {
+        this.profileHref = profileHref;
+    }
 
     @Transient
     private String[] fileNameList;
@@ -52,12 +75,12 @@ public class TimeLine {
     }
 
     @OneToMany(mappedBy = "timeId", fetch = FetchType.EAGER)
-    @JsonManagedReference
+    @JsonManagedReference(value = "timeId")
     private List<Like> likes;
 
-//    @OneToMany(mappedBy = "timeId", fetch = FetchType.EAGER)
-//    private List<Comment> comments;
-
+    @OneToMany(mappedBy = "timeId", fetch = FetchType.EAGER)
+    @JsonManagedReference(value = "timeId")
+    private List<Comment> comments;
 
     public Long getTimeId() {
         return timeId;
@@ -129,5 +152,13 @@ public class TimeLine {
 
     public void setLikes(List<Like> likes) {
         this.likes = likes;
+    }
+
+    public List<Comment> getComments() {
+        return comments;
+    }
+
+    public void setComments(List<Comment> comments) {
+        this.comments = comments;
     }
 }

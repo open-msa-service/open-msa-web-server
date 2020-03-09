@@ -40,10 +40,10 @@ public class LikeServiceImpl implements LikeService {
         timeLine.setUserId(userId);
 
         Like likes = new Like(userId, timeLine, LikeType.TIMELINE);
-
+        int counts = likeRepository.countLikeByTimeIdAndUserId(timeLine, userId);
         try{
-            if(!StringUtils.isEmpty(like.getLikeId())){
-                likeRepository.deleteLikeByLikeId(like.getLikeId());
+            if(counts != 0){
+                likeRepository.deleteLikeByTimeIdAndUserId(timeLine, userId);
             }else{
                 likeRepository.save(likes);
             }

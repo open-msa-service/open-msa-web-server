@@ -20,13 +20,12 @@ public class Like {
     private String userId;
 
     @ManyToOne
-    @JsonBackReference
     @JoinColumn(name = "timeId")
     private TimeLine timeId;
 
-//    @ManyToOne
-//    @JoinColumn(name = "commentId")
-//    private Comment commentId;
+    @ManyToOne
+    @JoinColumn(name = "commentId")
+    private Comment commentId;
 
     @Enumerated(value = EnumType.STRING)
     private LikeType likeType;
@@ -42,7 +41,7 @@ public class Like {
     @Transient
     private long tempTimeId;
 
-    Like(){}
+    public Like(){}
 
     public Like(String userId, TimeLine timeId, LikeType likeType) {
         this.userId = userId;
@@ -66,6 +65,7 @@ public class Like {
         this.userId = userId;
     }
 
+    @JsonBackReference(value = "timeId")
     public TimeLine getTimeId() {
         return timeId;
     }
@@ -82,4 +82,12 @@ public class Like {
         this.likeType = likeType;
     }
 
+    @JsonBackReference(value = "commentId")
+    public Comment getCommentId() {
+        return commentId;
+    }
+
+    public void setCommentId(Comment commentId) {
+        this.commentId = commentId;
+    }
 }

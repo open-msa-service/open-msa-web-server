@@ -5,7 +5,9 @@ import com.fasterxml.jackson.databind.JsonMappingException;
 import com.fasterxml.jackson.databind.JsonNode;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.msa.member.domain.Member;
+import com.msa.member.domain.State;
 import com.msa.member.dtos.ResponseMessage;
+import com.msa.member.repository.FriendRepository;
 import com.msa.member.repository.MemberRepository;
 import com.msa.member.service.FileUploadDownloadService;
 import com.msa.member.service.MemberService;
@@ -34,6 +36,8 @@ public class MemberServiceImpl implements MemberService {
 
     @Autowired private MemberRepository memberRepository;
 
+    @Autowired private FriendRepository friendRepository;
+
     @Autowired private FileUploadDownloadService fileUploadDownloadService;
 
     private ResponseMessage responseMessage;
@@ -54,6 +58,27 @@ public class MemberServiceImpl implements MemberService {
     }
 
     @Override
+    public ResponseEntity<Object> mainTimeLineList(String userId) {
+        List<String> friendId = null;
+        ResponseEntity<Object> responseEntity = null;
+        Map<String, Object> responseMap = new HashMap<>();
+        try{
+            friendId = friendRepository.findAllFriendByUserId(userId);
+            friendId.add(userId);
+
+            responseEntity = restTemplate.postForEntity(BASE_URL+"/main/timeList", friendId, Object.class);
+            handleTimelineRestTemplateAndData(userId, responseEntity, responseMap);
+        }catch (DataIntegrityViolationException ex){ // member error
+            throw new DataIntegrityViolationException("", ex);
+        }catch (HttpClientErrorException ex){ // restTemplate error
+            throw new HttpClientErrorException(HttpStatus.BAD_REQUEST);
+        }
+        responseMessage = new ResponseMessage(responseEntity.getStatusCodeValue(), "게시물을 성공적으로 가지고 왔습니다.",null);
+        responseMessage.setData(responseMap);
+        return new ResponseEntity<>(responseMessage, HttpStatus.OK);
+    }
+
+    @Override
     public ResponseEntity<Object> memberSearchByUserId(String userId) {
         Member member = Optional.of(memberRepository.findByUserId(userId)).get()
                 .orElseThrow(NoSuchElementException::new);
@@ -68,16 +93,7 @@ public class MemberServiceImpl implements MemberService {
         Map<String, Object> responseMap = new HashMap<>();
         try{
             responseEntity = restTemplate.getForEntity(BASE_URL+"/user/"+userId, Object.class);
-            int status = responseEntity.getStatusCodeValue();
-            if(status != 200){
-                throw new DataIntegrityViolationException("");
-            }
-
-            String timeline = getTimeLineData(responseEntity);
-            Member member = Optional.of(memberRepository.findByUserId(userId).get()).orElseThrow(()->new DataIntegrityViolationException(""));
-
-            responseMap.put("timeline", timeline);
-            responseMap.put("member", member);
+            handleTimelineRestTemplateAndData(userId, responseEntity, responseMap);
 
         }catch (DataIntegrityViolationException ex){ // member error
             throw new DataIntegrityViolationException("", ex);
@@ -88,6 +104,51 @@ public class MemberServiceImpl implements MemberService {
         responseMessage.setData(responseMap);
 
         return new ResponseEntity<>(responseMessage, HttpStatus.OK);
+    }
+
+    @Override
+    public ResponseEntity<Object> memberSearchTimeLine(String userId1, String userId2) {
+        // userId1 : my Id, userId2 : search Id
+        ResponseEntity<Object> responseEntity = null;
+        Map<String, Object> responseMap = new HashMap<>();
+        boolean isFriend = false;
+        try{
+            // "/user/{userId}/{isFriend}"
+            int counts = friendRepository.countFriendByUserId1AndUserId2AndState(userId1, userId2, State.FRIEND);
+            if(counts != 0 || userId1.equals(userId2)){
+                isFriend = true;
+            }
+            responseEntity = restTemplate.getForEntity(BASE_URL+"/user/" + userId2 + "/" + isFriend, Object.class);
+            handleTimelineRestTemplateAndData(userId2, responseEntity, responseMap);
+
+            // 이미 친구 요청을 한 경우 친구요청 버튼을 숨기기위해서 다시 한번 조회한다.
+            int counts2 = friendRepository.countFriendByUserId1AndUserId2AndState(userId1, userId2, State.WAIT);
+            if(counts2 != 0){
+                isFriend = true;
+            }
+            responseMap.put("isFriend", isFriend);
+        }catch (DataIntegrityViolationException ex){ // member error
+            throw new DataIntegrityViolationException("", ex);
+        }catch (HttpClientErrorException ex){ // restTemplate error
+            throw new HttpClientErrorException(HttpStatus.BAD_REQUEST);
+        }
+        responseMessage = new ResponseMessage(responseEntity.getStatusCodeValue(), "게시물을 성공적으로 가지고 왔습니다.",null);
+        responseMessage.setData(responseMap);
+
+        return new ResponseEntity<>(responseMessage, HttpStatus.OK);
+    }
+
+    private void handleTimelineRestTemplateAndData(String userId2, ResponseEntity<Object> responseEntity, Map<String, Object> responseMap) {
+        int status = responseEntity.getStatusCodeValue();
+        if (status != 200) {
+            throw new DataIntegrityViolationException("");
+        }
+
+        String timeline = getTimeLineData(responseEntity);
+        Member member = Optional.of(memberRepository.findByUserId(userId2).get()).orElseThrow(() -> new DataIntegrityViolationException(""));
+
+        responseMap.put("timeline", timeline);
+        responseMap.put("member", member);
     }
 
     private String getTimeLineData(ResponseEntity<Object> responseEntity) {
@@ -128,9 +189,18 @@ public class MemberServiceImpl implements MemberService {
                 setFileNames(files[0], member);
                 fileUploadDownloadService.storeFile(files[0]);
             }
+            String profileHref = member.getProfileHref();
+            String userId = member.getUserId();
+            Map<String, String> requestMap = new HashMap<>();
+            requestMap.put("userId", userId);
+            requestMap.put("profileHref", profileHref);
 
+            ObjectMapper objectMapper = new ObjectMapper();
+            Object request = objectMapper.writeValueAsString(requestMap);
+
+            restTemplate.put(BASE_URL+"/profile", request, Object.class);
             memberRepository.updateMember(member);
-        }catch (DataIntegrityViolationException ex){
+        }catch (DataIntegrityViolationException | JsonProcessingException ex){
             throw new DataIntegrityViolationException("회원정보 수정에 실패했습니다.", ex);
         }
 
@@ -153,5 +223,23 @@ public class MemberServiceImpl implements MemberService {
             throw new DataIntegrityViolationException("", e);
         }
         return member;
+    }
+
+
+
+    @Override
+    public ResponseEntity<Object> memberSearchByName(String username) {
+
+        List<Member> members = null;
+
+        try{
+            members = memberRepository.findMemberByUsernameIgnoreCaseContaining(username);
+        }catch (DataIntegrityViolationException ex){
+            throw new DataIntegrityViolationException("회원 조회에 실패했습니다.", ex);
+        }
+
+        responseMessage = new ResponseMessage(HttpStatus.OK.value(), "회원조회에 성공했습니다.", null);
+        responseMessage.setData(members, "member");
+        return new ResponseEntity<>(responseMessage, HttpStatus.OK);
     }
 }

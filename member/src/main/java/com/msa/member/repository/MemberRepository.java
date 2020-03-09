@@ -7,6 +7,7 @@ import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.query.Param;
 
 import javax.transaction.Transactional;
+import java.util.List;
 import java.util.Optional;
 
 public interface MemberRepository extends JpaRepository<Member, Long> {
@@ -19,5 +20,7 @@ public interface MemberRepository extends JpaRepository<Member, Long> {
             "m.statusMessage = :#{#mem.statusMessage}, m.introduceMessage = :#{#mem.introduceMessage}," +
             "m.profileHref = :#{#mem.profileHref} WHERE m.userId = :#{#mem.userId}")
     void updateMember(@Param("mem") Member member);
+
+    List<Member> findMemberByUsernameIgnoreCaseContaining(String username);
 
 }

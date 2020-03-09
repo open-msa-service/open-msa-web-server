@@ -16,4 +16,10 @@ public interface MemberService {
 
     ResponseEntity<Object> memberSerarchMyTimeline(String userId);
 
+    ResponseEntity<Object> memberSearchByName(String username);
+
+    ResponseEntity<Object> memberSearchTimeLine(String userId1, String userId2);
+
+    ResponseEntity<Object> mainTimeLineList(String userId);
+
 }

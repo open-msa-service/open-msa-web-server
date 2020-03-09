@@ -1,5 +1,8 @@
 package com.msa.timeline.service.impl;
 
+import com.fasterxml.jackson.core.JsonProcessingException;
+import com.fasterxml.jackson.databind.ObjectMapper;
+import com.msa.timeline.domain.Like;
 import com.msa.timeline.domain.TimeLine;
 import com.msa.timeline.repository.TimeLineRepository;
 import com.msa.timeline.service.LikeService;
@@ -9,6 +12,7 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
+import org.springframework.http.ResponseEntity;
 
 import java.util.List;
 
@@ -37,11 +41,18 @@ class LikeServiceImplTest {
 
     @Test
     @DisplayName("좋아요 클릭시")
-    void clickLike(){
-        long likeId = 10;
-        long timeId = 13;
-        String userId = "s";
-//        likeService.clickLikeService(likeId,timeId, userId);
+    void clickLike() throws JsonProcessingException {
+        TimeLine timeLine = new TimeLine();
+        timeLine.setTimeId(30L);
+        Like like = new Like();
+        like.setUserId("test");
+        like.setTimeId(timeLine);
+        ResponseEntity<Object> responseEntity = likeService.clickLikeService(like);
+
+        ObjectMapper objectMapper = new ObjectMapper();
+        String result = objectMapper.writeValueAsString(responseEntity.getBody());
+
+        logger.info("Response Body : {}", result);
     }
 
 }

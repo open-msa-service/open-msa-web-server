@@ -48,4 +48,19 @@ public class MemberController {
         return memberService.memberSerarchMyTimeline(userId);
     }
 
+    @GetMapping("/list/{username}")
+    ResponseEntity<Object> searchMemberByUsername(@PathVariable String username){
+        return memberService.memberSearchByName(username);
+    }
+
+    @GetMapping("/friend/timeline/{userId1}/{userId2}")
+    ResponseEntity<Object> getUserTimeLineByUserIdAndIsFriends(@PathVariable String userId1, @PathVariable String userId2){
+        return memberService.memberSearchTimeLine(userId1, userId2);
+    }
+
+    @GetMapping("/main/{userId}")
+    ResponseEntity<Object> mainTimeLineList(@PathVariable String userId){
+        return memberService.mainTimeLineList(userId);
+    }
+
 }
