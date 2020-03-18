@@ -29,8 +29,8 @@ public interface TimeLineRepository extends JpaRepository<TimeLine, Long> {
     List<TimeLine> findByUserIdAndScopeOrderByUpdateTimeDesc(String userId, Scope scope);
 
 
-    @Query(value = "select distinct t.time_id from timeline t, comments c, likes l where t.user_id in (:user) and c.user_id in (:user) and " +
-            "l.user_id in (:user)", nativeQuery = true)
+    @Query(value = "select distinct t.time_id from timeline t, comments c, likes l where t.user_id in (:user) and (c.user_id in (:user) or " +
+            "l.user_id in (:user))", nativeQuery = true)
     List<Long> timeLineIdList(@Param("user") List<String> userId);
 
     @Query(value = "select t.* from timeline t where t.time_id in (:id) order by t.time_id desc", nativeQuery = true)
