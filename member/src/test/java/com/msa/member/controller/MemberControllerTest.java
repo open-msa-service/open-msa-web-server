@@ -33,6 +33,14 @@ class MemberControllerTest {
     private ObjectMapper objectMapper = new ObjectMapper();
 
     @Test
+    @DisplayName("사용자 정보 및 타임라인 조회")
+    void getMemberInfoAndTimeLine() throws Exception {
+        MvcResult mvcResult = mockMvc.perform(get("/user/timeline/test")).andDo(print()).andExpect(status().isOk()).andReturn();
+        logger.info("ResponseBody : {}", mvcResult.getResponse().getContentAsString());
+    }
+
+    @Test
+    @Disabled
     @DisplayName("회원 Id 조회")
     void findById() throws Exception {
         MvcResult mvcResult = mockMvc.perform(get("/user/info/id/2").contentType(MediaType.APPLICATION_JSON_UTF8))

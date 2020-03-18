@@ -14,4 +14,12 @@ public interface MemberService {
 
     ResponseEntity<Object> memberUpdateProfile(MultipartFile[] files, String members);
 
+    ResponseEntity<Object> memberSerarchMyTimeline(String userId);
+
+    ResponseEntity<Object> memberSearchByName(String username);
+
+    ResponseEntity<Object> memberSearchTimeLine(String userId1, String userId2);
+
+    ResponseEntity<Object> mainTimeLineList(String userId);
+
 }

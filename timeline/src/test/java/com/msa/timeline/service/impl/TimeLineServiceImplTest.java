@@ -15,7 +15,10 @@ import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.dao.DataIntegrityViolationException;
+import org.springframework.dao.EmptyResultDataAccessException;
 import org.springframework.http.ResponseEntity;
+
+import java.util.List;
 
 import static org.junit.jupiter.api.Assertions.*;
 
@@ -29,7 +32,32 @@ class TimeLineServiceImplTest {
     @Autowired private CommentRepository commentRepository;
     @Autowired private LikeRepository likeRepository;
 
+
     @Test
+    @Disabled
+    @DisplayName("게시글 삭제 테스트")
+    void deleteTimelineByTimelineId(){
+        final long timeId = 12L;
+        assertThrows(EmptyResultDataAccessException.class, ()->timeLineService.deleteTimeLineById(timeId));
+
+        final long timeId2 = 19L;
+        assertDoesNotThrow(()->timeLineService.deleteTimeLineById(timeId2));
+    }
+
+    @Test
+    @DisplayName("UserId에 맞는 타임라인 가져오기 테스트")
+    void getTimeLineByUserId(){
+        String userId = "test";
+        List<TimeLine> timeLine = timeLineRepository.findByUserIdOrderByUpdateTimeDesc(userId);
+        for(TimeLine timeLine1 : timeLine){
+            assertEquals("test", timeLine1.getUserId());
+            logger.info("Content : {}", timeLine1.getContent());
+        }
+
+    }
+
+    @Test
+    @Disabled
     @DisplayName("타임라인 & 댓글 & 좋아요 통합")
     void timeLineAndCommentsAndLikeIntegrateTest() throws JsonProcessingException {
         ResponseEntity<Object> responseEntity = timeLineService.searchAllTimeLine();
@@ -62,51 +90,6 @@ class TimeLineServiceImplTest {
         timeLine.setUserId("testId9");
         timeLine.setScope(Scope.ALL);
 //        assertDoesNotThrow(()->timeLineService.writeTimeLine(timeLine));
-    }
-
-    @Test
-    @Disabled
-    @DisplayName("댓글 쓰기 테스트")
-    void writeCommentsTest() throws JsonProcessingException {
-        Comment comment = new Comment();
-        comment.setContent("댓글1이다.");
-        comment.setUserId("testId8");
-
-        TimeLine timeLine = new TimeLine();
-        timeLine.setTimeId(1L);
-//        comment.setTimeId(timeLine);
-
-        ResponseEntity<Object> responseEntity = timeLineService.writeComments(comment);
-        ObjectMapper mapper = new ObjectMapper();
-        String values = mapper.writeValueAsString(responseEntity.getBody());
-
-        logger.info("Response Body : {}", values);
-
-//        assertDoesNotThrow(()->commentRepository.save(comment));
-    }
-
-    @Test
-    @Disabled
-    @DisplayName("좋아요 누르기, 취소 테스트")
-    void clickLikeTest() throws JsonProcessingException {
-        Like like = new Like();
-        TimeLine timeLine = new TimeLine();
-        timeLine.setTimeId(1L);
-//        like.setTimeId(timeLine);
-        like.setUserId("testId8");
-        like.setLikeType(LikeType.TIMELINE);
-
-//        ResponseEntity<Object> responseEntity = timeLineService.clickLikes(like);
-//        ObjectMapper mapper = new ObjectMapper();
-//        String values = mapper.writeValueAsString(responseEntity.getBody());
-
-//        logger.info("Response Body : {}", values);
-
-//        ResponseEntity<Object> responseEntity2 = timeLineService.clickLikes(like);
-//        String values2 = mapper.writeValueAsString(responseEntity.getBody());
-//
-//        logger.info("Response Body : {}", values2);
-
     }
 
 }

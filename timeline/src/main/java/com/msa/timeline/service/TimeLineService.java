@@ -8,16 +8,24 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.multipart.MultipartFile;
 
 import javax.transaction.Transactional;
+import javax.xml.ws.Response;
+import java.util.List;
 
 @Transactional
 public interface TimeLineService {
 
     ResponseEntity<Object> searchAllTimeLine();
 
-    ResponseEntity<Object> writeTimeLine(MultipartFile[] file, String timeline);
+    ResponseEntity<Object> writeTimeLine(MultipartFile[] file, String timeline, boolean update);
 
-    ResponseEntity<Object> writeComments(Comment comment);
+    ResponseEntity<Object> searchAllTimeLineByUserId(String userId);
 
-//    ResponseEntity<Object> clickLikes(Like like);
+    ResponseEntity<Object> deleteTimeLineById(Long timeId);
+
+    void updateUserInfo(String userInfo);
+
+    ResponseEntity<Object> searchTimeLineByUserIdAndIsFriend(String userId, boolean isFriends);
+
+    ResponseEntity<Object> timeLineList(List<String> friendId);
 
 }
