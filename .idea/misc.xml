@@ -6,6 +6,7 @@
         <option value="$PROJECT_DIR$/gateway/pom.xml" />
         <option value="$PROJECT_DIR$/member/pom.xml" />
         <option value="$PROJECT_DIR$/timeline/pom.xml" />
+        <option value="$PROJECT_DIR$/msa-member/pom.xml" />
       </list>
     </option>
   </component>
