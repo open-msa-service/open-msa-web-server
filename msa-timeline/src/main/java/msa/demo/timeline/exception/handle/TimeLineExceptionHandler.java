@@ -2,6 +2,7 @@ package msa.demo.timeline.exception.handle;
 
 import msa.demo.timeline.exception.ErrorMessage;
 import org.apache.tomcat.util.http.fileupload.FileUploadException;
+import org.springframework.amqp.AmqpRejectAndDontRequeueException;
 import org.springframework.dao.DataIntegrityViolationException;
 import org.springframework.dao.InvalidDataAccessApiUsageException;
 import org.springframework.http.HttpStatus;
@@ -43,6 +44,12 @@ public class TimeLineExceptionHandler {
     @ExceptionHandler(FileUploadException.class)
     @ResponseStatus(HttpStatus.INTERNAL_SERVER_ERROR)
     public ResponseEntity<ErrorMessage> handleFileUploadException(FileUploadException ex){
+        return getErrorMessageResponseEntity(ex.getMessage(), ex.toString(), HttpStatus.INTERNAL_SERVER_ERROR);
+    }
+
+    @ExceptionHandler(AmqpRejectAndDontRequeueException.class)
+    @ResponseStatus(HttpStatus.INTERNAL_SERVER_ERROR)
+    public ResponseEntity<ErrorMessage> handleAmqpRejectAndDontRequeueException(AmqpRejectAndDontRequeueException ex){
         return getErrorMessageResponseEntity(ex.getMessage(), ex.toString(), HttpStatus.INTERNAL_SERVER_ERROR);
     }
 

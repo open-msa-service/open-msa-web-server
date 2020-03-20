@@ -102,6 +102,11 @@ public class TimeLineServiceImpl implements TimeLineService{
         return timeLine;
     }
 
+    /**
+     * 사용자 id로 타임라인 조회
+     * @param userId
+     * @return
+     */
     @Override
     public List<TimeLine> findMyTimeLineByUserId(String userId) {
         List<TimeLine> timeLines = new ArrayList<>();
@@ -109,5 +114,16 @@ public class TimeLineServiceImpl implements TimeLineService{
         timeLines = timeLIneRepository.findTimeLineByUserIdOrderByUpdateTimeDesc(userId);
 
         return timeLines;
+    }
+
+    /**
+     * 유저 프로필 사진 변경시 타임라인, 댓글 프로필 사진 변경
+     * @param userId
+     * @param profileHref
+     */
+    @Override
+    public void updateMemberProfileHref(String userId, String profileHref) {
+        timeLIneRepository.updateUserProfile(userId, profileHref);
+        commentRepository.updateUserProfile(userId, profileHref);
     }
 }

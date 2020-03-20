@@ -15,4 +15,6 @@ public interface TimeLineService {
 
     List<TimeLine> findMyTimeLineByUserId(String userId);
 
+    void updateMemberProfileHref(String userId, String profileHref);
+
 }
