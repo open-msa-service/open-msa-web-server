@@ -3,12 +3,15 @@ package msa.demo.member.service;
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import msa.demo.member.domain.Member;
+import msa.demo.member.event.EventDispatcher;
+import msa.demo.member.event.MemberSolvedEvent;
 import msa.demo.member.repository.MemberRepository;
 import org.springframework.dao.DataIntegrityViolationException;
 import org.springframework.dao.InvalidDataAccessApiUsageException;
 import org.springframework.stereotype.Service;
 import org.springframework.web.multipart.MultipartFile;
 
+import javax.transaction.Transactional;
 import java.time.LocalDateTime;
 import java.util.List;
 import java.util.NoSuchElementException;
@@ -22,11 +25,13 @@ public class MemberServiceImpl implements MemberService {
 
     private final FileUploadDownloadService fileUploadDownloadService;
 
-    public MemberServiceImpl(MemberRepository memberRepository, FileUploadDownloadService fileUploadDownloadService) {
+    private EventDispatcher eventDispatcher;
+
+    public MemberServiceImpl(MemberRepository memberRepository, FileUploadDownloadService fileUploadDownloadService, EventDispatcher eventDispatcher) {
         this.memberRepository = memberRepository;
         this.fileUploadDownloadService = fileUploadDownloadService;
+        this.eventDispatcher = eventDispatcher;
     }
-
 
     /**
      * 사용자 회원가입
@@ -51,6 +56,7 @@ public class MemberServiceImpl implements MemberService {
      * @param files
      * @param members
      */
+    @Transactional
     @Override
     public void updateUserInfo(MultipartFile[] files, String members) {
         Member member = convertStringToMember(members);
@@ -64,6 +70,13 @@ public class MemberServiceImpl implements MemberService {
             member.setUpdateTime(LocalDateTime.now());
 
             memberRepository.updateMemberInfo(member);
+
+            // 이벤트 전송(프로필 사진 변경)
+            eventDispatcher.send(new MemberSolvedEvent(
+                    member.getUserId(),
+                    member.getProfileHref()
+            ));
+
         }catch (NullPointerException ex){
             throw new NullPointerException("유효하지 않은 값이 전송되었습니다.");
         }
