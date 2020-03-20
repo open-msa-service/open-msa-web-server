@@ -19,6 +19,11 @@ public interface CommentRepository extends JpaRepository<Comment, Long> {
     @Query(value = "UPDATE Comment c SET c.content = :#{#com.content} WHERE c.commentId = :#{#com.commentId}")
     void updateComment(@Param("com")Comment comment);
 
+    @Transactional
+    @Modifying
+    @Query(value = "UPDATE Comment c SET c.profileHref = :profileHref WHERE c.userId = :userId")
+    void updateUserProfile(@Param("userId")String userId, @Param("profileHref")String profileHref);
+
     void deleteCommentByCommentId(Long commentId);
 
     List<Comment> findCommentByTimeIdOrderByUpdateTimeDesc(TimeLine timeLine);
