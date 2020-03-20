@@ -1,6 +1,9 @@
 package msa.demo.timeline.service;
 
 import msa.demo.timeline.domain.Comment;
+import msa.demo.timeline.domain.TimeLine;
+
+import java.util.List;
 
 public interface CommentService {
 
@@ -10,6 +13,6 @@ public interface CommentService {
 
     void deleteCommentByCommentId(Long commentId);
 
-    // 댓글 조회
+    List<Comment> findCommentListByTimeId(TimeLine timeLine);
 
 }

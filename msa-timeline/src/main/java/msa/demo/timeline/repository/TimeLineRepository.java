@@ -7,6 +7,7 @@ import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.query.Param;
 
 import javax.transaction.Transactional;
+import java.util.List;
 
 public interface TimeLineRepository extends JpaRepository<TimeLine, Long> {
 
@@ -22,5 +23,7 @@ public interface TimeLineRepository extends JpaRepository<TimeLine, Long> {
     void updateUserProfile(@Param("userId")String userId, @Param("profileHref")String profileHref);
 
     void deleteTimeLineByTimeId(Long timeId);
+
+    List<TimeLine> findTimeLineByUserIdOrderByUpdateTimeDesc(String userId);
 
 }

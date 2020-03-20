@@ -2,10 +2,15 @@ package msa.demo.timeline.service;
 
 
 import msa.demo.timeline.domain.Comment;
+import msa.demo.timeline.domain.TimeLine;
 import msa.demo.timeline.repository.CommentRepository;
 import org.springframework.dao.DataIntegrityViolationException;
 import org.springframework.dao.InvalidDataAccessApiUsageException;
 import org.springframework.stereotype.Service;
+
+import java.time.LocalDateTime;
+import java.util.ArrayList;
+import java.util.List;
 
 @Service
 public class CommentServiceImpl implements CommentService{
@@ -18,6 +23,7 @@ public class CommentServiceImpl implements CommentService{
 
     @Override
     public void writeComment(Comment comment) {
+        comment.setUpdateTime(LocalDateTime.now());
         try{
             commentRepository.save(comment);
         }catch (DataIntegrityViolationException ex){
@@ -35,5 +41,12 @@ public class CommentServiceImpl implements CommentService{
     @Override
     public void deleteCommentByCommentId(Long commentId) {
         commentRepository.deleteCommentByCommentId(commentId);
+    }
+
+    @Override
+    public List<Comment> findCommentListByTimeId(TimeLine timeLine) {
+        List<Comment> comments = new ArrayList<>();
+        comments = commentRepository.findCommentByTimeIdOrderByUpdateTimeDesc(timeLine);
+        return comments;
     }
 }

@@ -1,11 +1,13 @@
 package msa.demo.timeline.domain;
 
 
+import com.fasterxml.jackson.annotation.JsonFormat;
 import lombok.Getter;
 import lombok.Setter;
 import lombok.ToString;
 
 import javax.persistence.*;
+import java.time.LocalDateTime;
 
 @Entity
 @Getter @Setter @ToString
@@ -29,6 +31,11 @@ public class Comment {
     @Column(name = "USERNAME", nullable = false)
     private String username;
 
+    @JsonFormat(pattern = "yyyy-MM-dd")
+    private LocalDateTime updateTime;
 
+    @ManyToOne
+    @JoinColumn(name = "timeId")
+    private TimeLine timeId;
 
 }

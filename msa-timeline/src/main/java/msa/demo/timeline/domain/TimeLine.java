@@ -8,6 +8,7 @@ import lombok.ToString;
 
 import javax.persistence.*;
 import java.time.LocalDateTime;
+import java.util.List;
 
 @Entity
 @Getter @Setter @ToString
@@ -40,6 +41,9 @@ public class TimeLine {
 
     @JsonFormat(pattern = "yyyy-MM-dd")
     private LocalDateTime updateTime;
+
+    @OneToMany(fetch = FetchType.EAGER, mappedBy = "timeId")
+    private List<Comment> comments;
 
     @Transient
     private String[] fileNameList;
