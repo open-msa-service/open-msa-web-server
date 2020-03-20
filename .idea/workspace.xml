@@ -2,49 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f74f4414-498c-4a8b-8465-d98701f6f47e" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_h2database_h2_1_4_200.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__jakarta_activation_jakarta_activation_api_1_2_2.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__net_bytebuddy_byte_buddy_1_10_8.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__net_bytebuddy_byte_buddy_agent_1_10_8.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_tomcat_embed_tomcat_embed_core_9_0_31.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_tomcat_embed_tomcat_embed_el_9_0_31.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_tomcat_embed_tomcat_embed_websocket_9_0_31.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_hibernate_hibernate_core_5_4_12_Final.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_projectlombok_lombok_1_18_12.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_2_2_5_RELEASE.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_autoconfigure_2_2_5_RELEASE.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_2_2_5_RELEASE.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_aop_2_2_5_RELEASE.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_data_jpa_2_2_5_RELEASE.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_jdbc_2_2_5_RELEASE.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_json_2_2_5_RELEASE.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_logging_2_2_5_RELEASE.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_test_2_2_5_RELEASE.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_tomcat_2_2_5_RELEASE.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_validation_2_2_5_RELEASE.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_web_2_2_5_RELEASE.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_test_2_2_5_RELEASE.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_test_autoconfigure_2_2_5_RELEASE.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_data_spring_data_commons_2_2_5_RELEASE.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_data_spring_data_jpa_2_2_5_RELEASE.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_aop_5_2_4_RELEASE.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_aspects_5_2_4_RELEASE.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_beans_5_2_4_RELEASE.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_context_5_2_4_RELEASE.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_core_5_2_4_RELEASE.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_expression_5_2_4_RELEASE.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_jcl_5_2_4_RELEASE.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_jdbc_5_2_4_RELEASE.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_orm_5_2_4_RELEASE.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_test_5_2_4_RELEASE.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_tx_5_2_4_RELEASE.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_web_5_2_4_RELEASE.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_webmvc_5_2_4_RELEASE.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/msa-member/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/msa-member/src/main/resources/application.properties" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/gateway/target/" />
@@ -52,6 +10,7 @@
     <ignored path="$PROJECT_DIR$/game/target/" />
     <ignored path="$PROJECT_DIR$/timeline/target/" />
     <ignored path="$PROJECT_DIR$/msa-member/target/" />
+    <ignored path="$PROJECT_DIR$/msa-timeline/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -69,107 +28,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/member/src/main/java/com/msa/member/MemberApplication.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="105">
-              <caret line="15" selection-start-line="15" selection-end-line="17" selection-end-column="2" />
-              <folding>
-                <element signature="e#760#761#0" expanded="true" />
-                <element signature="e#828#829#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/msa-member/src/main/java/msa/demo/member/service/MemberServiceImpl.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="381">
-              <caret line="59" column="62" selection-start-line="59" selection-start-column="62" selection-end-line="59" selection-end-column="62" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/member/src/main/java/com/msa/member/service/impl/FileUploadDownloadServiceImpl.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="105">
-              <caret line="19" column="13" selection-start-line="19" selection-start-column="13" selection-end-line="19" selection-end-column="13" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/msa-member/src/main/java/msa/demo/member/service/FileUploadDownloadService.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="147">
-              <caret line="8" column="8" selection-start-line="8" selection-start-column="8" selection-end-line="8" selection-end-column="8" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/msa-member/src/main/java/msa/demo/member/service/FileUploadDownloadServiceImpl.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="204">
-              <caret line="38" column="52" lean-forward="true" selection-start-line="38" selection-start-column="52" selection-end-line="38" selection-end-column="52" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/msa-member/src/test/java/msa/demo/member/service/MemberServiceImplTest.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="392">
-              <caret line="48" column="5" lean-forward="true" selection-start-line="48" selection-start-column="5" selection-end-line="48" selection-end-column="5" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/msa-member/src/main/java/msa/demo/member/exception/handle/MemberExceptionHandler.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="987">
-              <caret line="47" lean-forward="true" selection-start-line="47" selection-end-line="47" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/msa-member/src/main/java/msa/demo/member/service/MemberService.java">
+        <entry file="file://$PROJECT_DIR$/msa-member/src/main/resources/application.properties">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="336">
-              <caret line="16" column="58" selection-start-line="16" selection-start-column="58" selection-end-line="16" selection-end-column="58" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/msa-member/src/main/java/msa/demo/member/domain/FileUploadResponse.java">
-          <provider selected="true" editor-type-id="text-editor" />
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/msa-member/src/main/java/msa/demo/member/domain/FileUploadProperties.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="84">
-              <caret line="4" column="12" selection-start-line="4" selection-start-column="12" selection-end-line="4" selection-end-column="12" />
+              <caret line="16" column="59" selection-start-line="16" selection-start-column="59" selection-end-line="16" selection-end-column="59" />
             </state>
           </provider>
         </entry>
@@ -194,6 +57,7 @@
       <find>convertStringToMember</find>
       <find>setFileNames</find>
       <find>storeFile</find>
+      <find>updateUserProfile</find>
     </findStrings>
     <replaceStrings>
       <replace />
@@ -205,37 +69,12 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/gateway/src/main/java/com/msa/gateway/config/WebMvcConfig.java" />
-        <option value="$PROJECT_DIR$/timeline/src/main/java/com/msa/timeline/repository/LikeRepository.java" />
-        <option value="$PROJECT_DIR$/timeline/src/main/java/com/msa/timeline/service/impl/LikeServiceImpl.java" />
-        <option value="$PROJECT_DIR$/timeline/src/main/java/com/msa/timeline/domain/Comment.java" />
-        <option value="$PROJECT_DIR$/timeline/src/main/java/com/msa/timeline/service/impl/CommentServiceImpl.java" />
-        <option value="$PROJECT_DIR$/gateway/src/main/resources/application.properties" />
-        <option value="$PROJECT_DIR$/gateway/pom.xml" />
-        <option value="$PROJECT_DIR$/member/src/main/java/com/msa/member/domain/State.java" />
-        <option value="$PROJECT_DIR$/member/src/test/java/com/msa/member/service/impl/FriendServiceImplTest.java" />
-        <option value="$PROJECT_DIR$/member/src/main/java/com/msa/member/domain/Friend.java" />
-        <option value="$PROJECT_DIR$/timeline/src/main/java/com/msa/timeline/domain/TimeLine.java" />
-        <option value="$PROJECT_DIR$/member/src/main/java/com/msa/member/domain/Member.java" />
-        <option value="$PROJECT_DIR$/member/src/main/java/com/msa/member/repository/MemberRepository.java" />
-        <option value="$PROJECT_DIR$/gateway/src/main/java/com/msa/gateway/security/tokens/JwtPostProcessingToken.java" />
-        <option value="$PROJECT_DIR$/member/src/main/java/com/msa/member/service/FriendService.java" />
-        <option value="$PROJECT_DIR$/member/src/main/java/com/msa/member/controller/FriendController.java" />
-        <option value="$PROJECT_DIR$/member/src/main/java/com/msa/member/service/impl/FriendServiceImpl.java" />
-        <option value="$PROJECT_DIR$/timeline/src/main/java/com/msa/timeline/service/TimeLineService.java" />
-        <option value="$PROJECT_DIR$/timeline/src/test/java/com/msa/timeline/repository/TimeLineRepositoryTest.java" />
-        <option value="$PROJECT_DIR$/timeline/src/main/java/com/msa/timeline/service/impl/TimeLineServiceImpl.java" />
-        <option value="$PROJECT_DIR$/timeline/src/main/java/com/msa/timeline/controller/TimeLineController.java" />
-        <option value="$PROJECT_DIR$/member/src/main/java/com/msa/member/service/MemberService.java" />
-        <option value="$PROJECT_DIR$/member/src/main/java/com/msa/member/controller/MemberController.java" />
-        <option value="$PROJECT_DIR$/member/src/test/java/com/msa/member/repository/FriendRepositoryTest.java" />
         <option value="$PROJECT_DIR$/member/src/main/java/com/msa/member/repository/FriendRepository.java" />
         <option value="$PROJECT_DIR$/member/src/main/java/com/msa/member/service/impl/MemberServiceImpl.java" />
         <option value="$PROJECT_DIR$/timeline/src/main/java/com/msa/timeline/repository/TimeLineRepository.java" />
         <option value="$PROJECT_DIR$/gateway/src/main/java/com/msa/gateway/filters/PreFilter.java" />
         <option value="$PROJECT_DIR$/msa-member/src/test/java/msa/demo/member/MsaMemberApplicationTests.java" />
         <option value="$PROJECT_DIR$/msa-member/pom.xml" />
-        <option value="$PROJECT_DIR$/msa-member/src/main/resources/application.properties" />
         <option value="$PROJECT_DIR$/msa-member/src/main/java/msa/demo/member/exception/ErrorMessage.java" />
         <option value="$PROJECT_DIR$/msa-member/src/main/java/msa/demo/member/exception/DataIntegrityViolationException.java" />
         <option value="$PROJECT_DIR$/msa-member/src/main/java/msa/demo/member/exception/InvalidDataAccessApiUsageException.java" />
@@ -256,6 +95,31 @@
         <option value="$PROJECT_DIR$/msa-member/src/main/java/msa/demo/member/exception/handle/MemberExceptionHandler.java" />
         <option value="$PROJECT_DIR$/msa-member/src/main/java/msa/demo/member/service/FileUploadDownloadServiceImpl.java" />
         <option value="$PROJECT_DIR$/msa-member/src/test/java/msa/demo/member/service/MemberServiceImplTest.java" />
+        <option value="$PROJECT_DIR$/msa-timeline/src/main/java/msa/demo/timeline/domain/Scope.java" />
+        <option value="$PROJECT_DIR$/msa-timeline/src/main/java/msa/demo/timeline/repository/TimeLIneRepository.java" />
+        <option value="$PROJECT_DIR$/msa-timeline/src/main/java/msa/demo/timeline/FileUploadResponse.java" />
+        <option value="$PROJECT_DIR$/msa-timeline/src/main/java/msa/demo/timeline/exception/handle/MemberExceptionHandler.java" />
+        <option value="$PROJECT_DIR$/msa-timeline/src/main/java/msa/demo/timeline/exception/handle/TimeLineExceptionHandler.java" />
+        <option value="$PROJECT_DIR$/msa-timeline/src/main/java/msa/demo/timeline/service/FileUploadDownloadService.java" />
+        <option value="$PROJECT_DIR$/msa-timeline/src/main/java/msa/demo/timeline/domain/FileUploadResponse.java" />
+        <option value="$PROJECT_DIR$/msa-timeline/src/main/java/msa/demo/timeline/TimelineApplication.java" />
+        <option value="$PROJECT_DIR$/msa-timeline/src/main/java/msa/demo/timeline/service/FileUploadDownloadServiceImpl.java" />
+        <option value="$PROJECT_DIR$/timeline/src/main/resources/application.properties" />
+        <option value="$PROJECT_DIR$/msa-timeline/src/main/resources/application.properties" />
+        <option value="$PROJECT_DIR$/timeline/src/main/java/com/msa/timeline/domain/Comment.java" />
+        <option value="$PROJECT_DIR$/msa-timeline/src/test/java/msa/demo/timeline/service/CommentServiceImplTest.java" />
+        <option value="$PROJECT_DIR$/msa-timeline/src/main/java/msa/demo/timeline/repository/TimeLineRepository.java" />
+        <option value="$PROJECT_DIR$/msa-timeline/src/main/java/msa/demo/timeline/domain/TimeLine.java" />
+        <option value="$PROJECT_DIR$/msa-timeline/src/main/java/msa/demo/timeline/service/TimeLineService.java" />
+        <option value="$PROJECT_DIR$/msa-timeline/src/main/java/msa/demo/timeline/controller/TimeLineController.java" />
+        <option value="$PROJECT_DIR$/msa-timeline/src/test/java/msa/demo/timeline/service/TimeLineServiceImplTest.java" />
+        <option value="$PROJECT_DIR$/msa-timeline/src/main/java/msa/demo/timeline/service/CommentService.java" />
+        <option value="$PROJECT_DIR$/msa-timeline/src/main/java/msa/demo/timeline/domain/Comment.java" />
+        <option value="$PROJECT_DIR$/msa-timeline/src/main/java/msa/demo/timeline/repository/CommentRepository.java" />
+        <option value="$PROJECT_DIR$/msa-timeline/src/main/java/msa/demo/timeline/service/TimeLineServiceImpl.java" />
+        <option value="$PROJECT_DIR$/msa-timeline/src/main/java/msa/demo/timeline/service/CommentServiceImpl.java" />
+        <option value="$PROJECT_DIR$/msa-timeline/src/main/java/msa/demo/timeline/controller/CommentController.java" />
+        <option value="$PROJECT_DIR$/msa-member/src/main/resources/application.properties" />
       </list>
     </option>
   </component>
@@ -288,73 +152,6 @@
           <expand>
             <path>
               <item name="open-msa-web-server" type="b2602c69:ProjectViewProjectNode" />
-              <item name="member" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="open-msa-web-server" type="b2602c69:ProjectViewProjectNode" />
-              <item name="member" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="open-msa-web-server" type="b2602c69:ProjectViewProjectNode" />
-              <item name="member" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="open-msa-web-server" type="b2602c69:ProjectViewProjectNode" />
-              <item name="member" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="open-msa-web-server" type="b2602c69:ProjectViewProjectNode" />
-              <item name="member" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="member" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="open-msa-web-server" type="b2602c69:ProjectViewProjectNode" />
-              <item name="member" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="member" type="462c0819:PsiDirectoryNode" />
-              <item name="controller" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="open-msa-web-server" type="b2602c69:ProjectViewProjectNode" />
-              <item name="member" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="member" type="462c0819:PsiDirectoryNode" />
-              <item name="dtos" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="open-msa-web-server" type="b2602c69:ProjectViewProjectNode" />
-              <item name="member" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="member" type="462c0819:PsiDirectoryNode" />
-              <item name="service" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="open-msa-web-server" type="b2602c69:ProjectViewProjectNode" />
-              <item name="member" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="member" type="462c0819:PsiDirectoryNode" />
-              <item name="service" type="462c0819:PsiDirectoryNode" />
-              <item name="impl" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="open-msa-web-server" type="b2602c69:ProjectViewProjectNode" />
               <item name="msa-member" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -373,100 +170,7 @@
               <item name="msa-member" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="open-msa-web-server" type="b2602c69:ProjectViewProjectNode" />
-              <item name="msa-member" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="member" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="open-msa-web-server" type="b2602c69:ProjectViewProjectNode" />
-              <item name="msa-member" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="member" type="462c0819:PsiDirectoryNode" />
-              <item name="domain" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="open-msa-web-server" type="b2602c69:ProjectViewProjectNode" />
-              <item name="msa-member" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="member" type="462c0819:PsiDirectoryNode" />
-              <item name="exception" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="open-msa-web-server" type="b2602c69:ProjectViewProjectNode" />
-              <item name="msa-member" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="member" type="462c0819:PsiDirectoryNode" />
-              <item name="exception" type="462c0819:PsiDirectoryNode" />
-              <item name="handle" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="open-msa-web-server" type="b2602c69:ProjectViewProjectNode" />
-              <item name="msa-member" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="member" type="462c0819:PsiDirectoryNode" />
-              <item name="repository" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="open-msa-web-server" type="b2602c69:ProjectViewProjectNode" />
-              <item name="msa-member" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="member" type="462c0819:PsiDirectoryNode" />
-              <item name="service" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="open-msa-web-server" type="b2602c69:ProjectViewProjectNode" />
-              <item name="msa-member" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="test" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="open-msa-web-server" type="b2602c69:ProjectViewProjectNode" />
-              <item name="msa-member" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="test" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="open-msa-web-server" type="b2602c69:ProjectViewProjectNode" />
-              <item name="msa-member" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="test" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="member" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="open-msa-web-server" type="b2602c69:ProjectViewProjectNode" />
-              <item name="msa-member" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="test" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="member" type="462c0819:PsiDirectoryNode" />
-              <item name="controller" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="open-msa-web-server" type="b2602c69:ProjectViewProjectNode" />
-              <item name="msa-member" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="test" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="member" type="462c0819:PsiDirectoryNode" />
-              <item name="service" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -488,7 +192,7 @@
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5" value="" />
     <property name="extract.method.default.visibility" value="private" />
     <property name="jdk.selected.JAVA_MODULE" value="1.8" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/msa-member/src/main/java/msa/demo/member/domain" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/msa-timeline/src/main/java/msa/demo/timeline/domain" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="nodejs_package_manager_path" value="npm" />
@@ -499,20 +203,23 @@
   </component>
   <component name="RecentsManager">
     <key name="CreateTestDialog.RecentsKey">
+      <recent name="msa.demo.timeline.service" />
       <recent name="msa.demo.member.controller" />
       <recent name="msa.demo.member.service" />
       <recent name="com.msa.member.repository" />
       <recent name="com.msa.timeline.repository" />
-      <recent name="com.msa.member.service.impl" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="msa.demo.timeline.service" />
       <recent name="msa.demo.member.service" />
       <recent name="com.msa.member.config" />
       <recent name="com.msa.timeline.service" />
       <recent name="com.msa.timeline.service.impl" />
-      <recent name="com.msa.timeline" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/msa-timeline/src/main/java/msa/demo/timeline/domain" />
+      <recent name="$PROJECT_DIR$/msa-timeline/src/main/java/msa/demo/timeline/service" />
+      <recent name="$PROJECT_DIR$/msa-timeline/src/main/java/msa/demo/timeline" />
       <recent name="$PROJECT_DIR$/msa-member/src/main/java/msa/demo/member/domain" />
       <recent name="$PROJECT_DIR$/timeline/src/main/java/com/msa/timeline/dtos" />
     </key>
@@ -524,6 +231,11 @@
     </key>
   </component>
   <component name="RunDashboard">
+    <option name="configurationTypes">
+      <set>
+        <option value="SpringBootApplicationConfigurationType" />
+      </set>
+    </option>
     <option name="ruleStates">
       <list>
         <RuleState>
@@ -534,81 +246,82 @@
         </RuleState>
       </list>
     </option>
+    <option name="contentProportion" value="0.17675675" />
   </component>
-  <component name="RunManager" selected="JUnit.MemberControllerTest">
-    <configuration name="MemberControllerTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="msa-member" />
+  <component name="RunManager" selected="JUnit.TimeLineServiceImplTest">
+    <configuration name="CommentServiceImplTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="msa-timeline" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="msa.demo.member.controller.*" />
+          <option name="PATTERN" value="msa.demo.timeline.service.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="msa.demo.member.controller" />
-      <option name="MAIN_CLASS_NAME" value="msa.demo.member.controller.MemberControllerTest" />
+      <option name="PACKAGE_NAME" value="msa.demo.timeline.service" />
+      <option name="MAIN_CLASS_NAME" value="msa.demo.timeline.service.CommentServiceImplTest" />
       <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="MemberServiceImplTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="msa-member" />
+    <configuration name="CommentServiceImplTest.writeComment" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="msa-timeline" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="msa.demo.member.service.*" />
+          <option name="PATTERN" value="msa.demo.timeline.service.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="msa.demo.member.service" />
-      <option name="MAIN_CLASS_NAME" value="msa.demo.member.service.MemberServiceImplTest" />
+      <option name="PACKAGE_NAME" value="msa.demo.timeline.service" />
+      <option name="MAIN_CLASS_NAME" value="msa.demo.timeline.service.CommentServiceImplTest" />
+      <option name="METHOD_NAME" value="writeComment" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="TimeLineServiceImplTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="msa-timeline" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="msa.demo.timeline.service.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="msa.demo.timeline.service" />
+      <option name="MAIN_CLASS_NAME" value="msa.demo.timeline.service.TimeLineServiceImplTest" />
       <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="MemberServiceImplTest.getMemberInfoByUserId" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="msa-member" />
+    <configuration name="TimeLineServiceImplTest.updateTimeLine" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="msa-timeline" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="msa.demo.member.service.*" />
+          <option name="PATTERN" value="msa.demo.timeline.service.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="msa.demo.member.service" />
-      <option name="MAIN_CLASS_NAME" value="msa.demo.member.service.MemberServiceImplTest" />
-      <option name="METHOD_NAME" value="getMemberInfoByUserId" />
+      <option name="PACKAGE_NAME" value="msa.demo.timeline.service" />
+      <option name="MAIN_CLASS_NAME" value="msa.demo.timeline.service.TimeLineServiceImplTest" />
+      <option name="METHOD_NAME" value="updateTimeLine" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="MemberServiceImplTest.memberSignUpTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="msa-member" />
+    <configuration name="TimeLineServiceImplTest.writeTimeLine" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="msa-timeline" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="msa.demo.member.service.*" />
+          <option name="PATTERN" value="msa.demo.timeline.service.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="msa.demo.member.service" />
-      <option name="MAIN_CLASS_NAME" value="msa.demo.member.service.MemberServiceImplTest" />
-      <option name="METHOD_NAME" value="memberSignUpTest" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="MemberServiceImplTest.updateMemberInfo" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="msa-member" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="msa.demo.member.service.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="msa.demo.member.service" />
-      <option name="MAIN_CLASS_NAME" value="msa.demo.member.service.MemberServiceImplTest" />
-      <option name="METHOD_NAME" value="updateMemberInfo" />
+      <option name="PACKAGE_NAME" value="msa.demo.timeline.service" />
+      <option name="MAIN_CLASS_NAME" value="msa.demo.timeline.service.TimeLineServiceImplTest" />
+      <option name="METHOD_NAME" value="writeTimeLine" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -642,6 +355,13 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="TimelineApplication (1)" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="msa-timeline" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="msa.demo.timeline.TimelineApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="TimelineApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
       <module name="timeline" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="com.msa.timeline.TimelineApplication" />
@@ -651,11 +371,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.MemberControllerTest" />
-        <item itemvalue="JUnit.MemberServiceImplTest" />
-        <item itemvalue="JUnit.MemberServiceImplTest.updateMemberInfo" />
-        <item itemvalue="JUnit.MemberServiceImplTest.getMemberInfoByUserId" />
-        <item itemvalue="JUnit.MemberServiceImplTest.memberSignUpTest" />
+        <item itemvalue="JUnit.TimeLineServiceImplTest" />
+        <item itemvalue="JUnit.CommentServiceImplTest" />
+        <item itemvalue="JUnit.CommentServiceImplTest.writeComment" />
+        <item itemvalue="JUnit.TimeLineServiceImplTest.updateTimeLine" />
+        <item itemvalue="JUnit.TimeLineServiceImplTest.writeTimeLine" />
       </list>
     </recent_temporary>
   </component>
@@ -672,50 +392,50 @@
       <workItem from="1581685016577" duration="6090000" />
       <workItem from="1581826455428" duration="138876000" />
       <workItem from="1583353651317" duration="46239000" />
-      <workItem from="1584525203236" duration="18993000" />
+      <workItem from="1584525203236" duration="39288000" />
     </task>
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="MemberServiceImplTest - 2020.03.19 at 19h 56m 33s.xml">
-      <configuration name="MemberServiceImplTest" configurationId="JUnit" />
+    <history-entry file="CommentServiceImplTest_writeComment - 2020.03.20 at 12h 53m 08s.xml">
+      <configuration name="CommentServiceImplTest.writeComment" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="MemberServiceImplTest - 2020.03.19 at 19h 57m 09s.xml">
-      <configuration name="MemberServiceImplTest" configurationId="JUnit" />
+    <history-entry file="CommentServiceImplTest_writeComment - 2020.03.20 at 12h 56m 56s.xml">
+      <configuration name="CommentServiceImplTest.writeComment" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="MemberServiceImplTest - 2020.03.19 at 19h 57m 53s.xml">
-      <configuration name="MemberServiceImplTest" configurationId="JUnit" />
+    <history-entry file="CommentServiceImplTest - 2020.03.20 at 12h 57m 56s.xml">
+      <configuration name="CommentServiceImplTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="MemberServiceImplTest - 2020.03.19 at 20h 00m 46s.xml">
-      <configuration name="MemberServiceImplTest" configurationId="JUnit" />
+    <history-entry file="CommentServiceImplTest - 2020.03.20 at 12h 58m 59s.xml">
+      <configuration name="CommentServiceImplTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="MemberControllerTest - 2020.03.19 at 20h 06m 58s.xml">
-      <configuration name="MemberControllerTest" configurationId="JUnit" />
+    <history-entry file="CommentServiceImplTest - 2020.03.20 at 13h 40m 34s.xml">
+      <configuration name="CommentServiceImplTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="MemberControllerTest - 2020.03.19 at 20h 07m 47s.xml">
-      <configuration name="MemberControllerTest" configurationId="JUnit" />
+    <history-entry file="CommentServiceImplTest - 2020.03.20 at 13h 41m 05s.xml">
+      <configuration name="CommentServiceImplTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="MemberServiceImplTest - 2020.03.19 at 20h 08m 42s.xml">
-      <configuration name="MemberServiceImplTest" configurationId="JUnit" />
+    <history-entry file="CommentServiceImplTest - 2020.03.20 at 13h 42m 03s.xml">
+      <configuration name="CommentServiceImplTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="MemberControllerTest - 2020.03.19 at 20h 09m 21s.xml">
-      <configuration name="MemberControllerTest" configurationId="JUnit" />
+    <history-entry file="TimeLineServiceImplTest - 2020.03.20 at 14h 45m 46s.xml">
+      <configuration name="TimeLineServiceImplTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="MemberControllerTest - 2020.03.19 at 20h 11m 17s.xml">
-      <configuration name="MemberControllerTest" configurationId="JUnit" />
+    <history-entry file="TimeLineServiceImplTest - 2020.03.20 at 14h 55m 19s.xml">
+      <configuration name="TimeLineServiceImplTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="MemberControllerTest - 2020.03.19 at 20h 11m 49s.xml">
-      <configuration name="MemberControllerTest" configurationId="JUnit" />
+    <history-entry file="TimeLineServiceImplTest - 2020.03.20 at 14h 59m 31s.xml">
+      <configuration name="TimeLineServiceImplTest" configurationId="JUnit" />
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="210198000" />
+    <option name="totallyTimeSpent" value="230493000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="1440" y="0" width="1920" height="1080" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.4979592" visible="true" weight="0.24174654" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.4979592" visible="true" weight="0.18423855" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="Image Layers" order="3" />
@@ -723,6 +443,7 @@
       <window_info id="UI Designer" order="5" />
       <window_info id="Favorites" order="6" sideWeight="0.5020408" side_tool="true" weight="0.24034335" />
       <window_info id="Web" order="7" sideWeight="0.5020408" side_tool="true" weight="0.24034335" />
+      <window_info anchor="bottom" id="Run Dashboard" weight="0.32997987" />
       <window_info anchor="bottom" id="Messages" order="0" weight="0.32595575" />
       <window_info anchor="bottom" id="Message" order="1" />
       <window_info anchor="bottom" id="Find" order="2" />
@@ -803,419 +524,6 @@
     </expressions>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/gateway/src/main/java/com/msa/gateway/security/providers/JwtAuthenticationProvider.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="13" column="13" selection-start-line="13" selection-start-column="13" selection-end-line="13" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/gateway/src/main/java/com/msa/gateway/security/providers/FormLoginAuthenticationProvider.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-212">
-          <caret line="18" column="13" selection-start-line="18" selection-start-column="13" selection-end-line="18" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-web/5.2.3.RELEASE/spring-web-5.2.3.RELEASE.jar!/org/springframework/web/method/support/InvocableHandlerMethod.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="121">
-          <caret line="99" lean-forward="true" selection-start-line="99" selection-end-line="99" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/member/src/main/java/com/msa/member/dtos/ResponseMessage.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-13">
-          <caret line="11" column="13" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/member/src/main/java/com/msa/member/controller/FriendController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="706">
-          <caret line="38" lean-forward="true" selection-start-line="38" selection-end-line="38" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#1126#1127#0" expanded="true" />
-            <element signature="e#1181#1182#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/member/src/main/java/com/msa/member/domain/Friend.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-88">
-          <caret line="35" column="35" selection-start-line="35" selection-start-column="35" selection-end-line="35" selection-end-column="35" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/member/src/main/java/com/msa/member/service/impl/FriendServiceImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="349">
-          <caret line="59" column="47" lean-forward="true" selection-start-line="59" selection-start-column="47" selection-end-line="59" selection-end-column="47" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/member/src/test/java/com/msa/member/repository/FriendRepositoryTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="320">
-          <caret line="26" column="45" lean-forward="true" selection-start-line="26" selection-start-column="45" selection-end-line="26" selection-end-column="45" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/member/src/main/java/com/msa/member/repository/FriendRepository.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="299">
-          <caret line="26" column="71" selection-start-line="26" selection-start-column="71" selection-end-line="26" selection-end-column="71" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#0#35#1" expanded="true" />
-            <element signature="e#0#32#1" expanded="true" />
-            <element signature="e#0#59#1" expanded="true" />
-            <element signature="e#0#56#1" expanded="true" />
-            <element signature="e#0#81#1" expanded="true" />
-            <element signature="e#0#78#1" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/timeline/src/main/java/com/msa/timeline/controller/TimeLineController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="257">
-          <caret line="77" column="17" lean-forward="true" selection-start-line="77" selection-start-column="17" selection-end-line="77" selection-end-column="17" />
-          <folding>
-            <element signature="e#2299#2300#0" expanded="true" />
-            <element signature="e#2355#2356#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/timeline/src/main/java/com/msa/timeline/service/TimeLineService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="320">
-          <caret line="28" column="42" lean-forward="true" selection-start-line="28" selection-start-column="42" selection-end-line="28" selection-end-column="42" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/timeline/src/test/java/com/msa/timeline/repository/TimeLineRepositoryTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="267">
-          <caret line="33" lean-forward="true" selection-start-line="33" selection-end-line="33" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/timeline/src/main/java/com/msa/timeline/TimelineApplication.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="315">
-          <caret line="18" lean-forward="true" selection-start-line="18" selection-end-line="18" />
-          <folding>
-            <element signature="e#454#455#0" expanded="true" />
-            <element signature="e#524#525#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/gateway/src/main/java/com/msa/gateway/filters/PreFilter.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="357">
-          <caret line="29" column="13" selection-start-line="29" selection-start-column="13" selection-end-line="29" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/gateway/src/main/java/com/msa/gateway/GatewayApplication.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="441">
-          <caret line="21" selection-start-line="21" selection-end-line="21" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#522#523#0" expanded="true" />
-            <element signature="e#591#592#0" expanded="true" />
-            <element signature="e#651#652#0" expanded="true" />
-            <element signature="e#701#702#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/timeline/src/main/java/com/msa/timeline/repository/TimeLineRepository.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="462">
-          <caret line="31" column="138" selection-start-line="31" selection-start-column="138" selection-end-line="31" selection-end-column="138" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/timeline/src/main/java/com/msa/timeline/service/impl/TimeLineServiceImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="598">
-          <caret line="172" selection-start-line="172" selection-end-line="172" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/msa-member/src/test/java/msa/demo/member/MsaMemberApplicationTests.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="6" column="7" selection-start-line="6" selection-start-column="7" selection-end-line="6" selection-end-column="7" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/member/src/main/java/com/msa/member/domain/Member.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="347">
-          <caret line="61" column="4" selection-start-line="61" selection-start-column="4" selection-end-line="65" selection-end-column="5" />
-          <folding>
-            <element signature="e#1909#1910#0" expanded="true" />
-            <element signature="e#1934#1935#0" expanded="true" />
-            <element signature="e#1968#1969#0" expanded="true" />
-            <element signature="e#1996#1997#0" expanded="true" />
-            <element signature="e#2029#2030#0" expanded="true" />
-            <element signature="e#2058#2059#0" expanded="true" />
-            <element signature="e#2102#2103#0" expanded="true" />
-            <element signature="e#2138#2139#0" expanded="true" />
-            <element signature="e#2173#2174#0" expanded="true" />
-            <element signature="e#2204#2205#0" expanded="true" />
-            <element signature="e#2252#2253#0" expanded="true" />
-            <element signature="e#2292#2293#0" expanded="true" />
-            <element signature="e#2327#2328#0" expanded="true" />
-            <element signature="e#2358#2359#0" expanded="true" />
-            <element signature="e#2406#2407#0" expanded="true" />
-            <element signature="e#2446#2447#0" expanded="true" />
-            <element signature="e#2483#2484#0" expanded="true" />
-            <element signature="e#2514#2515#0" expanded="true" />
-            <element signature="e#2564#2565#0" expanded="true" />
-            <element signature="e#2604#2605#0" expanded="true" />
-            <element signature="e#2637#2638#0" expanded="true" />
-            <element signature="e#2668#2669#0" expanded="true" />
-            <element signature="e#2714#2715#0" expanded="true" />
-            <element signature="e#2754#2755#0" expanded="true" />
-            <element signature="e#2792#2793#0" expanded="true" />
-            <element signature="e#2826#2827#0" expanded="true" />
-            <element signature="e#2880#2881#0" expanded="true" />
-            <element signature="e#2926#2927#0" expanded="true" />
-            <element signature="e#2958#2959#0" expanded="true" />
-            <element signature="e#2986#2987#0" expanded="true" />
-            <element signature="e#3028#3029#0" expanded="true" />
-            <element signature="e#3062#3063#0" expanded="true" />
-            <element signature="e#3100#3101#0" expanded="true" />
-            <element signature="e#3134#3135#0" expanded="true" />
-            <element signature="e#3188#3189#0" expanded="true" />
-            <element signature="e#3234#3235#0" expanded="true" />
-            <element signature="e#3274#3275#0" expanded="true" />
-            <element signature="e#3310#3311#0" expanded="true" />
-            <element signature="e#3368#3369#0" expanded="true" />
-            <element signature="e#3418#3419#0" expanded="true" />
-            <element signature="e#3461#3462#0" expanded="true" />
-            <element signature="e#3500#3501#0" expanded="true" />
-            <element signature="e#3564#3565#0" expanded="true" />
-            <element signature="e#3620#3621#0" expanded="true" />
-            <element signature="e#3664#3665#0" expanded="true" />
-            <element signature="e#3697#3698#0" expanded="true" />
-            <element signature="e#3756#3757#0" expanded="true" />
-            <element signature="e#3800#3801#0" expanded="true" />
-            <element signature="e#3840#3841#0" expanded="true" />
-            <element signature="e#3870#3871#0" expanded="true" />
-            <element signature="e#3922#3923#0" expanded="true" />
-            <element signature="e#3960#3961#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/member/src/main/java/com/msa/member/repository/MemberRepository.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="315">
-          <caret line="23" column="4" selection-start-line="23" selection-start-column="4" selection-end-line="23" selection-end-column="75" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/msa-member/src/main/resources/application.properties">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="252">
-          <caret line="12" lean-forward="true" selection-start-line="12" selection-end-line="12" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/msa-member/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="254">
-          <caret line="20" column="18" lean-forward="true" selection-start-line="20" selection-start-column="18" selection-end-line="20" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/msa-member/src/main/java/msa/demo/member/exception.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="42">
-          <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/msa-member/src/main/java/msa/demo/member/exception/handle/ExceptionHandler.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="147">
-          <caret line="7" column="10" selection-start-line="7" selection-start-column="10" selection-end-line="7" selection-end-column="10" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/msa-member/src/main/java/msa/demo/member/exception/DataIntegrityViolationException.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="231">
-          <caret line="11" lean-forward="true" selection-start-line="11" selection-end-line="11" />
-          <folding>
-            <element signature="e#272#273#0" expanded="true" />
-            <element signature="e#292#293#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/msa-member/src/main/java/msa/demo/member/exception/NullPointerException.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="189">
-          <caret line="9" column="5" lean-forward="true" selection-start-line="9" selection-start-column="5" selection-end-line="9" selection-end-column="5" />
-          <folding>
-            <element signature="e#239#240#0" expanded="true" />
-            <element signature="e#269#270#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/msa-member/src/main/java/msa/demo/member/exception/NoSuchElementException.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="231">
-          <caret line="11" lean-forward="true" selection-start-line="11" selection-end-line="11" />
-          <folding>
-            <element signature="e#265#266#0" expanded="true" />
-            <element signature="e#295#296#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/msa-member/src/main/java/msa/demo/member/exception/ErrorMessage.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="315">
-          <caret line="15" column="1" lean-forward="true" selection-start-line="15" selection-start-column="1" selection-end-line="15" selection-end-column="1" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/msa-member/src/main/java/msa/demo/member/repository/MemberRepository.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="307">
-          <caret line="15" selection-start-line="15" selection-end-line="15" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#0#177#1" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/msa-member/src/main/java/msa/demo/member/domain/ResponseMessage.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="441">
-          <caret line="22" selection-start-line="22" selection-end-line="22" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/msa-member/src/test/java/msa/demo/member/controller/MemberControllerTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="514">
-          <caret line="55" column="69" selection-start-line="55" selection-start-column="69" selection-end-line="55" selection-end-column="69" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#863#864#0" expanded="true" />
-            <element signature="e#891#892#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/msa-member/src/main/java/msa/demo/member/domain/Member.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-164">
-          <caret line="10" column="3" selection-start-line="10" selection-start-column="3" selection-end-line="10" selection-end-column="3" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/member/src/main/java/com/msa/member/controller/MemberController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="375">
-          <caret line="41" column="126" selection-start-line="41" selection-start-column="47" selection-end-line="41" selection-end-column="126" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/member/src/main/java/com/msa/member/service/MemberService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="252">
-          <caret line="14" column="84" selection-start-line="14" selection-start-column="47" selection-end-line="14" selection-end-column="84" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/msa-member/src/main/java/msa/demo/member/controller/MemberController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="430">
-          <caret line="41" column="50" selection-start-line="41" selection-start-column="50" selection-end-line="41" selection-end-column="50" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#306#307#0" expanded="true" />
-            <element signature="e#356#357#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/member/src/main/java/com/msa/member/service/FriendService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="252">
-          <caret line="12" column="60" selection-start-line="12" selection-start-column="60" selection-end-line="12" selection-end-column="60" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/member/src/main/java/com/msa/member/service/FileUploadDownloadService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="6" column="17" selection-start-line="6" selection-start-column="17" selection-end-line="6" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/member/src/main/java/com/msa/member/service/impl/FileUploadDownloadServiceImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="19" column="13" selection-start-line="19" selection-start-column="13" selection-end-line="19" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/msa-member/src/main/java/msa/demo/member/domain/FileUploadResponse.java">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/msa-member/src/main/java/msa/demo/member/domain/FileUploadProperties.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="84">
-          <caret line="4" column="12" selection-start-line="4" selection-start-column="12" selection-end-line="4" selection-end-column="12" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/msa-member/src/main/java/msa/demo/member/MsaMemberApplication.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="126">
-          <caret line="9" column="22" selection-start-line="9" selection-start-column="22" selection-end-line="9" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/member/src/main/java/com/msa/member/MemberApplication.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="105">
@@ -1227,53 +535,28 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/member/src/main/java/com/msa/member/service/impl/MemberServiceImpl.java">
+    <entry file="file://$PROJECT_DIR$/msa-member/src/test/java/msa/demo/member/service/MemberServiceImplTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="189" column="16" selection-start-line="189" selection-start-column="16" selection-end-line="189" selection-end-column="62" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/msa-member/src/main/java/msa/demo/member/service/MemberServiceImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="381">
-          <caret line="59" column="62" selection-start-line="59" selection-start-column="62" selection-end-line="59" selection-end-column="62" />
+        <state relative-caret-position="392">
+          <caret line="48" column="5" selection-start-line="48" selection-start-column="5" selection-end-line="48" selection-end-column="5" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/msa-member/src/main/java/msa/demo/member/service/FileUploadDownloadService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="147">
-          <caret line="8" column="8" selection-start-line="8" selection-start-column="8" selection-end-line="8" selection-end-column="8" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/msa-member/src/main/java/msa/demo/member/exception/InvalidDataAccessApiUsageException.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="84">
-          <caret line="4" column="4" lean-forward="true" selection-start-line="4" selection-start-column="4" selection-end-line="10" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/msa-member/src/main/java/msa/demo/member/exception/FileUploadException.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="21">
-          <caret line="1" lean-forward="true" selection-start-line="1" selection-end-line="1" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/msa-member/src/main/java/msa/demo/member/exception/handle/MemberExceptionHandler.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="987">
-          <caret line="47" lean-forward="true" selection-start-line="47" selection-end-line="47" />
+          <caret line="47" selection-start-line="47" selection-end-line="47" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/msa-member/src/main/java/msa/demo/member/domain/FileUploadResponse.java">
+      <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/msa-member/src/main/java/msa/demo/member/service/MemberService.java">
       <provider selected="true" editor-type-id="text-editor">
@@ -1285,23 +568,369 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/msa-member/src/main/java/msa/demo/member/service/FileUploadDownloadServiceImpl.java">
+    <entry file="file://$PROJECT_DIR$/msa-member/src/main/java/msa/demo/member/service/MemberServiceImpl.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
-          <caret line="38" column="52" lean-forward="true" selection-start-line="38" selection-start-column="52" selection-end-line="38" selection-end-column="52" />
+        <state relative-caret-position="1239">
+          <caret line="59" column="62" selection-start-line="59" selection-start-column="62" selection-end-line="59" selection-end-column="62" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/msa-member/src/test/java/msa/demo/member/service/MemberServiceImplTest.java">
+    <entry file="file://$PROJECT_DIR$/msa-member/src/test/java/msa/demo/member/controller/MemberControllerTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="392">
+        <state relative-caret-position="85">
+          <caret line="37" column="15" selection-start-line="37" selection-start-column="15" selection-end-line="37" selection-end-column="15" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/msa-timeline/src/main/java/msa/demo/timeline/domain/Scope.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="63">
+          <caret line="3" column="15" selection-start-line="3" selection-start-column="15" selection-end-line="3" selection-end-column="15" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/msa-timeline/src/main/java/msa/demo/timeline/exception/FileUploadException.java">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/msa-timeline/src/main/java/msa/demo/timeline/exception/NullPointerException.java">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/msa-timeline/src/main/java/msa/demo/timeline/exception/ErrorMessage.java">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/msa-timeline/src/main/java/msa/demo/timeline/exception/NoSuchElementException.java">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/msa-timeline/src/main/java/msa/demo/timeline/Member.java">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/msa-timeline/src/main/java/msa/demo/timeline/exception/InvalidDataAccessApiUsageException.java">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/msa-member/src/main/java/msa/demo/member/domain/Member.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-419">
+          <caret line="10" column="3" selection-start-line="10" selection-start-column="3" selection-end-line="10" selection-end-column="3" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/timeline/src/main/java/com/msa/timeline/repository/TimeLineRepository.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="168">
+          <caret line="17" column="4" selection-start-line="17" selection-start-column="4" selection-end-line="26" selection-end-column="99" />
+          <folding>
+            <element signature="e#0#103#1" expanded="true" />
+            <element signature="e#0#75#1" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/msa-member/src/main/java/msa/demo/member/service/FileUploadDownloadServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="798">
+          <caret line="38" column="52" selection-start-line="38" selection-start-column="52" selection-end-line="38" selection-end-column="52" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/msa-member/src/main/java/msa/demo/member/domain/FileUploadProperties.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="252">
+          <caret line="16" lean-forward="true" selection-start-line="16" selection-end-line="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/msa-timeline/src/main/java/msa/demo/timeline/exception/handle/TimeLineExceptionHandler.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="420">
+          <caret line="20" column="32" selection-start-line="20" selection-start-column="32" selection-end-line="20" selection-end-column="32" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/msa-timeline/src/main/java/msa/demo/timeline/domain/ResponseMessage.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="9" column="13" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/msa-member/pom.xml">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/timeline/src/main/java/com/msa/timeline/TimelineApplication.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="8" selection-start-line="8" selection-end-line="10" selection-end-column="2" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/msa-member/src/main/java/msa/demo/member/MsaMemberApplication.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="8" lean-forward="true" selection-start-line="8" selection-end-line="10" selection-end-column="2" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/timeline/src/main/java/com/msa/timeline/service/impl/FileUploadDownloadServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="63">
+          <caret line="19" column="13" selection-start-line="19" selection-start-column="13" selection-end-line="19" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/timeline/src/main/java/com/msa/timeline/service/FileUploadDownloadService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="42">
+          <caret line="2" lean-forward="true" selection-start-line="2" selection-end-line="2" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/msa-timeline/src/main/java/msa/demo/timeline/TimelineApplication.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="210">
+          <caret line="14" column="15" selection-start-line="14" selection-start-column="15" selection-end-line="14" selection-end-column="15" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/msa-timeline/src/main/java/msa/demo/timeline/service/FileUploadDownloadService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="147">
+          <caret line="8" column="8" selection-start-line="8" selection-start-column="8" selection-end-line="8" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/msa-timeline/src/main/java/msa/demo/timeline/domain/FileUploadResponse.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="462">
+          <caret line="23" column="1" lean-forward="true" selection-start-line="23" selection-start-column="1" selection-end-line="23" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/timeline/src/main/resources/application.properties">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="462">
+          <caret line="22" selection-start-line="22" selection-end-line="23" selection-end-column="67" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/msa-timeline/src/main/java/msa/demo/timeline/domain/FileUploadProperties.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="231">
+          <caret line="15" column="1" lean-forward="true" selection-start-line="15" selection-start-column="1" selection-end-line="15" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/timeline/src/main/java/com/msa/timeline/domain/Comment.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-20">
+          <caret line="59" column="28" lean-forward="true" selection-start-line="15" selection-start-column="4" selection-end-line="59" selection-end-column="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/timeline/src/main/java/com/msa/timeline/domain/TimeLine.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="500">
+          <caret line="106" column="5" lean-forward="true" selection-start-line="106" selection-start-column="5" selection-end-line="106" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/msa-timeline/src/main/java/msa/demo/timeline/service/FileUploadDownloadServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="271">
+          <caret line="30" column="22" selection-start-line="30" selection-start-column="22" selection-end-line="30" selection-end-column="22" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/msa-timeline/src/main/java/msa/demo/timeline/repository/TimeLineRepository.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="525">
+          <caret line="26" column="76" selection-start-line="26" selection-start-column="76" selection-end-line="26" selection-end-column="76" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#0#103#1" expanded="true" />
+            <element signature="e#0#75#1" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/msa-member/src/main/java/msa/demo/member/controller/MemberController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="435">
+          <caret line="40" column="130" lean-forward="true" selection-start-line="40" selection-start-column="51" selection-end-line="40" selection-end-column="130" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/msa-timeline/src/test/java/msa/demo/timeline/service/CommentServiceImplTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="381">
+          <caret line="29" lean-forward="true" selection-start-line="29" selection-end-line="29" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/timeline/src/main/java/com/msa/timeline/controller/TimeLineController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1365">
+          <caret line="83" lean-forward="true" selection-start-line="83" selection-end-line="83" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/timeline/src/main/java/com/msa/timeline/service/impl/TimeLineServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="378">
+          <caret line="75" lean-forward="true" selection-start-line="75" selection-end-line="75" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/timeline/src/main/java/com/msa/timeline/service/impl/CommentServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="525">
+          <caret line="34" column="5" lean-forward="true" selection-start-line="34" selection-start-column="5" selection-end-line="34" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/msa-timeline/src/main/java/msa/demo/timeline/domain/Comment.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="477">
+          <caret line="34" column="37" selection-start-line="34" selection-start-column="37" selection-end-line="34" selection-end-column="37" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/msa-timeline/src/main/java/msa/demo/timeline/controller/CommentController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="861">
+          <caret line="41" column="5" selection-start-line="41" selection-start-column="5" selection-end-line="41" selection-end-column="5" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#410#411#0" expanded="true" />
+            <element signature="e#462#463#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/msa-timeline/src/main/java/msa/demo/timeline/domain/TimeLine.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="454">
+          <caret line="43" lean-forward="true" selection-start-line="43" selection-end-line="43" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/msa-timeline/src/main/java/msa/demo/timeline/repository/CommentRepository.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="483">
+          <caret line="23" column="78" selection-start-line="23" selection-start-column="78" selection-end-line="23" selection-end-column="78" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#0#64#1" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/msa-timeline/src/main/java/msa/demo/timeline/service/CommentServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="441">
+          <caret line="23" column="13" lean-forward="true" selection-start-line="23" selection-start-column="13" selection-end-line="23" selection-end-column="13" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#1030#1031#0" expanded="true" />
+            <element signature="e#1086#1087#0" expanded="true" />
+            <element signature="e#1160#1161#0" expanded="true" />
+            <element signature="e#1229#1230#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/msa-timeline/src/main/java/msa/demo/timeline/controller/TimeLineController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="730">
+          <caret line="48" column="59" selection-start-line="48" selection-start-column="59" selection-end-line="48" selection-end-column="59" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#323#324#0" expanded="true" />
+            <element signature="e#377#378#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/msa-timeline/src/test/java/msa/demo/timeline/service/TimeLineServiceImplTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1008">
           <caret line="48" column="5" lean-forward="true" selection-start-line="48" selection-start-column="5" selection-end-line="48" selection-end-column="5" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/msa-timeline/src/main/java/msa/demo/timeline/service/TimeLineServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="241">
+          <caret line="72" column="50" selection-start-line="72" selection-start-column="50" selection-end-line="72" selection-end-column="50" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/msa-timeline/src/main/java/msa/demo/timeline/service/CommentService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="294">
+          <caret line="14" selection-start-line="14" selection-end-line="14" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/msa-timeline/src/main/java/msa/demo/timeline/service/TimeLineService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="231">
+          <caret line="11" column="65" selection-start-line="11" selection-start-column="65" selection-end-line="11" selection-end-column="65" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/msa-timeline/src/main/resources/application.properties">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="336">
+          <caret line="16" column="48" selection-start-line="16" selection-start-column="48" selection-end-line="16" selection-end-column="48" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/msa-member/src/main/resources/application.properties">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="336">
+          <caret line="16" column="59" selection-start-line="16" selection-start-column="59" selection-end-line="16" selection-end-column="59" />
         </state>
       </provider>
     </entry>
