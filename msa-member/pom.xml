@@ -33,6 +33,12 @@
             <scope>runtime</scope>
         </dependency>
 
+        <!-- Spring AQMP(spring messaging) -->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-amqp</artifactId>
+        </dependency>
+
 <!--        개발시 H2 DataBase 사용-->
 <!--        <dependency>-->
 <!--            <groupId>com.oracle.ojdbc</groupId>-->
