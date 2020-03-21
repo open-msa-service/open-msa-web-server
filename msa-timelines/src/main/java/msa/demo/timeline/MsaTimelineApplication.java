@@ -11,10 +11,10 @@ import org.springframework.cloud.netflix.eureka.EnableEurekaClient;
 @EnableConfigurationProperties({
         FileUploadProperties.class
 })
-public class TimelineApplication {
+public class MsaTimelineApplication {
 
     public static void main(String[] args) {
-        SpringApplication.run(TimelineApplication.class, args);
+        SpringApplication.run(MsaTimelineApplication.class, args);
     }
 
 }
