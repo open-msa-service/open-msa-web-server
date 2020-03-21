@@ -16,7 +16,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 @Service
-public class TimeLineServiceImpl implements TimeLineService{
+public class TimeLineServiceImpl implements TimeLineService {
 
     private final TimeLineRepository timeLIneRepository;
 
@@ -32,6 +32,7 @@ public class TimeLineServiceImpl implements TimeLineService{
 
     /**
      * 글 수정
+     *
      * @param file
      * @param tempTimeline
      */
@@ -39,17 +40,18 @@ public class TimeLineServiceImpl implements TimeLineService{
     public void updateTImeLine(MultipartFile[] file, String tempTimeline) {
         TimeLine timeLine = convertStringToTimeLine(tempTimeline);
         timeLine.setUpdateTime(LocalDateTime.now());
-        try{
+        try {
             setImageFileNames(timeLine);
             fileUploadDownloadService.storeFile(file);
             timeLIneRepository.updateTimeline(timeLine);
-        }catch (InvalidDataAccessApiUsageException ex){
+        } catch (InvalidDataAccessApiUsageException ex) {
             throw new InvalidDataAccessApiUsageException("전송된 데이터가 올바르지 않습니다.");
         }
     }
 
     /**
      * 글 삭제
+     *
      * @param timeId
      */
     @Override
@@ -65,6 +67,7 @@ public class TimeLineServiceImpl implements TimeLineService{
 
     /**
      * 글쓰기
+     *
      * @param file
      * @param tempTimeline
      */
@@ -72,11 +75,11 @@ public class TimeLineServiceImpl implements TimeLineService{
     public void writeTimeLine(MultipartFile[] file, String tempTimeline) {
         TimeLine timeLine = convertStringToTimeLine(tempTimeline);
         timeLine.setUpdateTime(LocalDateTime.now());
-        try{
+        try {
             setImageFileNames(timeLine);
             fileUploadDownloadService.storeFile(file);
             timeLIneRepository.save(timeLine);
-        }catch (InvalidDataAccessApiUsageException ex){
+        } catch (InvalidDataAccessApiUsageException ex) {
             throw new InvalidDataAccessApiUsageException("전송된 데이터가 올바르지 않습니다.");
         }
 
@@ -84,8 +87,8 @@ public class TimeLineServiceImpl implements TimeLineService{
 
     private void setImageFileNames(TimeLine timeLine) {
         StringBuilder fileLocation = new StringBuilder();
-        if(!StringUtils.isEmpty(timeLine.getFileNameList())){
-            for(String str : timeLine.getFileNameList()){
+        if (!StringUtils.isEmpty(timeLine.getFileNameList())) {
+            for (String str : timeLine.getFileNameList()) {
                 fileLocation.append(str.replaceAll(",", " ")).append(",");
             }
             timeLine.setFileLocation(fileLocation.toString());
@@ -105,6 +108,7 @@ public class TimeLineServiceImpl implements TimeLineService{
 
     /**
      * 사용자 id로 타임라인 조회
+     *
      * @param userId
      * @return
      */
@@ -119,6 +123,7 @@ public class TimeLineServiceImpl implements TimeLineService{
 
     /**
      * 유저 프로필 사진 변경시 타임라인, 댓글 프로필 사진 변경
+     *
      * @param userId
      * @param profileHref
      */

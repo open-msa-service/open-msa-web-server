@@ -13,7 +13,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 @Service
-public class CommentServiceImpl implements CommentService{
+public class CommentServiceImpl implements CommentService {
 
     private final CommentRepository commentRepository;
 
@@ -24,11 +24,11 @@ public class CommentServiceImpl implements CommentService{
     @Override
     public void writeComment(Comment comment) {
         comment.setUpdateTime(LocalDateTime.now());
-        try{
+        try {
             commentRepository.save(comment);
-        }catch (DataIntegrityViolationException ex){
+        } catch (DataIntegrityViolationException ex) {
             throw new DataIntegrityViolationException("전송된 데이터가 올바르지 않습니다.");
-        }catch (InvalidDataAccessApiUsageException ex){
+        } catch (InvalidDataAccessApiUsageException ex) {
             throw new InvalidDataAccessApiUsageException("null값을 저장할 수 없습니다.");
         }
     }

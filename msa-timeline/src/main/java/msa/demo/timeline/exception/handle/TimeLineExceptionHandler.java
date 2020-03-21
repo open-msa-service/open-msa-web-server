@@ -19,37 +19,37 @@ public class TimeLineExceptionHandler {
 
     @ExceptionHandler(DataIntegrityViolationException.class)
     @ResponseStatus(HttpStatus.BAD_REQUEST)
-    public ResponseEntity<ErrorMessage> handleDataIntegrityViolationException(DataIntegrityViolationException ex){
+    public ResponseEntity<ErrorMessage> handleDataIntegrityViolationException(DataIntegrityViolationException ex) {
         return getErrorMessageResponseEntity(ex.getMessage(), ex.toString(), HttpStatus.BAD_REQUEST);
     }
 
     @ExceptionHandler(InvalidDataAccessApiUsageException.class)
     @ResponseStatus(HttpStatus.BAD_REQUEST)
-    public ResponseEntity<ErrorMessage> handleInvalidDataAccessApiUsageException(InvalidDataAccessApiUsageException ex){
+    public ResponseEntity<ErrorMessage> handleInvalidDataAccessApiUsageException(InvalidDataAccessApiUsageException ex) {
         return getErrorMessageResponseEntity(ex.getMessage(), ex.toString(), HttpStatus.BAD_REQUEST);
     }
 
     @ExceptionHandler(NoSuchElementException.class)
     @ResponseStatus(HttpStatus.NOT_FOUND)
-    public ResponseEntity<ErrorMessage> handleNoSuchElementException(NoSuchElementException ex){
+    public ResponseEntity<ErrorMessage> handleNoSuchElementException(NoSuchElementException ex) {
         return getErrorMessageResponseEntity(ex.getMessage(), ex.toString(), HttpStatus.NOT_FOUND);
     }
 
     @ExceptionHandler(NullPointerException.class)
     @ResponseStatus(HttpStatus.BAD_REQUEST)
-    public ResponseEntity<ErrorMessage> handleNullPointerException(NullPointerException ex){
+    public ResponseEntity<ErrorMessage> handleNullPointerException(NullPointerException ex) {
         return getErrorMessageResponseEntity(ex.getMessage(), ex.toString(), HttpStatus.BAD_REQUEST);
     }
 
     @ExceptionHandler(FileUploadException.class)
     @ResponseStatus(HttpStatus.INTERNAL_SERVER_ERROR)
-    public ResponseEntity<ErrorMessage> handleFileUploadException(FileUploadException ex){
+    public ResponseEntity<ErrorMessage> handleFileUploadException(FileUploadException ex) {
         return getErrorMessageResponseEntity(ex.getMessage(), ex.toString(), HttpStatus.INTERNAL_SERVER_ERROR);
     }
 
     @ExceptionHandler(AmqpRejectAndDontRequeueException.class)
     @ResponseStatus(HttpStatus.INTERNAL_SERVER_ERROR)
-    public ResponseEntity<ErrorMessage> handleAmqpRejectAndDontRequeueException(AmqpRejectAndDontRequeueException ex){
+    public ResponseEntity<ErrorMessage> handleAmqpRejectAndDontRequeueException(AmqpRejectAndDontRequeueException ex) {
         return getErrorMessageResponseEntity(ex.getMessage(), ex.toString(), HttpStatus.INTERNAL_SERVER_ERROR);
     }
 

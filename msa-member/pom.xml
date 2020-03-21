@@ -33,12 +33,12 @@
             <scope>runtime</scope>
         </dependency>
 
-<!--        개발시 H2 DataBase 사용-->
-<!--        <dependency>-->
-<!--            <groupId>com.oracle.ojdbc</groupId>-->
-<!--            <artifactId>ojdbc8</artifactId>-->
-<!--            <scope>runtime</scope>-->
-<!--        </dependency>-->
+        <!--        개발시 H2 DataBase 사용-->
+        <!--        <dependency>-->
+        <!--            <groupId>com.oracle.ojdbc</groupId>-->
+        <!--            <artifactId>ojdbc8</artifactId>-->
+        <!--            <scope>runtime</scope>-->
+        <!--        </dependency>-->
         <dependency>
             <groupId>org.projectlombok</groupId>
             <artifactId>lombok</artifactId>

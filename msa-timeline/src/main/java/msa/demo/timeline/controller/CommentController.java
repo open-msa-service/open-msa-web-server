@@ -21,14 +21,14 @@ public class CommentController {
     }
 
     @DeleteMapping("/delete/{commentId}")
-    ResponseEntity<ResponseMessage> deleteCommentById(@PathVariable Long commentId){
+    ResponseEntity<ResponseMessage> deleteCommentById(@PathVariable Long commentId) {
         commentService.deleteCommentByCommentId(commentId);
         responseMessage = new ResponseMessage("", "댓글을 삭제 했습니다.");
         return new ResponseEntity<>(responseMessage, HttpStatus.OK);
     }
 
     @PostMapping("/write")
-    ResponseEntity<ResponseMessage> writeComment(@RequestBody Comment comment){
+    ResponseEntity<ResponseMessage> writeComment(@RequestBody Comment comment) {
         commentService.writeComment(comment);
         responseMessage = new ResponseMessage("", "댓글을 작성 했습니다.");
         return new ResponseEntity<>(responseMessage, HttpStatus.OK);

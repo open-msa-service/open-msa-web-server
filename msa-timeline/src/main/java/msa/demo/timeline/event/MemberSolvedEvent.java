@@ -9,8 +9,8 @@ import java.io.Serializable;
 
 
 /**
- *  시스템
- *  profileHref 이벤트 발생
+ * 시스템
+ * profileHref 이벤트 발생
  */
 @Getter
 @ToString

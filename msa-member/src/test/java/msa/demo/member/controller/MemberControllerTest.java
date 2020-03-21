@@ -36,7 +36,7 @@ class MemberControllerTest {
     private JacksonTester<Member> jsonMember;
 
     @BeforeEach
-    public void setUp(){
+    public void setUp() {
         JacksonTester.initFields(this, new ObjectMapper());
     }
 

@@ -23,28 +23,28 @@ public class TimeLineController {
     }
 
     @GetMapping("/{userId}")
-    ResponseEntity<ResponseMessage> getMyTimeLineByUserId(@PathVariable String userId){
+    ResponseEntity<ResponseMessage> getMyTimeLineByUserId(@PathVariable String userId) {
         List<TimeLine> timeLines = timeLineService.findMyTimeLineByUserId(userId);
         responseMessage = new ResponseMessage(timeLines, userId + "의 타임라인을 조회했습니다.");
         return new ResponseEntity<>(responseMessage, HttpStatus.OK);
     }
 
     @DeleteMapping("/delete/{timeId}")
-    ResponseEntity<ResponseMessage> deleteTimeLineByTimeId(@PathVariable Long timeId){
+    ResponseEntity<ResponseMessage> deleteTimeLineByTimeId(@PathVariable Long timeId) {
         timeLineService.deleteTimeLineByTimeId(timeId);
         responseMessage = new ResponseMessage("", "타임라인을 삭제했습니다.");
         return new ResponseEntity<>(responseMessage, HttpStatus.OK);
     }
 
     @PostMapping("/write")
-    ResponseEntity<ResponseMessage> writeTimeLine(@RequestPart("file") MultipartFile[] file, @RequestPart("timeLine")String tempTimeLine){
+    ResponseEntity<ResponseMessage> writeTimeLine(@RequestPart("file") MultipartFile[] file, @RequestPart("timeLine") String tempTimeLine) {
         timeLineService.writeTimeLine(file, tempTimeLine);
         responseMessage = new ResponseMessage("", "타임라인을 작성했습니다.");
         return new ResponseEntity<>(responseMessage, HttpStatus.OK);
     }
 
     @PutMapping("/update")
-    ResponseEntity<ResponseMessage> updateTimeLine(@RequestPart("file") MultipartFile[] file, @RequestPart("timeLine")String tempTimeLine){
+    ResponseEntity<ResponseMessage> updateTimeLine(@RequestPart("file") MultipartFile[] file, @RequestPart("timeLine") String tempTimeLine) {
         timeLineService.updateTImeLine(file, tempTimeLine);
         responseMessage = new ResponseMessage("", "타임라인을 수정했습니다.");
         return new ResponseEntity<>(responseMessage, HttpStatus.OK);

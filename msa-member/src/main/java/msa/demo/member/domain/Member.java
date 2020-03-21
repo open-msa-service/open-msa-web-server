@@ -7,10 +7,11 @@ import javax.persistence.*;
 import java.time.LocalDateTime;
 
 /**
- *  회원 클래스
+ * 회원 클래스
  */
 @Entity
-@Getter @Setter
+@Getter
+@Setter
 @RequiredArgsConstructor
 @ToString
 @EqualsAndHashCode
@@ -36,7 +37,7 @@ public class Member {
     @Column(name = "PROFILE_HREF")
     private String profileHref;  // 프로필 이미지 경로
 
-    @Column(name = "EMAIL" , nullable = false)
+    @Column(name = "EMAIL", nullable = false)
     private String email;
 
     @Column(name = "PHONE_NUMBER", nullable = false)

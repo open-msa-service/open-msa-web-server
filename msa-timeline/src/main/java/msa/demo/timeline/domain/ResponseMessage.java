@@ -6,7 +6,8 @@ import org.springframework.http.HttpStatus;
 
 import java.time.LocalDateTime;
 
-@Getter @Setter
+@Getter
+@Setter
 public class ResponseMessage {
 
     private int status;
@@ -14,7 +15,7 @@ public class ResponseMessage {
     private String message;
     private LocalDateTime time;
 
-    public ResponseMessage(Object data, String message){
+    public ResponseMessage(Object data, String message) {
         this.status = HttpStatus.OK.value();
         this.time = LocalDateTime.now();
         this.data = data;

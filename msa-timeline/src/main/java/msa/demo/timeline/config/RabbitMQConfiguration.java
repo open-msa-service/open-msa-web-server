@@ -22,27 +22,27 @@ import org.springframework.messaging.handler.annotation.support.DefaultMessageHa
 public class RabbitMQConfiguration implements RabbitListenerConfigurer {
 
     @Bean
-    public TopicExchange msaExchange(@Value("${msa.exchange}")final String exchangeName){
+    public TopicExchange msaExchange(@Value("${msa.exchange}") final String exchangeName) {
         return new TopicExchange(exchangeName);
     }
 
     @Bean
-    public Queue timeLineMemberQueue(@Value("${msa.queue}")final String queueName){
+    public Queue timeLineMemberQueue(@Value("${msa.queue}") final String queueName) {
         return new Queue(queueName, true);
     }
 
     @Bean
-    Binding binding(final Queue queue, final TopicExchange exchange, @Value("${msa.anything.exchange}")final String routingKey){
+    Binding binding(final Queue queue, final TopicExchange exchange, @Value("${msa.anything.exchange}") final String routingKey) {
         return BindingBuilder.bind(queue).to(exchange).with(routingKey);
     }
 
     @Bean
-    public MappingJackson2MessageConverter consumerJackson2MessageConverter(){
+    public MappingJackson2MessageConverter consumerJackson2MessageConverter() {
         return new MappingJackson2MessageConverter();
     }
 
     @Bean
-    public DefaultMessageHandlerMethodFactory messageHandlerMethodFactory(){
+    public DefaultMessageHandlerMethodFactory messageHandlerMethodFactory() {
         DefaultMessageHandlerMethodFactory factory = new DefaultMessageHandlerMethodFactory();
         factory.setMessageConverter(consumerJackson2MessageConverter());
         return factory;

@@ -2,11 +2,11 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/gateway/gateway.iml" filepath="$PROJECT_DIR$/gateway/gateway.iml" />
-      <module fileurl="file://$PROJECT_DIR$/member/member.iml" filepath="$PROJECT_DIR$/member/member.iml" />
+      <module fileurl="file://$PROJECT_DIR$/msa-gateway/msa-gateway.iml" filepath="$PROJECT_DIR$/msa-gateway/msa-gateway.iml" />
       <module fileurl="file://$PROJECT_DIR$/msa-member/msa-member.iml" filepath="$PROJECT_DIR$/msa-member/msa-member.iml" />
+      <module fileurl="file://$PROJECT_DIR$/msa-service-registry/msa-service-registry.iml" filepath="$PROJECT_DIR$/msa-service-registry/msa-service-registry.iml" />
       <module fileurl="file://$PROJECT_DIR$/msa-timeline/msa-timeline.iml" filepath="$PROJECT_DIR$/msa-timeline/msa-timeline.iml" />
-      <module fileurl="file://$PROJECT_DIR$/timeline/timeline.iml" filepath="$PROJECT_DIR$/timeline/timeline.iml" />
+      <module fileurl="file://$PROJECT_DIR$/msa-timelines/msa-timelines.iml" filepath="$PROJECT_DIR$/msa-timelines/msa-timelines.iml" />
     </modules>
   </component>
 </project>

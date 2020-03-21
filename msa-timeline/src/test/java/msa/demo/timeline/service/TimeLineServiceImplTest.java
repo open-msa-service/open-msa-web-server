@@ -25,24 +25,24 @@ class TimeLineServiceImplTest {
     private TimeLineService timeLineService;
 
     @Test
-    void searchMyTimeLineByUserId(){
+    void searchMyTimeLineByUserId() {
         String userId = "test";
         List<TimeLine> timeLines = timeLIneRepository.findTimeLineByUserIdOrderByUpdateTimeDesc(null);
-        for(TimeLine timeLine : timeLines)
+        for (TimeLine timeLine : timeLines)
             log.info("timelines : {}", timeLine);
     }
 
 
     @Test
     @Disabled
-    void deleteTimeLineById(){
+    void deleteTimeLineById() {
         Long timeId = 1L;
         timeLineService.deleteTimeLineByTimeId(null);
     }
 
     @Test
     @Disabled
-    void updateTimeLine(){
+    void updateTimeLine() {
         TimeLine timeLine = new TimeLine();
 
 //        timeLineService.updateTImeLine(timeLine);
@@ -51,7 +51,7 @@ class TimeLineServiceImplTest {
 
     @Test
     @Disabled
-    void writeTimeLine(){
+    void writeTimeLine() {
         TimeLine timeLine = new TimeLine();
         timeLine.setContent("게시글 테스트");
         timeLine.setScope(Scope.ALL);
@@ -61,7 +61,6 @@ class TimeLineServiceImplTest {
 
 //        timeLineService.writeTimeLine(timeLine);
     }
-
 
 
 }

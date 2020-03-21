@@ -10,7 +10,9 @@ import javax.persistence.*;
 import java.time.LocalDateTime;
 
 @Entity
-@Getter @Setter @ToString
+@Getter
+@Setter
+@ToString
 @Table(name = "Comment")
 public class Comment {
 

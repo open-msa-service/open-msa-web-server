@@ -15,12 +15,12 @@ public interface TimeLineRepository extends JpaRepository<TimeLine, Long> {
     @Modifying
     @Query(value = "UPDATE TimeLine t SET t.content = :#{#time.content}, t.fileLocation = :#{#time.fileLocation}" +
             ", t.scope = :#{#time.scope} WHERE t.timeId = :#{#time.timeId}")
-    void updateTimeline(@Param("time")TimeLine timeLine);
+    void updateTimeline(@Param("time") TimeLine timeLine);
 
     @Transactional
     @Modifying
     @Query(value = "UPDATE TimeLine t SET t.profileHref = :profileHref WHERE t.userId = :userId")
-    void updateUserProfile(@Param("userId")String userId, @Param("profileHref")String profileHref);
+    void updateUserProfile(@Param("userId") String userId, @Param("profileHref") String profileHref);
 
     void deleteTimeLineByTimeId(Long timeId);
 

@@ -11,7 +11,9 @@ import java.time.LocalDateTime;
 import java.util.List;
 
 @Entity
-@Getter @Setter @ToString
+@Getter
+@Setter
+@ToString
 @Table(name = "TIMELINE")
 public class TimeLine {
 

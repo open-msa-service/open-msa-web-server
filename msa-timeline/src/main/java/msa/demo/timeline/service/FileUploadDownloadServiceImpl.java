@@ -20,13 +20,13 @@ public class FileUploadDownloadServiceImpl implements FileUploadDownloadService 
     private final Path fileLocation;
 
     @Autowired
-    public FileUploadDownloadServiceImpl(FileUploadProperties properties){
+    public FileUploadDownloadServiceImpl(FileUploadProperties properties) {
 
         this.fileLocation = Paths.get(properties.getUploadDir())
                 .toAbsolutePath().normalize();
-        try{
+        try {
             Files.createDirectories(this.fileLocation);
-        }catch (Exception e){
+        } catch (Exception e) {
             try {
                 throw new FileUploadException("");
             } catch (FileUploadException ex) {
