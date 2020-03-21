@@ -7,10 +7,7 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="msa-gateway" />
-        <module name="gateway" />
-        <module name="timeline" />
         <module name="msa-service-registry" />
-        <module name="member" />
         <module name="msa-member" />
         <module name="msa-timeline" />
       </profile>
