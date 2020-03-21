@@ -10,6 +10,7 @@ import org.springframework.stereotype.Service;
 import org.springframework.util.StringUtils;
 import org.springframework.web.multipart.MultipartFile;
 
+import java.io.IOException;
 import java.time.LocalDateTime;
 import java.util.ArrayList;
 import java.util.List;
@@ -96,7 +97,7 @@ public class TimeLineServiceImpl implements TimeLineService{
         TimeLine timeLine = null;
         try {
             timeLine = objectMapper.readValue(tempTimeline, TimeLine.class);
-        } catch (JsonProcessingException e) {
+        } catch (IOException e) {
             e.printStackTrace();
         }
         return timeLine;
