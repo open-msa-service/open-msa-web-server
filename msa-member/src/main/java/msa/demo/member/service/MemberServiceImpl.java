@@ -12,6 +12,7 @@ import org.springframework.stereotype.Service;
 import org.springframework.web.multipart.MultipartFile;
 
 import javax.transaction.Transactional;
+import java.io.IOException;
 import java.time.LocalDateTime;
 import java.util.List;
 import java.util.NoSuchElementException;
@@ -95,6 +96,8 @@ public class MemberServiceImpl implements MemberService {
             member = objectMapper.readValue(members, Member.class);
         } catch (JsonProcessingException e) {
             throw new DataIntegrityViolationException("", e);
+        } catch (IOException e) {
+            e.printStackTrace();
         }
         return member;
     }
