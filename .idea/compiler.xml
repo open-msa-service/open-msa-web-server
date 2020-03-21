@@ -6,18 +6,22 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="msa-timeline" />
-        <module name="msa-member" />
+        <module name="msa-gateway" />
         <module name="gateway" />
-        <module name="member" />
         <module name="timeline" />
+        <module name="msa-service-registry" />
+        <module name="member" />
+        <module name="msa-member" />
+        <module name="msa-timeline" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
       <module name="game" target="1.8" />
       <module name="gateway" target="1.8" />
       <module name="member" target="1.8" />
+      <module name="msa-gateway" target="1.8" />
       <module name="msa-member" target="1.8" />
+      <module name="msa-service-registry" target="1.8" />
       <module name="msa-timeline" target="1.8" />
       <module name="timeline" target="1.8" />
     </bytecodeTargetLevel>
@@ -27,7 +31,9 @@
       <module name="game" options="-parameters" />
       <module name="gateway" options="-parameters" />
       <module name="member" options="-parameters" />
+      <module name="msa-gateway" options="-parameters" />
       <module name="msa-member" options="-parameters" />
+      <module name="msa-service-registry" options="-parameters" />
       <module name="msa-timeline" options="-parameters" />
       <module name="timeline" options="-parameters" />
     </option>
