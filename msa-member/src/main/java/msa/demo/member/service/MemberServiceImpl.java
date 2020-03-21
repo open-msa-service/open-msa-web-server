@@ -36,6 +36,7 @@ public class MemberServiceImpl implements MemberService {
 
     /**
      * 사용자 회원가입
+     *
      * @param member
      */
     @Override
@@ -43,9 +44,9 @@ public class MemberServiceImpl implements MemberService {
         // TODO : profileHref default 경로 추가해 줄 것.
         // gateway에서 타고 넘어 올 것이라 end-point 따로 필요 x
 
-        try{
+        try {
             memberRepository.save(member);
-        }catch (DataIntegrityViolationException ex){
+        } catch (DataIntegrityViolationException ex) {
             throw new DataIntegrityViolationException("회원정보를 모두 입력해 주세요.");
         }
 
@@ -54,6 +55,7 @@ public class MemberServiceImpl implements MemberService {
 
     /**
      * 사용자 정보 수정
+     *
      * @param files
      * @param members
      */
@@ -61,8 +63,8 @@ public class MemberServiceImpl implements MemberService {
     @Override
     public void updateUserInfo(MultipartFile[] files, String members) {
         Member member = convertStringToMember(members);
-        try{
-            if(files.length != 0){
+        try {
+            if (files.length != 0) {
                 setFileNames(files[0], member);
                 fileUploadDownloadService.storeFile(files[0]);
             }
@@ -71,6 +73,7 @@ public class MemberServiceImpl implements MemberService {
             member.setUpdateTime(LocalDateTime.now());
 
             memberRepository.updateMemberInfo(member);
+<<<<<<< HEAD
 
             // 이벤트 전송(프로필 사진 변경)
             eventDispatcher.send(new MemberSolvedEvent(
@@ -79,6 +82,9 @@ public class MemberServiceImpl implements MemberService {
             ));
 
         }catch (NullPointerException ex){
+=======
+        } catch (NullPointerException ex) {
+>>>>>>> feature/mas-timeline
             throw new NullPointerException("유효하지 않은 값이 전송되었습니다.");
         }
     }
@@ -92,7 +98,7 @@ public class MemberServiceImpl implements MemberService {
     private Member convertStringToMember(String members) {
         ObjectMapper objectMapper = new ObjectMapper();
         Member member = null;
-        try{
+        try {
             member = objectMapper.readValue(members, Member.class);
         } catch (JsonProcessingException e) {
             throw new DataIntegrityViolationException("", e);
@@ -105,17 +111,18 @@ public class MemberServiceImpl implements MemberService {
 
     /**
      * 이름으로 이용자 검색
+     *
      * @param username
      * @return
      */
     @Override
     public List<Member> findAllMemberByUsername(String username) {
         List<Member> members = null;
-        try{
+        try {
             members = Optional.of(memberRepository.findMemberByUsernameIgnoreCaseContaining(username).get()).get();
-        }catch (InvalidDataAccessApiUsageException ex){
+        } catch (InvalidDataAccessApiUsageException ex) {
             throw new InvalidDataAccessApiUsageException("Null값이 들어올 수 없습니다.");
-        }catch (NoSuchElementException ex){
+        } catch (NoSuchElementException ex) {
             throw new NoSuchElementException("해당 사용자를 찾을 수 없습니다.");
         }
 
@@ -124,6 +131,7 @@ public class MemberServiceImpl implements MemberService {
 
     /**
      * 사용자 정보 조회
+     *
      * @param userId
      * @return Member.class
      */
@@ -131,9 +139,9 @@ public class MemberServiceImpl implements MemberService {
     public Member findMemberInfoByUserId(String userId) {
 
         Member member;
-        try{
+        try {
             member = Optional.of(memberRepository.findByUserId(userId).get()).get();
-        }catch (NoSuchElementException ex){
+        } catch (NoSuchElementException ex) {
             throw new NoSuchElementException("해당 사용자를 찾을 수 없습니다.");
         }
 

@@ -49,12 +49,21 @@
             <artifactId>spring-cloud-starter-netflix-eureka-client</artifactId>
         </dependency>
 
+<<<<<<< HEAD
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-actuator</artifactId>
         </dependency>
 
         <!-- https://mvnrepository.com/artifact/org.projectlombok/lombok -->
+=======
+        <!--        개발시 H2 DataBase 사용-->
+        <!--        <dependency>-->
+        <!--            <groupId>com.oracle.ojdbc</groupId>-->
+        <!--            <artifactId>ojdbc8</artifactId>-->
+        <!--            <scope>runtime</scope>-->
+        <!--        </dependency>-->
+>>>>>>> feature/mas-timeline
         <dependency>
             <groupId>org.projectlombok</groupId>
             <artifactId>lombok</artifactId>
