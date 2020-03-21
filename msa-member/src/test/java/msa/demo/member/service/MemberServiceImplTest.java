@@ -33,17 +33,17 @@ class MemberServiceImplTest {
 
     @Test
     @Disabled
-    void findByAllMemberByUsername(){
-        String username="ee";
+    void findByAllMemberByUsername() {
+        String username = "ee";
         List<Member> members = memberService.findAllMemberByUsername(username);
 
-        for(Member member : members)
+        for (Member member : members)
             System.out.println(member);
     }
 
     @Test
     @Disabled
-    void updateMemberInfo(){
+    void updateMemberInfo() {
         Member member = new Member();
 //        memberService.updateUserInfo(numember);
     }
@@ -58,7 +58,7 @@ class MemberServiceImplTest {
 
     @Test
     @Disabled
-    void memberSignUpTest(){
+    void memberSignUpTest() {
         Member member = new Member();
         member.setUserId("test");
         member.setEmail("jm0520@hanmail.net");

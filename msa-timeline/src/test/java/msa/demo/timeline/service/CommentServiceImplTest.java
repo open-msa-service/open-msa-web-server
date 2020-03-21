@@ -17,7 +17,7 @@ class CommentServiceImplTest {
 
 
     @Test
-    void updateComment(){
+    void updateComment() {
         Comment comment = new Comment();
         comment.setUsername("jongmin");
         comment.setContent("dd");
@@ -27,7 +27,7 @@ class CommentServiceImplTest {
 
     @Test
     @Disabled
-    void deleteCommentById(){
+    void deleteCommentById() {
         Long commentId = 2L;
         commentService.deleteCommentByCommentId(null);
     }

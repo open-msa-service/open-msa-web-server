@@ -4,9 +4,10 @@ public class FileUploadException extends RuntimeException {
 
     private static final long serialVersionUID = 1L;
 
-    public FileUploadException(){}
+    public FileUploadException() {
+    }
 
-    public FileUploadException(String message){
+    public FileUploadException(String message) {
         super(message);
     }
 

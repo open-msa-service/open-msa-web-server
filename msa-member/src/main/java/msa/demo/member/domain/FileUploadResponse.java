@@ -3,7 +3,8 @@ package msa.demo.member.domain;
 import lombok.Getter;
 import lombok.Setter;
 
-@Getter @Setter
+@Getter
+@Setter
 public class FileUploadResponse {
 
     private String fileName;
@@ -11,7 +12,8 @@ public class FileUploadResponse {
     private String fileType;
     private long size;
 
-    public FileUploadResponse(){}
+    public FileUploadResponse() {
+    }
 
     public FileUploadResponse(String fileName, String fileDownloadUri, String fileType, long size) {
         this.fileName = fileName;

@@ -19,12 +19,12 @@ public class FileUploadDownloadServiceImpl implements FileUploadDownloadService 
     private final Path fileLocation;
 
     @Autowired
-    public FileUploadDownloadServiceImpl(FileUploadProperties properties){
+    public FileUploadDownloadServiceImpl(FileUploadProperties properties) {
         this.fileLocation = Paths.get(properties.getUploadDir())
                 .toAbsolutePath().normalize();
-        try{
+        try {
             Files.createDirectories(this.fileLocation);
-        }catch (Exception e){
+        } catch (Exception e) {
             try {
                 throw new FileUploadException("파일 업로드에 실패했습니다.");
             } catch (FileUploadException ex) {
@@ -38,8 +38,8 @@ public class FileUploadDownloadServiceImpl implements FileUploadDownloadService 
     public void storeFile(MultipartFile file) {
         String fileName = StringUtils.cleanPath(Objects.requireNonNull(file.getOriginalFilename()));
 
-        try{
-            if(fileName.contains(".."))
+        try {
+            if (fileName.contains(".."))
                 throw new FileUploadException("");
 
             Path targetLocation = this.fileLocation.resolve(fileName);
