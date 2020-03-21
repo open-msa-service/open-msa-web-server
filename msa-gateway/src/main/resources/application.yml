@@ -8,16 +8,22 @@ zuul:
   routes:
     member:
       path: /member/**
-      url : http://localhost:8081/user
+      serviceId: member
+      stripPrefix: false
     timeLine:
       path: /time/**
-      url : http://localhost:8082/time
-    commetn:
+      serviceId: timeLine
+      stripPrefix: false
+    comment:
       path: /comment/**
-      url : http://localhost:8082/comment
+      serviceId : timeLine
+      stripPrefix : false
+  ignored-services: '*'
 
 
-ribbon:
-  eureka:
-    enabled: false
+eureka:
+    client:
+      service-url:
+        default-zone: http://localhost:8761/eureka/
+
 
