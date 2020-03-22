@@ -1,7 +1,8 @@
 package msa.member.msamember.service;
 
-import msa.demo.member.domain.Member;
-import msa.demo.member.repository.MemberRepository;
+
+import msa.member.msamember.domain.Member;
+import msa.member.msamember.repository.MemberRepository;
 import org.junit.Test;
 import org.junit.jupiter.api.Disabled;
 import org.slf4j.Logger;

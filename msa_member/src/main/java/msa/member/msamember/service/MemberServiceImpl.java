@@ -2,10 +2,10 @@ package msa.member.msamember.service;
 
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
-import msa.demo.member.domain.Member;
-import msa.demo.member.event.EventDispatcher;
-import msa.demo.member.event.MemberSolvedEvent;
-import msa.demo.member.repository.MemberRepository;
+import msa.member.msamember.domain.Member;
+import msa.member.msamember.event.EventDispatcher;
+import msa.member.msamember.event.MemberSolvedEvent;
+import msa.member.msamember.repository.MemberRepository;
 import org.springframework.dao.DataIntegrityViolationException;
 import org.springframework.dao.InvalidDataAccessApiUsageException;
 import org.springframework.stereotype.Service;
@@ -73,7 +73,6 @@ public class MemberServiceImpl implements MemberService {
             member.setUpdateTime(LocalDateTime.now());
 
             memberRepository.updateMemberInfo(member);
-<<<<<<< HEAD
 
             // 이벤트 전송(프로필 사진 변경)
             eventDispatcher.send(new MemberSolvedEvent(
@@ -82,9 +81,6 @@ public class MemberServiceImpl implements MemberService {
             ));
 
         }catch (NullPointerException ex){
-=======
-        } catch (NullPointerException ex) {
->>>>>>> feature/mas-timeline
             throw new NullPointerException("유효하지 않은 값이 전송되었습니다.");
         }
     }

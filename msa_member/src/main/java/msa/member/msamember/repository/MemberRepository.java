@@ -1,6 +1,6 @@
 package msa.member.msamember.repository;
 
-import msa.demo.member.domain.Member;
+import msa.member.msamember.domain.Member;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Modifying;
 import org.springframework.data.jpa.repository.Query;

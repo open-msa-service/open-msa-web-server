@@ -1,6 +1,6 @@
 package msa.member.msamember.service;
 
-import msa.demo.member.domain.FileUploadProperties;
+import msa.member.msamember.domain.FileUploadProperties;
 import org.apache.tomcat.util.http.fileupload.FileUploadException;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;

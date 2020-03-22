@@ -1,6 +1,6 @@
 package msa.member.msamember.exception.handle;
 
-import msa.demo.member.exception.ErrorMessage;
+import msa.member.msamember.exception.ErrorMessage;
 import org.springframework.dao.DataIntegrityViolationException;
 import org.springframework.dao.InvalidDataAccessApiUsageException;
 import org.springframework.http.HttpStatus;

@@ -1,9 +1,8 @@
 package msa.member.msamember.controller;
 
-
-import msa.demo.member.domain.Member;
-import msa.demo.member.domain.ResponseMessage;
-import msa.demo.member.service.MemberService;
+import msa.member.msamember.domain.Member;
+import msa.member.msamember.domain.ResponseMessage;
+import msa.member.msamember.service.MemberService;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
