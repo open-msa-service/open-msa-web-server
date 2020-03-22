@@ -2,10 +2,11 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/msa-gateway/msa-gateway.iml" filepath="$PROJECT_DIR$/msa-gateway/msa-gateway.iml" />
-      <module fileurl="file://$PROJECT_DIR$/msa-member/msa-member.iml" filepath="$PROJECT_DIR$/msa-member/msa-member.iml" />
-      <module fileurl="file://$PROJECT_DIR$/msa-service-registry/msa-service-registry.iml" filepath="$PROJECT_DIR$/msa-service-registry/msa-service-registry.iml" />
-      <module fileurl="file://$PROJECT_DIR$/msa-timeline/msa-timeline.iml" filepath="$PROJECT_DIR$/msa-timeline/msa-timeline.iml" />
+      <module fileurl="file://$PROJECT_DIR$/msa_gateway/msa_gateway.iml" filepath="$PROJECT_DIR$/msa_gateway/msa_gateway.iml" />
+      <module fileurl="file://$PROJECT_DIR$/msa_member/msa_member.iml" filepath="$PROJECT_DIR$/msa_member/msa_member.iml" />
+      <module fileurl="file://$PROJECT_DIR$/msa_service_registry/msa_service_registry.iml" filepath="$PROJECT_DIR$/msa_service_registry/msa_service_registry.iml" />
+      <module fileurl="file://$PROJECT_DIR$/msa_timeline/msa_timeline.iml" filepath="$PROJECT_DIR$/msa_timeline/msa_timeline.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/open-msa-web-server.iml" filepath="$PROJECT_DIR$/.idea/open-msa-web-server.iml" />
     </modules>
   </component>
 </project>
