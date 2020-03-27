@@ -23,6 +23,9 @@ public class CommentServiceImpl implements CommentService {
     @Override
     public void writeComment(Comment comment) {
         comment.setUpdateTime(LocalDateTime.now());
+        TimeLine timeLine = new TimeLine();
+        timeLine.setTimeId(comment.getTempTimeId());
+        comment.setTimeId(timeLine);
         try {
             commentRepository.save(comment);
         } catch (DataIntegrityViolationException ex) {

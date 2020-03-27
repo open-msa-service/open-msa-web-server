@@ -1,7 +1,7 @@
 package msa.member.msamember.service;
 
 
-import msa.demo.member.domain.Member;
+import msa.member.msamember.domain.Member;
 import org.springframework.web.multipart.MultipartFile;
 
 import java.util.List;

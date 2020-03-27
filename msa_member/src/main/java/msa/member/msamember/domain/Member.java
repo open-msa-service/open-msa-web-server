@@ -19,7 +19,8 @@ import java.time.LocalDateTime;
 public class Member {
 
     @Id
-    @GeneratedValue
+    @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "MEM_SEQ")
+    @SequenceGenerator(sequenceName = "MEMBER_SEQ", allocationSize = 1, name = "MEM_SEQ")
     Long id;
 
     @Column(name = "USER_ID", unique = true)
@@ -32,10 +33,13 @@ public class Member {
     private String password;
 
     @Column(name = "SOCIAL_ID")
-    private long socialId;
+    private String socialId;
 
     @Column(name = "PROFILE_HREF")
     private String profileHref;  // 프로필 이미지 경로
+
+    @Enumerated(value = EnumType.STRING)
+    private UserRole userRole;
 
     @Column(name = "EMAIL", nullable = false)
     private String email;

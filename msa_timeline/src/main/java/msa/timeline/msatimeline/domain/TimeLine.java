@@ -2,6 +2,7 @@ package msa.timeline.msatimeline.domain;
 
 
 import com.fasterxml.jackson.annotation.JsonFormat;
+import com.fasterxml.jackson.annotation.JsonManagedReference;
 import lombok.Getter;
 import lombok.Setter;
 import lombok.ToString;
@@ -18,7 +19,8 @@ import java.util.List;
 public class TimeLine {
 
     @Id
-    @GeneratedValue
+    @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "TIME_SEQ")
+    @SequenceGenerator(sequenceName = "TIME_SEQ", allocationSize = 1, name = "TIME_SEQ")
     private Long timeId;
 
     @Lob
@@ -44,8 +46,13 @@ public class TimeLine {
     @JsonFormat(pattern = "yyyy-MM-dd")
     private LocalDateTime updateTime;
 
+    @JsonManagedReference
     @OneToMany(fetch = FetchType.EAGER, mappedBy = "timeId")
     private List<Comment> comments;
+
+    @JsonManagedReference
+    @OneToMany(mappedBy = "timeId")
+    private List<Like> likes;
 
     @Transient
     private String[] fileNameList;

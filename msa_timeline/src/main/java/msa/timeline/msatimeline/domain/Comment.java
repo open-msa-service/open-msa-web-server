@@ -1,6 +1,7 @@
 package msa.timeline.msatimeline.domain;
 
 
+import com.fasterxml.jackson.annotation.JsonBackReference;
 import com.fasterxml.jackson.annotation.JsonFormat;
 import lombok.Getter;
 import lombok.Setter;
@@ -13,11 +14,12 @@ import java.time.LocalDateTime;
 @Getter
 @Setter
 @ToString
-@Table(name = "Comment")
+@Table(name = "COMMENTS")
 public class Comment {
 
     @Id
-    @GeneratedValue
+    @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "COM_SEQ")
+    @SequenceGenerator(sequenceName = "COMMENT_SEQ", allocationSize = 1, name = "COM_SEQ")
     private Long commentId;
 
     @Lob
@@ -37,7 +39,11 @@ public class Comment {
     private LocalDateTime updateTime;
 
     @ManyToOne
+    @JsonBackReference
     @JoinColumn(name = "timeId")
     private TimeLine timeId;
+
+    @Transient
+    private Long tempTimeId;
 
 }
