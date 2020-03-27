@@ -2,6 +2,7 @@ package msa.member.msamember.service;
 
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
+import lombok.extern.slf4j.Slf4j;
 import msa.member.msamember.domain.Member;
 import msa.member.msamember.event.EventDispatcher;
 import msa.member.msamember.event.MemberSolvedEvent;
@@ -18,7 +19,7 @@ import java.util.List;
 import java.util.NoSuchElementException;
 import java.util.Optional;
 
-
+@Slf4j
 @Service
 public class MemberServiceImpl implements MemberService {
 
@@ -42,14 +43,14 @@ public class MemberServiceImpl implements MemberService {
     @Override
     public void memberSignUp(Member member) {
         // TODO : profileHref default 경로 추가해 줄 것.
-        // gateway에서 타고 넘어 올 것이라 end-point 따로 필요 x
-
+        log.info("MemberService memberSignUp :::: {}", member.toString());
+        member.setProfileHref("/images/default_image.png");
         try {
             memberRepository.save(member);
         } catch (DataIntegrityViolationException ex) {
+            log.error("MemberService memberSignUp error :::: ",ex);
             throw new DataIntegrityViolationException("회원정보를 모두 입력해 주세요.");
         }
-
     }
 
 
@@ -62,6 +63,7 @@ public class MemberServiceImpl implements MemberService {
     @Transactional
     @Override
     public void updateUserInfo(MultipartFile[] files, String members) {
+        log.info("MemberService updateUserInfo :::: {}", members);
         Member member = convertStringToMember(members);
         try {
             if (files.length != 0) {
@@ -81,13 +83,14 @@ public class MemberServiceImpl implements MemberService {
             ));
 
         }catch (NullPointerException ex){
+            log.error("MemberService updateUserInfo error :::: ", ex);
             throw new NullPointerException("유효하지 않은 값이 전송되었습니다.");
         }
     }
 
     private void setFileNames(MultipartFile files, Member member) {
         String fileNames = files.getOriginalFilename();
-        fileNames = "/static/images/" + fileNames;
+        fileNames = "/images/" + fileNames;
         member.setProfileHref(fileNames);
     }
 
@@ -114,11 +117,14 @@ public class MemberServiceImpl implements MemberService {
     @Override
     public List<Member> findAllMemberByUsername(String username) {
         List<Member> members = null;
+        log.info("MemberService findAllMemberByUsername :::: {}", username);
         try {
-            members = Optional.of(memberRepository.findMemberByUsernameIgnoreCaseContaining(username).get()).get();
+            members = memberRepository.findByUsernameIgnoreCaseContaining(username);
         } catch (InvalidDataAccessApiUsageException ex) {
+            log.error("MemberService findAllMemberByUsername error :::: ", ex);
             throw new InvalidDataAccessApiUsageException("Null값이 들어올 수 없습니다.");
         } catch (NoSuchElementException ex) {
+            log.error("MemberService findAllMemberByUsername error :::: ", ex);
             throw new NoSuchElementException("해당 사용자를 찾을 수 없습니다.");
         }
 
@@ -133,11 +139,12 @@ public class MemberServiceImpl implements MemberService {
      */
     @Override
     public Member findMemberInfoByUserId(String userId) {
-
+        log.info("MemberService findMemberInfoByUserId :::: {}", userId);
         Member member;
         try {
             member = Optional.of(memberRepository.findByUserId(userId).get()).get();
         } catch (NoSuchElementException ex) {
+            log.error("MemberService findMemberInfoByUserId error :::: ", ex);
             throw new NoSuchElementException("해당 사용자를 찾을 수 없습니다.");
         }
 

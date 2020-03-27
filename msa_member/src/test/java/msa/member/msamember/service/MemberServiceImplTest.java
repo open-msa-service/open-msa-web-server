@@ -9,7 +9,6 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
-import org.springframework.boot.test.mock.mockito.MockBean;
 import org.springframework.core.annotation.Order;
 
 import java.nio.file.attribute.UserPrincipalNotFoundException;
@@ -33,6 +32,15 @@ class MemberServiceImplTest {
     private MemberService memberService;
 
     @Test
+    void searchMemberByUsername(){
+        String username = "테스";
+        List<Member> list = memberRepository.findByUsernameIgnoreCaseContaining(username);
+        for(Member member : list){
+            logger.info("member info :::: {}", member.getUsername());
+        }
+    }
+
+    @Test
     @Disabled
     void findByAllMemberByUsername() {
         String username = "ee";
@@ -50,6 +58,7 @@ class MemberServiceImplTest {
     }
 
     @Test
+    @Disabled
     @Order(value = 2)
     void getMemberInfoByUserId() throws UserPrincipalNotFoundException {
         String userId = "test";

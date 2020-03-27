@@ -1,57 +1,62 @@
 package msa.gateway.msagateway.security;
 
 
-import msa.gateway.msagateway.security.handle.CustomAuthenticationEntryPoint;
-import msa.gateway.msagateway.security.handle.CustomAuthenticationFailureHandler;
-import msa.gateway.msagateway.security.handle.CustomAuthenticationFilter;
-import msa.gateway.msagateway.security.handle.CustomAuthenticationSuccessHandler;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
-import org.springframework.security.authentication.AuthenticationProvider;
-import org.springframework.security.authentication.dao.DaoAuthenticationProvider;
+import org.springframework.security.authentication.AuthenticationManager;
 import org.springframework.security.config.annotation.authentication.builders.AuthenticationManagerBuilder;
+import org.springframework.security.config.annotation.method.configuration.EnableGlobalMethodSecurity;
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
-import org.springframework.security.config.annotation.web.builders.WebSecurity;
+import org.springframework.security.config.annotation.web.configuration.EnableWebSecurity;
 import org.springframework.security.config.annotation.web.configuration.WebSecurityConfigurerAdapter;
 import org.springframework.security.core.userdetails.UserDetailsService;
+import org.springframework.security.crypto.factory.PasswordEncoderFactories;
 import org.springframework.security.crypto.password.PasswordEncoder;
-import org.springframework.security.web.AuthenticationEntryPoint;
-import org.springframework.security.web.authentication.AuthenticationFailureHandler;
-import org.springframework.security.web.authentication.AuthenticationSuccessHandler;
+import org.springframework.security.oauth2.provider.token.TokenStore;
+import org.springframework.security.oauth2.provider.token.store.JdbcTokenStore;
 import org.springframework.web.cors.CorsConfiguration;
 import org.springframework.web.cors.CorsConfigurationSource;
 import org.springframework.web.cors.UrlBasedCorsConfigurationSource;
 
+import javax.annotation.Resource;
+import javax.sql.DataSource;
 import java.util.Arrays;
 
 @Configuration
+@EnableWebSecurity
+@EnableGlobalMethodSecurity(prePostEnabled = true)
 public class SecurityConfig extends WebSecurityConfigurerAdapter {
 
-    @Qualifier("userDetailsServiceImpl")
-    @Autowired
+    @Resource(name = "userService")
     private UserDetailsService userDetailsService;
-    @Autowired private PasswordEncoder passwordEncoder;
 
+    private final DataSource dataSource;
+
+    public SecurityConfig(DataSource dataSource) {
+        this.dataSource = dataSource;
+    }
+
+    @Bean
+    public PasswordEncoder encoder() {
+        return PasswordEncoderFactories.createDelegatingPasswordEncoder();
+    }
+
+    @Bean
+    public TokenStore tokenStore() {
+        return new JdbcTokenStore(dataSource);
+    }
+
+    @Bean
     @Override
-    protected void configure(AuthenticationManagerBuilder auth) throws Exception {
-        /*
-         * AuthenticationProvider 등록
-         */
-        auth.authenticationProvider(authenticationProvider());
+    protected AuthenticationManager authenticationManager() throws Exception {
+        return super.authenticationManager();
     }
 
     @Override
-    public void configure(WebSecurity web) throws Exception {
-        web.ignoring()
-                .antMatchers("/resources/**")
-                .antMatchers("/css/**")
-                .antMatchers("/vendor/**")
-                .antMatchers("/js/**")
-                .antMatchers("/favicon*/**")
-                .antMatchers("/img/**")
-        ;
+    protected void configure(AuthenticationManagerBuilder auth) throws Exception {
+        auth.userDetailsService(userDetailsService)
+                .passwordEncoder(encoder());
     }
 
     @Override
@@ -59,82 +64,27 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
         http
                 .cors()
                 .and()
-                .authorizeRequests()
-                .antMatchers("/login*/**").permitAll()
-                .anyRequest().authenticated()
-                .and().csrf()
+                .csrf()
                 .disable()
-                .addFilter(authenticationFilter())
-                .exceptionHandling()
-                .authenticationEntryPoint(authenticationEntryPoint())
-        ;
+                .anonymous()
+                .disable()
+                .authorizeRequests()
+                .antMatchers("/api-docs/**").permitAll();
     }
 
     @Bean
-    public CorsConfigurationSource corsConfigurationSource() {
+    public CorsConfigurationSource corsConfigurationSource()
+    {
         CorsConfiguration configuration = new CorsConfiguration();
         configuration.setAllowedOrigins(Arrays.asList("*"));
         configuration.setAllowedMethods(Arrays.asList("*"));
         configuration.setAllowedHeaders(Arrays.asList("*"));
         UrlBasedCorsConfigurationSource source = new UrlBasedCorsConfigurationSource();
         source.registerCorsConfiguration("/**", configuration);
-
         return source;
     }
 
-    /*
-     * SuccessHandler bean register
-     */
-    @Bean
-    public AuthenticationSuccessHandler authenticationSuccessHandler() {
-        CustomAuthenticationSuccessHandler successHandler = new CustomAuthenticationSuccessHandler();
-        successHandler.setDefaultTargetUrl("/index");
-        return successHandler;
+    public String passwordEncoding(String password){
+        return encoder().encode(password);
     }
-
-    /*
-     * FailureHandler bean register
-     */
-    @Bean
-    public AuthenticationFailureHandler authenticationFailureHandler() {
-        CustomAuthenticationFailureHandler failureHandler = new CustomAuthenticationFailureHandler();
-        failureHandler.setDefaultFailureUrl("/loginPage?error=error");
-        return failureHandler;
-    }
-
-    /*
-     * AuthenticationEntryPoint bean register
-     */
-    @Bean
-    public AuthenticationEntryPoint authenticationEntryPoint() {
-        return new CustomAuthenticationEntryPoint("/loginPage");
-    }
-
-    /*
-     * Form Login시 걸리는 Filter bean register
-     */
-    @Bean
-    public CustomAuthenticationFilter authenticationFilter() throws Exception {
-        CustomAuthenticationFilter authenticationFilter = new CustomAuthenticationFilter(authenticationManager());
-        authenticationFilter.setFilterProcessesUrl("/login");
-        authenticationFilter.setUsernameParameter("username");
-        authenticationFilter.setPasswordParameter("password");
-
-        authenticationFilter.setAuthenticationSuccessHandler(authenticationSuccessHandler());
-        authenticationFilter.setAuthenticationFailureHandler(authenticationFailureHandler());
-
-        authenticationFilter.afterPropertiesSet();
-
-        return authenticationFilter;
-    }
-
-    @Bean
-    public AuthenticationProvider authenticationProvider() {
-        DaoAuthenticationProvider authenticationProvider = new DaoAuthenticationProvider();
-        authenticationProvider.setUserDetailsService(userDetailsService);
-        authenticationProvider.setPasswordEncoder(passwordEncoder);
-
-        return authenticationProvider;
-    }
-
 }

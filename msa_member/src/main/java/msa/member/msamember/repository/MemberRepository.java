@@ -21,6 +21,6 @@ public interface MemberRepository extends JpaRepository<Member, Long> {
             "m.profileHref = :#{#mem.profileHref}, m.updateTime = :#{#mem.updateTime} WHERE m.userId = :#{#mem.userId}")
     void updateMemberInfo(@Param("mem") Member member);
 
-    Optional<List<Member>> findMemberByUsernameIgnoreCaseContaining(String username);
+    List<Member> findByUsernameIgnoreCaseContaining(String username);
 
 }

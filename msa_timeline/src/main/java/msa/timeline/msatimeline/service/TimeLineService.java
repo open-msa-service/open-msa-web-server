@@ -17,4 +17,10 @@ public interface TimeLineService {
 
     void updateMemberProfileHref(String userId, String profileHref);
 
+    List<TimeLine> findVisitTimeLineByUserId(String userId, String visitId);
+
+    boolean isFriend(String userId, String visitId);
+
+    List<TimeLine> findMainTimeLineByUserId(List<String> friendList);
+
 }

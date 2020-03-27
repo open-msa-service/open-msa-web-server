@@ -7,10 +7,7 @@ import lombok.ToString;
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.Id;
-import javax.persistence.Transient;
+import javax.persistence.*;
 import java.time.LocalDateTime;
 import java.util.Collection;
 
@@ -23,16 +20,31 @@ import java.util.Collection;
 public class Account implements UserDetails {
 
     @Id
+    @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "AUTH_SEQ")
+    @SequenceGenerator(sequenceName = "ACCOUNT_SEQ", allocationSize = 1, name = "AUTH_SEQ")
     private Long id;
     private String userId;
     private String password;
     private String username;
+
+    @Enumerated(value = EnumType.STRING)
     private UserRole role;
+
     @Column(length=2000)
     private String access_token;
     private LocalDateTime access_token_validity;
     @Column(length=2000)
     private String refresh_token;
+
+    // Member의 회원가입을 위한 Column
+    @Transient
+    private String social_id;
+    @Transient
+    private String email;
+    @Transient
+    private String phoneNumber;
+
+
 
     @Transient
     private Collection<? extends GrantedAuthority> authorities;

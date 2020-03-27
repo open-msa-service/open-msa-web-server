@@ -15,7 +15,7 @@ public class RibbonConfiguration {
     @Bean
     public IPing ribbonPing(final IClientConfig config){
         // service 상태 확인
-        return new PingUrl(false, "/health");
+        return new PingUrl(false, "/actuator/health");
     }
 
     @Bean

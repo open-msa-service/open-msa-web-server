@@ -2,29 +2,32 @@ package msa.gateway.msagateway.controller;
 
 
 import msa.gateway.msagateway.domain.Account;
+import msa.gateway.msagateway.domain.ResponseMessage;
+import msa.gateway.msagateway.service.AccountService;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
-import org.springframework.security.core.context.SecurityContextHolder;
-import org.springframework.security.core.userdetails.User;
-import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.security.crypto.password.PasswordEncoder;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
-@RequestMapping("/api")
 public class AccountController {
 
-    @RequestMapping("api/users/me")
-    public ResponseEntity<Account> profile(){
+    private final AccountService accountService;
+    private ResponseMessage responseMessage;
 
-        // Build some dummy data to return for testing
-        User user = (User)SecurityContextHolder.getContext().getAuthentication().getPrincipal();
-        String userId = user.getUsername();
-        String password = user.getPassword();
 
-        Account account = new Account();
-        account.setUserId(userId);
-        account.setPassword(password);
+    public AccountController(AccountService accountService) {
+        this.accountService = accountService;
+    }
 
-        return ResponseEntity.ok(account);
+    @PostMapping("/register")
+    ResponseEntity<ResponseMessage> memberRegister(@RequestBody Account account){
+        accountService.memberRegister(account);
+        responseMessage = new ResponseMessage("", "회원가입을 완료했습니다.");
+        return new ResponseEntity<>(responseMessage, HttpStatus.OK);
     }
 
 

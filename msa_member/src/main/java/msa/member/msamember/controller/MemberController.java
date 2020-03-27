@@ -1,5 +1,6 @@
 package msa.member.msamember.controller;
 
+import lombok.extern.slf4j.Slf4j;
 import msa.member.msamember.domain.Member;
 import msa.member.msamember.domain.ResponseMessage;
 import msa.member.msamember.service.MemberService;
@@ -8,10 +9,13 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.multipart.MultipartFile;
 
+import java.io.UnsupportedEncodingException;
+import java.nio.charset.StandardCharsets;
 import java.util.List;
 
+@Slf4j
 @RestController
-@RequestMapping("/user")
+@RequestMapping("/member")
 public class MemberController {
 
     private ResponseMessage responseMessage;
@@ -31,7 +35,9 @@ public class MemberController {
 
     @GetMapping("/search/{username}")
     ResponseEntity<ResponseMessage> findUserByUsername(@PathVariable String username) {
-        List<Member> members = memberService.findAllMemberByUsername(username);
+        String userName = new String(username.getBytes(StandardCharsets.UTF_8), StandardCharsets.UTF_8);
+        log.info("MemberController findUserByUsername method username :::: {}", userName);
+        List<Member> members = memberService.findAllMemberByUsername(userName);
         responseMessage = new ResponseMessage(members, "회원정보를 가져오는데 성공했습니다.");
         return new ResponseEntity<ResponseMessage>(responseMessage, HttpStatus.OK);
     }
