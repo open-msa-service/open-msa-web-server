@@ -23,4 +23,9 @@ public interface MemberRepository extends JpaRepository<Member, Long> {
 
     List<Member> findByUsernameIgnoreCaseContaining(String username);
 
+    @Transactional
+    @Modifying
+    @Query(value = "SELECT m.* from Member m where m.user_id in :friend", nativeQuery = true)
+    List<Member> findFriendInfo(@Param("friend")List<String> friends);
+
 }
