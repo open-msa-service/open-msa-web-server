@@ -1,13 +1,14 @@
 package msa.member.msamember.service;
 
 import msa.member.msamember.domain.Friend;
+import msa.member.msamember.domain.Member;
 
 import java.util.List;
 import java.util.Map;
 
 public interface FriendService {
 
-    Map<String, List<Friend>> getMyFriendListByUserId(String userId1);
+    Map<String, List<Member>> getMyFriendListByUserId(String userId1);
 
     void requestFriendByUserId(String userId1, String userId2);
 

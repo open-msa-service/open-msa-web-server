@@ -3,8 +3,10 @@ package msa.member.msamember.service;
 
 import lombok.extern.slf4j.Slf4j;
 import msa.member.msamember.domain.Friend;
+import msa.member.msamember.domain.Member;
 import msa.member.msamember.domain.State;
 import msa.member.msamember.repository.FriendRepository;
+import msa.member.msamember.repository.MemberRepository;
 import org.springframework.stereotype.Service;
 
 import java.util.HashMap;
@@ -17,8 +19,11 @@ public class FriendServiceImpl implements FriendService{
 
     private final FriendRepository friendRepository;
 
-    public FriendServiceImpl(FriendRepository friendRepository) {
+    private final MemberRepository memberRepository;
+
+    public FriendServiceImpl(FriendRepository friendRepository, MemberRepository memberRepository) {
         this.friendRepository = friendRepository;
+        this.memberRepository = memberRepository;
     }
 
     /**
@@ -27,16 +32,27 @@ public class FriendServiceImpl implements FriendService{
      * @return
      */
     @Override
-    public Map<String, List<Friend>> getMyFriendListByUserId(String userId1) {
+    public Map<String, List<Member>> getMyFriendListByUserId(String userId1) {
+        // Friend를 가지고 와서 Member 형태로 보내줘야 한다.
         // 친구 목록
-        List<Friend> friends = friendRepository.findAllByUserId1AndState(userId1, State.FRIEND);
+        List<String> friendIds = friendRepository.findUserId1ByUserId2AndState(userId1, State.FRIEND);
+
+        // 친구 목록이 없는 경우 빈 리스트를 넣어준다
+        if(friendIds.size() == 0) {
+            friendIds.add(" ");
+        }
+        List<Member> friendMemberInfo = memberRepository.findFriendInfo(friendIds);
 
         // 수락 대기 중인 친구요청
-        List<Friend> requestFriends = friendRepository.findAllByUserId2AndState(userId1, State.WAIT);
+        List<String> requestFriends = friendRepository.findUserId1ByUserId2AndState(userId1, State.WAIT);
+        if(requestFriends.size() == 0){
+            requestFriends.add(" ");
+        }
+        List<Member> requestMemberInfo = memberRepository.findFriendInfo(requestFriends);
 
-        Map<String, List<Friend>> responseMap = new HashMap<>();
-        responseMap.put("friend", friends);
-        responseMap.put("requestFriend", requestFriends);
+        Map<String, List<Member>> responseMap = new HashMap<>();
+        responseMap.put("friend", friendMemberInfo);
+        responseMap.put("requestFriend", requestMemberInfo);
 
         return responseMap;
     }

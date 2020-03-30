@@ -16,6 +16,11 @@ public interface FriendRepository extends JpaRepository<Friend, Long> {
 
     List<Friend> findAllByUserId2AndState(String userId1, State state);
 
+    @Transactional
+    @Modifying
+    @Query(value = "select f.userId1 from Friend f where f.userId2=:#{#userId2} and f.state = :#{#state}")
+    List<String> findUserId1ByUserId2AndState(@Param("userId2") String userId2, @Param("state") State state);
+
     int countFriendByUserId1AndUserId2(String userId1, String userId2);
 
     @Transactional
