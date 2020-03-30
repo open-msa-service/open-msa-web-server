@@ -1,11 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="220fc417-33d6-40ae-b6d2-b4def8d67fc1" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/msa_gateway/src/main/java/msa/gateway/msagateway/security/ResourceServerConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/msa_gateway/src/main/java/msa/gateway/msagateway/security/ResourceServerConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/msa_gateway/src/main/java/msa/gateway/msagateway/security/SecurityConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/msa_gateway/src/main/java/msa/gateway/msagateway/security/SecurityConfig.java" afterDir="false" />
-    </list>
+    <list default="true" id="220fc417-33d6-40ae-b6d2-b4def8d67fc1" name="Default Changelist" comment="" />
     <ignored path="$PROJECT_DIR$/msa-member/target/" />
     <ignored path="$PROJECT_DIR$/msa-service-registry/target/" />
     <ignored path="$PROJECT_DIR$/member/target/" />
@@ -501,7 +497,7 @@
       <workItem from="1584849962159" duration="259000" />
       <workItem from="1584850224667" duration="2431000" />
       <workItem from="1585119212541" duration="33662000" />
-      <workItem from="1585468969229" duration="3595000" />
+      <workItem from="1585468969229" duration="3788000" />
     </task>
     <servers />
   </component>
@@ -538,7 +534,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="99960000" />
+    <option name="totallyTimeSpent" value="100153000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -551,9 +547,8 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="1440" y="0" width="1920" height="1080" extended-state="0" />
-    <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.497543" visible="true" weight="0.16506922" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.497543" visible="true" weight="0.16506922" />
       <window_info id="Structure" order="1" sideWeight="0.502457" side_tool="true" weight="0.21816881" />
       <window_info id="Designer" order="2" />
       <window_info id="Image Layers" order="3" />
@@ -577,7 +572,7 @@
       <window_info anchor="bottom" id="Database Changes" order="13" />
       <window_info anchor="bottom" id="Version Control" order="14" weight="0.32997987" />
       <window_info anchor="bottom" id="Problems" order="15" weight="0.32923833" />
-      <window_info anchor="bottom" id="Run Dashboard" order="16" visible="true" weight="0.3108652" />
+      <window_info active="true" anchor="bottom" id="Run Dashboard" order="16" visible="true" weight="0.3108652" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
