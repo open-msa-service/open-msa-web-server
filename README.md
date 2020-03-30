@@ -37,6 +37,7 @@
 ##### UI server
 - [Client Repository](https://github.com/open-msa-service/open-msa-web-client)로 이동
 
+
 ### API 명세
 - [GateWay](https://github.com/open-msa-service/open-msa-web-server/tree/master/msa_gateway)
 - [Member API](https://github.com/open-msa-service/open-msa-web-server/tree/master/msa_member)
@@ -45,11 +46,13 @@
 
 ### 구현
 #### 시연영상
-<iframe width="640" height="360" src="https://www.youtube.com/embed/xfzPemVeXJs" frameborder="0" gesture="media" allowfullscreen=""></iframe>
+[![시연영상](http://img.youtube.com/vi/xfzPemVeXJs/0.jpg)](http://www.youtube.com/watch?v=xfzPemVeXJs "시연영상")
+
 
 #### 이벤트 설계
 <img src="/resource/register.png" />
 <img src="/resource/modify.png" />
+
 
 #### REST Client
 <img src="/resource/timeline.png" />
